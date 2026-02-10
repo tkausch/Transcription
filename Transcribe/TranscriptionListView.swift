@@ -56,11 +56,14 @@ struct TranscriptionListView: View {
     }
 
     private var list: some View {
-        List(transcriptions, id: \.id, selection: $selectedTranscription) { transcription in
-            NavigationLink(value: transcription) {
-                TranscriptionRowView(transcription: transcription)
+        List(selection: $selectedTranscription) {
+            ForEach(transcriptions, id: \.id) { transcription in
+                NavigationLink(value: transcription) {
+                    TranscriptionRowView(transcription: transcription)
+                }
+                .tag(transcription)
             }
-            .tag(transcription)
+            .onDelete(perform: deleteTranscriptions)
         }
         .navigationDestination(for: Transcription.self) { transcription in
             TranscriptionDetailView(transcription: transcription)
@@ -104,10 +107,17 @@ struct TranscriptionListView: View {
 #endif
     }
 
+    private func deleteTranscriptions(offsets: IndexSet) {
+        for index in offsets {
+            try? repository.delete(transcriptions[index])
+        }
+        loadTranscriptions()
+    }
+
     private func loadTranscriptions() {
         transcriptions = (try? repository.fetchAll()) ?? []
-        if selectedTranscription == nil || !transcriptions.contains(where: { $0.id == selectedTranscription?.id }) {
-            selectedTranscription = transcriptions.first
+        if let selected = selectedTranscription, !transcriptions.contains(where: { $0.id == selected.id }) {
+            selectedTranscription = nil
         }
     }
 }
