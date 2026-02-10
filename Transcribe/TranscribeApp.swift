@@ -25,6 +25,7 @@ struct TranscribeApp: App {
     var body: some Scene {
         WindowGroup {
             TranscriptionListView()
+                .environment(AppSettings.shared)
         }
         .modelContainer(sharedModelContainer)
     }

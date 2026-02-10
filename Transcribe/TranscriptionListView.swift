@@ -9,6 +9,7 @@ import SwiftData
 
 struct TranscriptionListView: View {
     @Environment(\.modelContext) private var modelContext
+    @Environment(AppSettings.self) private var appSettings
     @State private var transcriptions: [Transcription] = []
     @State private var selectedTranscription: Transcription?
     @State private var showSettings = false
@@ -29,7 +30,7 @@ struct TranscriptionListView: View {
             .navigationTitle("Transcriptions")
             .toolbar { toolbarItems }
             .navigationDestination(isPresented: $showSettings) {
-                Text("Settings").navigationTitle("Settings")
+                SettingsView()
             }
         } detail: {
             if let transcription = selectedTranscription {
@@ -42,7 +43,12 @@ struct TranscriptionListView: View {
                 }
             }
         }
-        .task { loadTranscriptions() }
+        .task {
+            loadTranscriptions()
+            if !appSettings.isModelDownloaded {
+                showSettings = true
+            }
+        }
     }
 
     // MARK: - Subviews
@@ -125,4 +131,5 @@ struct TranscriptionListView: View {
 #Preview {
     TranscriptionListView()
         .modelContainer(for: Transcription.self, inMemory: true)
+        .environment(AppSettings.shared)
 }
