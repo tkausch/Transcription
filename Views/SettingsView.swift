@@ -10,6 +10,7 @@ import WhisperKit
 struct SettingsView: View {
 
     @Environment(AppSettings.self) private var appSettings
+    @Environment(TranscriptionService.self) private var transcriptionService
 
     @State private var availableModels: [String] = []
     @State private var isLoadingModels = false
@@ -151,6 +152,12 @@ struct SettingsView: View {
         downloadMessage = "Preparing download…"
         errorMessage = nil
 
+        // Unload the current pipeline before deleting files
+        transcriptionService.unload()
+
+        // Delete any previously downloaded model files
+        deleteModelFiles(for: appSettings.selectedModel)
+
         do {
             _ = try await WhisperKit.download(
                 variant: appSettings.selectedModel,
@@ -166,12 +173,30 @@ struct SettingsView: View {
                 }
             )
             downloadProgress = 1
+            downloadMessage = "Initializing model…"
+
+            // Load the newly downloaded model into the service
+            await transcriptionService.load()
+
             downloadMessage = "Model ready."
             downloadState = .done
             appSettings.isModelDownloaded = true
         } catch {
             downloadState = .failed
             errorMessage = error.localizedDescription
+            appSettings.isModelDownloaded = false
+        }
+    }
+
+    /// Removes downloaded model files for the given variant from the WhisperKit cache directory.
+    private func deleteModelFiles(for model: String) {
+        let fm = FileManager.default
+        guard let cacheDir = fm.urls(for: .cachesDirectory, in: .userDomainMask).first else { return }
+        let whisperDir = cacheDir.appending(component: "huggingface/models/argmaxinc/whisperkit-coreml", directoryHint: .isDirectory)
+        // WhisperKit stores models in a subdirectory matching the variant name
+        let modelDir = whisperDir.appending(component: model, directoryHint: .isDirectory)
+        if fm.fileExists(atPath: modelDir.path) {
+            try? fm.removeItem(at: modelDir)
         }
     }
 }
@@ -181,4 +206,5 @@ struct SettingsView: View {
         SettingsView()
     }
     .environment(AppSettings.shared)
+    .environment(TranscriptionService.shared)
 }

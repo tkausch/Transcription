@@ -22,10 +22,15 @@ struct TranscribeApp: App {
         }
     }()
 
+    private let appSettings = AppSettings.shared
+
     var body: some Scene {
         WindowGroup {
             TranscriptionListView()
-                .environment(AppSettings.shared)
+                .environment(appSettings)
+                .environment(TranscriptionService.shared)
+                .environment(SummarizationService.shared)
+                .modifier(OnboardingCoverModifier(appSettings: appSettings))
         }
         .modelContainer(sharedModelContainer)
     }

@@ -15,6 +15,7 @@ final class AppSettings {
     private enum Keys {
         static let isModelDownloaded = "isModelDownloaded"
         static let selectedModel = "selectedModel"
+        static let hasSeenOnboarding = "hasSeenOnboarding"
     }
 
     static let defaultModel = "openai_whisper-large-v3"
@@ -27,8 +28,13 @@ final class AppSettings {
         didSet { UserDefaults.standard.set(selectedModel, forKey: Keys.selectedModel) }
     }
 
-    private init() {
+    var hasSeenOnboarding: Bool {
+        didSet { UserDefaults.standard.set(hasSeenOnboarding, forKey: Keys.hasSeenOnboarding) }
+    }
+
+    init() {
         self.isModelDownloaded = UserDefaults.standard.bool(forKey: Keys.isModelDownloaded)
         self.selectedModel = UserDefaults.standard.string(forKey: Keys.selectedModel) ?? AppSettings.defaultModel
+        self.hasSeenOnboarding = UserDefaults.standard.bool(forKey: Keys.hasSeenOnboarding)
     }
 }
