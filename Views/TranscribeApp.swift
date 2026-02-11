@@ -23,14 +23,29 @@ struct TranscribeApp: App {
     }()
 
     private let appSettings = AppSettings.shared
+    @State private var isLaunching = true
 
     var body: some Scene {
         WindowGroup {
-            TranscriptionListView()
-                .environment(appSettings)
-                .environment(TranscriptionService.shared)
-                .environment(SummarizationService.shared)
-                .modifier(OnboardingCoverModifier(appSettings: appSettings))
+            ZStack {
+                TranscriptionListView()
+                    .environment(appSettings)
+                    .environment(TranscriptionService.shared)
+                    .environment(SummarizationService.shared)
+                    .modifier(OnboardingCoverModifier(appSettings: appSettings))
+
+                if isLaunching {
+                    LaunchScreenView()
+                        .transition(.opacity)
+                }
+            }
+            .task {
+                // Brief delay to show launch screen, then fade out
+                try? await Task.sleep(for: .seconds(1.5))
+                withAnimation(.easeOut(duration: 0.4)) {
+                    isLaunching = false
+                }
+            }
         }
         .modelContainer(sharedModelContainer)
     }

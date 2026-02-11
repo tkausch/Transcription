@@ -25,6 +25,7 @@
 		B6A98ECE2F3CCBCE00C3AEC5 /* TranscriptionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A98ECD2F3CCBCE00C3AEC5 /* TranscriptionHeaderView.swift */; };
 		B6A98ED02F3CD05B00C3AEC5 /* SummarizationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A98ECF2F3CD05B00C3AEC5 /* SummarizationService.swift */; };
 		B6A98ED22F3CD1F000C3AEC5 /* SummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A98ED12F3CD1F000C3AEC5 /* SummaryView.swift */; };
+		B6A98EDF2F3D101B00C3AEC5 /* LaunchScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A98EDE2F3D101B00C3AEC5 /* LaunchScreenView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,7 @@
 		B6A98ECD2F3CCBCE00C3AEC5 /* TranscriptionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranscriptionHeaderView.swift; sourceTree = "<group>"; };
 		B6A98ECF2F3CD05B00C3AEC5 /* SummarizationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummarizationService.swift; sourceTree = "<group>"; };
 		B6A98ED12F3CD1F000C3AEC5 /* SummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryView.swift; sourceTree = "<group>"; };
+		B6A98EDE2F3D101B00C3AEC5 /* LaunchScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -157,6 +159,7 @@
 				B6A98ECB2F3CCB1A00C3AEC5 /* TranscriptionTextView.swift */,
 				B6A98ECD2F3CCBCE00C3AEC5 /* TranscriptionHeaderView.swift */,
 				B6A98ED12F3CD1F000C3AEC5 /* SummaryView.swift */,
+				B6A98EDE2F3D101B00C3AEC5 /* LaunchScreenView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -337,6 +340,7 @@
 				B6A98E842F3B49F500C3AEC5 /* Transcription.swift in Sources */,
 				B6A98EC62F3BD96900C3AEC5 /* OnboardingView.swift in Sources */,
 				B6A98ECA2F3CCAC900C3AEC5 /* TranscriptionInfoView.swift in Sources */,
+				B6A98EDF2F3D101B00C3AEC5 /* LaunchScreenView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -511,6 +515,7 @@
 				ENABLE_RESOURCE_ACCESS_USB = NO;
 				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = TranscribeApp;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -566,6 +571,7 @@
 				ENABLE_RESOURCE_ACCESS_USB = NO;
 				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = TranscribeApp;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;

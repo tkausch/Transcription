@@ -10,7 +10,7 @@ import Observation
 @Observable
 final class AppSettings {
 
-    static let shared = AppSettings()
+    nonisolated(unsafe) static let shared = AppSettings()
 
     private enum Keys {
         static let isModelDownloaded = "isModelDownloaded"

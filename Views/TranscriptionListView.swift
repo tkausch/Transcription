@@ -6,11 +6,15 @@
 
 import SwiftUI
 import SwiftData
+#if canImport(AppKit)
+import AppKit
+#endif
 
 struct TranscriptionListView: View {
 
     @Environment(\.modelContext) private var modelContext
     @Environment(AppSettings.self) private var appSettings
+    @Environment(\.openURL) private var openURL
     @State private var viewModel: TranscriptionListViewModel?
     @State private var navigationPath: [Transcription] = []
 
@@ -120,6 +124,29 @@ struct TranscriptionListView: View {
 #endif
     }
 
+    // MARK: - Actions
+
+    private func openVoiceMemos() {
+#if os(macOS)
+        NSWorkspace.shared.openApplication(
+            at: URL(fileURLWithPath: "/System/Applications/VoiceMemos.app"),
+            configuration: NSWorkspace.OpenConfiguration()
+        )
+#else
+        // voicememos:// opens the app; voicememos://new-recording starts a new recording directly
+        if let url = URL(string: "voicememos://new-recording") {
+            openURL(url) { success in
+                if !success {
+                    // Fallback: open the app root
+                    if let fallback = URL(string: "voicememos://") {
+                        openURL(fallback)
+                    }
+                }
+            }
+        }
+#endif
+    }
+
     // MARK: - Toolbar
 
     @ToolbarContentBuilder
@@ -140,7 +167,7 @@ struct TranscriptionListView: View {
         }
         ToolbarItem(placement: .primaryAction) {
             Button {
-                // TODO: start recording
+                openVoiceMemos()
             } label: {
                 Label("Record", systemImage: "mic")
             }
