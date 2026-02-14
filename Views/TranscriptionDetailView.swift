@@ -22,14 +22,13 @@ struct TranscriptionDetailView: View {
     var body: some View {
         ScrollView {
             VStack(alignment: .leading, spacing: 16) {
-                TranscriptionHeaderView(transcription: transcription)
-
-                Divider()
 
                 // MARK: Summary Section
-                SummaryView(transcription: transcription)
+                if !transcription.isTranscribing {
+                    SummaryView(transcription: transcription)
 
-                Divider()
+                    Divider()
+                }
 
                 // MARK: Transcription Section
                 TranscriptionTextView(transcription: transcription)
@@ -42,35 +41,40 @@ struct TranscriptionDetailView: View {
 
                 TranscriptionInfoView(transcription: transcription)
 
-                Divider()
-
                 // MARK: Audio Player Section
-                Text("Audio")
-                    .font(.headline)
+                if !transcription.isTranscribing {
+                    Divider()
 
-                if FileManager.default.fileExists(atPath: transcription.audioFileURL.path) {
-                    AudioPlayerView(vm: audioPlayer)
-                } else {
-                    Text("Audio file not available.")
-                        .font(.subheadline)
-                        .foregroundStyle(.secondary)
+                    Text("Audio")
+                        .font(.headline)
+
+                    if FileManager.default.fileExists(atPath: transcription.audioFileURL.path) {
+                        AudioPlayerView(vm: audioPlayer)
+                    } else {
+                        Text("Audio file not available.")
+                            .font(.subheadline)
+                            .foregroundStyle(.secondary)
+                    }
                 }
             }
             .padding()
         }
-        .navigationTitle(transcription.audioFileURL.lastPathComponent)
+        .navigationTitle(transcription.title ?? "Transcription")
 #if os(iOS)
         .navigationBarTitleDisplayMode(.inline)
 #endif
+        .id(transcription.id)
         .onAppear {
             loadAudio()
         }
         .onDisappear {
             audioPlayer.stop()
         }
-        .onChange(of: transcription.id) {
-            audioPlayer.stop()
-            loadAudio()
+        .onChange(of: transcription.isTranscribing) { _, isTranscribing in
+            // Reload audio once transcription finishes — file may not have existed on onAppear
+            if !isTranscribing {
+                loadAudio()
+            }
         }
     }
 }

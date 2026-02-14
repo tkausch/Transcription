@@ -8,9 +8,13 @@ import SwiftUI
 import SwiftData
 #if canImport(AppKit)
 import AppKit
+#elseif canImport(UIKit)
+import UIKit
 #endif
 
 struct TranscriptionListView: View {
+
+    @Binding var incomingURL: URL?
 
     @Environment(\.modelContext) private var modelContext
     @Environment(AppSettings.self) private var appSettings
@@ -86,6 +90,11 @@ struct TranscriptionListView: View {
         } message: {
             Text(vm.importError?.localizedDescription ?? "")
         }
+        .onChange(of: incomingURL) { _, url in
+            guard let url else { return }
+            vm.importAudioFile(url: url)
+            incomingURL = nil
+        }
     }
 
     // MARK: - Subviews
@@ -133,17 +142,8 @@ struct TranscriptionListView: View {
             configuration: NSWorkspace.OpenConfiguration()
         )
 #else
-        // voicememos:// opens the app; voicememos://new-recording starts a new recording directly
-        if let url = URL(string: "voicememos://new-recording") {
-            openURL(url) { success in
-                if !success {
-                    // Fallback: open the app root
-                    if let fallback = URL(string: "voicememos://") {
-                        openURL(fallback)
-                    }
-                }
-            }
-        }
+        guard let url = URL(string: "voicememos://") else { return }
+        UIApplication.shared.open(url)
 #endif
     }
 
@@ -176,7 +176,7 @@ struct TranscriptionListView: View {
 }
 
 #Preview {
-    TranscriptionListView()
+    TranscriptionListView(incomingURL: .constant(nil))
         .modelContainer(for: Transcription.self, inMemory: true)
         .environment(AppSettings.shared)
 }

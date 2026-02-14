@@ -48,18 +48,20 @@ final class TranscriptionListViewModel {
     // MARK: - Import
 
     func importAudioFile(url: URL) {
-        guard url.startAccessingSecurityScopedResource() else { return }
-        defer { url.stopAccessingSecurityScopedResource() }
+        let accessing = url.startAccessingSecurityScopedResource()
+        defer { if accessing { url.stopAccessingSecurityScopedResource() } }
 
         do {
-            let destination = try copyToAudioStore(url: url)
-            let transcription = Transcription(audioFileURL: destination)
+            let filename = try copyToAudioStore(url: url)
+            let transcription = Transcription(audioFilename: filename)
             transcription.title = url.deletingPathExtension().lastPathComponent
+            transcription.originalFilename = url.lastPathComponent
             try repository.save(transcription)
             loadTranscriptions()
             selectedTranscription = transcription
             Task { await startTranscription(for: transcription) }
         } catch {
+            print("[Import] Failed to import \(url.lastPathComponent): \(error)")
             importError = error
         }
     }
@@ -80,17 +82,20 @@ final class TranscriptionListViewModel {
         }
     }
 
-    private func copyToAudioStore(url: URL) throws -> URL {
-        let dir = URL.applicationSupportDirectory
-            .appending(component: "AudioFiles", directoryHint: .isDirectory)
-        try FileManager.default.createDirectory(at: dir, withIntermediateDirectories: true)
-
-        let destination = dir.appending(component: url.lastPathComponent, directoryHint: .notDirectory)
-        if FileManager.default.fileExists(atPath: destination.path) {
-            try FileManager.default.removeItem(at: destination)
+    private func copyToAudioStore(url: URL) throws -> String {
+        let fm = FileManager.default
+        guard let appSupport = fm.urls(for: .applicationSupportDirectory, in: .userDomainMask).first else {
+            throw CocoaError(.fileNoSuchFile)
         }
-        try FileManager.default.copyItem(at: url, to: destination)
-        return destination
+        let dir = appSupport.appending(component: "AudioFiles", directoryHint: .isDirectory)
+        try fm.createDirectory(at: dir, withIntermediateDirectories: true)
+
+        // UUID prefix avoids filename collisions; preserve original extension
+        let filename = "\(UUID().uuidString).\(url.pathExtension)"
+        let destination = dir.appending(component: filename, directoryHint: .notDirectory)
+        try fm.copyItem(at: url, to: destination)
+        print("[Import] Copied \(url.lastPathComponent) → \(destination.path)")
+        return filename
     }
 
     // MARK: - Delete

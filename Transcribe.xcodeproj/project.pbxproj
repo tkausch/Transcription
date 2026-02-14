@@ -26,6 +26,7 @@
 		B6A98ED02F3CD05B00C3AEC5 /* SummarizationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A98ECF2F3CD05B00C3AEC5 /* SummarizationService.swift */; };
 		B6A98ED22F3CD1F000C3AEC5 /* SummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A98ED12F3CD1F000C3AEC5 /* SummaryView.swift */; };
 		B6A98EDF2F3D101B00C3AEC5 /* LaunchScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A98EDE2F3D101B00C3AEC5 /* LaunchScreenView.swift */; };
+		B6A98EE42F3F7F4700C3AEC5 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A98EE32F3F7F4700C3AEC5 /* SettingsViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,11 +68,25 @@
 		B6A98ECF2F3CD05B00C3AEC5 /* SummarizationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummarizationService.swift; sourceTree = "<group>"; };
 		B6A98ED12F3CD1F000C3AEC5 /* SummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryView.swift; sourceTree = "<group>"; };
 		B6A98EDE2F3D101B00C3AEC5 /* LaunchScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenView.swift; sourceTree = "<group>"; };
+		B6A98EE32F3F7F4700C3AEC5 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		B6A98EE22F3D1AC300C3AEC5 /* Exceptions for "Transcribe" folder in "Transcribe" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = B6A98E512F3B3EDD00C3AEC5 /* Transcribe */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		B6A98E542F3B3EDD00C3AEC5 /* Transcribe */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				B6A98EE22F3D1AC300C3AEC5 /* Exceptions for "Transcribe" folder in "Transcribe" target */,
+			);
 			path = Transcribe;
 			sourceTree = "<group>";
 		};
@@ -160,6 +175,7 @@
 				B6A98ECD2F3CCBCE00C3AEC5 /* TranscriptionHeaderView.swift */,
 				B6A98ED12F3CD1F000C3AEC5 /* SummaryView.swift */,
 				B6A98EDE2F3D101B00C3AEC5 /* LaunchScreenView.swift */,
+				B6A98EE32F3F7F4700C3AEC5 /* SettingsViewModel.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -328,6 +344,7 @@
 				B6A98ECC2F3CCB1A00C3AEC5 /* TranscriptionTextView.swift in Sources */,
 				B6A98EC82F3CCA1E00C3AEC5 /* AudioPlayerView.swift in Sources */,
 				B6A98EB02F3B690A00C3AEC5 /* TranscriptionDetailView.swift in Sources */,
+				B6A98EE42F3F7F4700C3AEC5 /* SettingsViewModel.swift in Sources */,
 				B6A98EBB2F3B69C600C3AEC5 /* AppSettings.swift in Sources */,
 				B6A98EC42F3BCD9700C3AEC5 /* TranscriptionListViewModel.swift in Sources */,
 				B6A98ECE2F3CCBCE00C3AEC5 /* TranscriptionHeaderView.swift in Sources */,
@@ -498,7 +515,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_TEAM = Y7R5N52YDS;
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -515,6 +532,7 @@
 				ENABLE_RESOURCE_ACCESS_USB = NO;
 				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Transcribe/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = TranscribeApp;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
@@ -554,7 +572,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_TEAM = Y7R5N52YDS;
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -571,6 +589,7 @@
 				ENABLE_RESOURCE_ACCESS_USB = NO;
 				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Transcribe/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = TranscribeApp;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;

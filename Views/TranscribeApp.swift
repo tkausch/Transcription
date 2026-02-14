@@ -24,11 +24,12 @@ struct TranscribeApp: App {
 
     private let appSettings = AppSettings.shared
     @State private var isLaunching = true
+    @State private var incomingURL: URL? = nil
 
     var body: some Scene {
         WindowGroup {
             ZStack {
-                TranscriptionListView()
+                TranscriptionListView(incomingURL: $incomingURL)
                     .environment(appSettings)
                     .environment(TranscriptionService.shared)
                     .environment(SummarizationService.shared)
@@ -45,6 +46,9 @@ struct TranscribeApp: App {
                 withAnimation(.easeOut(duration: 0.4)) {
                     isLaunching = false
                 }
+            }
+            .onOpenURL { url in
+                incomingURL = url
             }
         }
         .modelContainer(sharedModelContainer)

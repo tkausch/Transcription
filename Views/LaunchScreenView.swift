@@ -17,10 +17,10 @@ struct LaunchScreenView: View {
             VStack(spacing: 16) {
                 Spacer()
 
-                Image(systemName: "waveform.circle.fill")
+                Image("AppIconImage")
                     .resizable()
-                    .frame(width: 100, height: 100)
-                    .foregroundStyle(.white)
+                    .frame(width: 120, height: 120)
+                    .clipShape(RoundedRectangle(cornerRadius: 26, style: .continuous))
 
                 Text("TranscribeApp")
                     .font(.largeTitle.bold())

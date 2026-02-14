@@ -12,9 +12,9 @@ struct TranscriptionInfoView: View {
     var body: some View {
         Grid(alignment: .leadingFirstTextBaseline, horizontalSpacing: 16, verticalSpacing: 8) {
             GridRow {
-                Text("Filename")
+                Text("File")
                     .foregroundStyle(.secondary)
-                Text(transcription.audioFileURL.lastPathComponent)
+                Text(transcription.originalFilename ?? "—")
                     .textSelection(.enabled)
             }
             GridRow {

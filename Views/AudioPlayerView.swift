@@ -6,6 +6,9 @@
 
 import SwiftUI
 import AVFoundation
+#if os(iOS)
+import AVKit
+#endif
 
 // MARK: - Audio Player ViewModel
 
@@ -21,7 +24,12 @@ final class AudioPlayerViewModel {
 
     var scrubTime: Double = 0
 
+    private var loadedURL: URL?
+
     func load(url: URL) {
+        guard url != loadedURL else { return }
+        loadedURL = url
+        stop()
         let item = AVPlayerItem(url: url)
         player = AVPlayer(playerItem: item)
 
@@ -62,10 +70,16 @@ final class AudioPlayerViewModel {
         guard let player else { return }
         if isPlaying {
             player.pause()
+            isPlaying = false
         } else {
+#if os(iOS)
+            let session = AVAudioSession.sharedInstance()
+            try? session.setCategory(.playback, mode: .default)
+            try? session.setActive(true)
+#endif
             player.play()
+            isPlaying = true
         }
-        isPlaying.toggle()
     }
 
     func seek(to time: Double) {
@@ -79,6 +93,7 @@ final class AudioPlayerViewModel {
             player?.removeTimeObserver(timeObserver)
         }
         player = nil
+        loadedURL = nil
         isPlaying = false
     }
 }

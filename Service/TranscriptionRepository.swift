@@ -72,8 +72,7 @@ final class TranscriptionRepository: TranscriptionRepositoryProtocol {
 
     #if DEBUG
     func makeSampleTestTranscription() -> Transcription {
-        let sampleURL = URL(fileURLWithPath: "welcome_recording.m4a")
-        let sample = Transcription(audioFileURL: sampleURL)
+        let sample = Transcription(audioFilename: "welcome_recording.m4a")
         sample.title = "Welcome"
         sample.text = "This is a sample transcription to help you get started. Open an audio file or tap the microphone button to record something new. Your transcriptions will appear here once processing is complete."
         sample.duration = 42.0
