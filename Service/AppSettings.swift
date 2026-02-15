@@ -16,6 +16,7 @@ final class AppSettings {
         static let isModelDownloaded = "isModelDownloaded"
         static let selectedModel = "selectedModel"
         static let hasSeenOnboarding = "hasSeenOnboarding"
+        static let forceDarkMode = "forceDarkMode"
     }
 
     static let defaultModel = "openai_whisper-large-v3"
@@ -32,9 +33,14 @@ final class AppSettings {
         didSet { UserDefaults.standard.set(hasSeenOnboarding, forKey: Keys.hasSeenOnboarding) }
     }
 
+    var forceDarkMode: Bool {
+        didSet { UserDefaults.standard.set(forceDarkMode, forKey: Keys.forceDarkMode) }
+    }
+
     init() {
         self.isModelDownloaded = UserDefaults.standard.bool(forKey: Keys.isModelDownloaded)
         self.selectedModel = UserDefaults.standard.string(forKey: Keys.selectedModel) ?? AppSettings.defaultModel
         self.hasSeenOnboarding = UserDefaults.standard.bool(forKey: Keys.hasSeenOnboarding)
+        self.forceDarkMode = UserDefaults.standard.bool(forKey: Keys.forceDarkMode)
     }
 }

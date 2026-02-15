@@ -49,7 +49,9 @@ struct TranscriptionRowView: View {
                 .foregroundStyle(.secondary)
             }
 
+            #if os(macOS)
             Spacer()
+            #endif
         }
 #if os(macOS)
         .padding(.vertical, 6)

@@ -29,6 +29,7 @@ struct SettingsView: View {
         Form {
             whisperModelsSection(vm: vm)
             downloadSection(vm: vm)
+            appearanceSection()
         }
 #if os(macOS)
         .formStyle(.grouped)
@@ -60,6 +61,17 @@ struct SettingsView: View {
             Text("Larger models are more accurate but require more memory and take longer to download. Models ending in \".en\" are optimized for English-only audio and are faster and more accurate when English is the only language spoken.")
         }
         .disabled(vm.isDownloading)
+    }
+
+    // MARK: - Appearance Section
+
+    private func appearanceSection() -> some View {
+        @Bindable var settings = appSettings
+        return Section {
+            Toggle("Dark Mode", isOn: $settings.forceDarkMode)
+        } header: {
+            Text("Appearance")
+        }
     }
 
     // MARK: - Download Section

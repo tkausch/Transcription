@@ -117,11 +117,11 @@ struct TranscriptionListView: View {
                     TranscriptionRowView(transcription: transcription)
                 }
                 .tag(transcription)
-                .listRowSeparator(.visible)
 #if os(macOS)
+                .listRowSeparator(.visible)
                 .alignmentGuide(.listRowSeparatorLeading) { d in d[.leading] + 50 }
 #else
-                .alignmentGuide(.listRowSeparatorLeading) { d in d[.leading] + 40 }
+                .listRowSeparator(.hidden)
 #endif
                 .contextMenu {
                     Button(role: .destructive) {

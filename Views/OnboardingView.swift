@@ -13,6 +13,8 @@ private struct OnboardingPage {
     let title: String
     let subtitle: String
     let gradient: [Color]
+    /// Optional override icon view rendered instead of the default SF Symbol.
+    var iconView: AnyView? = nil
 }
 
 #if os(macOS)
@@ -50,10 +52,26 @@ private let pages: [OnboardingPage] = {
     ]
 #if os(iOS)
     result.append(OnboardingPage(
-        systemImage: "shortcuts",
+        systemImage: "bolt.fill",
         title: "Use in Shortcuts",
         subtitle: "The \"Transcribe Audio\" action is available in the Shortcuts app — automate transcriptions, chain them with other actions, or trigger them with Siri.",
-        gradient: [.pink, .orange]
+        gradient: [Color(red: 0.45, green: 0.28, blue: 0.95), Color(red: 0.18, green: 0.55, blue: 0.98)],
+        iconView: AnyView(
+            ZStack {
+                RoundedRectangle(cornerRadius: 27)
+                    .fill(LinearGradient(
+                        colors: [Color(red: 0.45, green: 0.28, blue: 0.95), Color(red: 0.18, green: 0.55, blue: 0.98)],
+                        startPoint: .topLeading,
+                        endPoint: .bottomTrailing
+                    ))
+                    .frame(width: 120, height: 120)
+                Image(systemName: "bolt.fill")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 54, height: 54)
+                    .foregroundStyle(.white)
+            }
+        )
     ))
 #endif
     result.append(OnboardingPage(
@@ -76,18 +94,24 @@ private struct OnboardingPageView: View {
         VStack(spacing: 32) {
             Spacer()
 
-            Image(systemName: page.systemImage)
-                .resizable()
-                .scaledToFit()
-                .frame(width: 120, height: 120)
-                .foregroundStyle(
-                    LinearGradient(
-                        colors: page.gradient,
-                        startPoint: .topLeading,
-                        endPoint: .bottomTrailing
-                    )
-                )
-                .shadow(color: page.gradient.first?.opacity(0.4) ?? .clear, radius: 20, x: 0, y: 10)
+            Group {
+                if let iconView = page.iconView {
+                    iconView
+                } else {
+                    Image(systemName: page.systemImage)
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 120, height: 120)
+                        .foregroundStyle(
+                            LinearGradient(
+                                colors: page.gradient,
+                                startPoint: .topLeading,
+                                endPoint: .bottomTrailing
+                            )
+                        )
+                }
+            }
+            .shadow(color: page.gradient.first?.opacity(0.4) ?? .clear, radius: 20, x: 0, y: 10)
 
             VStack(spacing: 12) {
                 Text(page.title)

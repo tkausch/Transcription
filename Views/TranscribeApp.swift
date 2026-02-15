@@ -65,6 +65,7 @@ struct TranscribeApp: App {
                     .environment(TranscriptionService.shared)
                     .environment(SummarizationService.shared)
                     .modifier(OnboardingCoverModifier(appSettings: appSettings))
+                    .preferredColorScheme(appSettings.forceDarkMode ? .dark : nil)
 
                 if isLaunching {
                     LaunchScreenView()
