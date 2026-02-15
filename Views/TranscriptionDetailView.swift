@@ -70,6 +70,10 @@ struct TranscriptionDetailView: View {
         .onDisappear {
             audioPlayer.stop()
         }
+        .onChange(of: transcription.id) {
+            audioPlayer.stop()
+            loadAudio()
+        }
         .onChange(of: transcription.isTranscribing) { _, isTranscribing in
             // Reload audio once transcription finishes — file may not have existed on onAppear
             if !isTranscribing {

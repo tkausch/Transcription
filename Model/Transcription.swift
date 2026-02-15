@@ -7,11 +7,6 @@
 import Foundation
 import SwiftData
 
-enum TranscriptionSource: String, Codable {
-    case file
-    case recording
-}
-
 @Model
 final class Transcription {
     
@@ -26,7 +21,8 @@ final class Transcription {
     /// Stored filename only (e.g. "uuid.mp3") — resolved to a full URL at runtime via `audioFileURL`.
     var audioFilename: String
     var isTranscribing: Bool = false
-    var source: TranscriptionSource = TranscriptionSource.file
+    /// Progress from 0.0 to 1.0 while transcribing. Ephemeral — not persisted.
+    @Attribute(.ephemeral) var transcriptionProgress: Double = 0
     var summary: String?
 
     /// Resolves the stored filename to the current app sandbox path at runtime.
@@ -37,10 +33,9 @@ final class Transcription {
                          .appending(component: audioFilename, directoryHint: .notDirectory)
     }
 
-    init(audioFilename: String, source: TranscriptionSource = .file) {
+    init(audioFilename: String) {
         self.id = UUID()
         self.createdAt = Date()
         self.audioFilename = audioFilename
-        self.source = source
     }
 }

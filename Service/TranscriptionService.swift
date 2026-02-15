@@ -6,6 +6,7 @@
 
 import Foundation
 import Observation
+import AVFoundation
 import WhisperKit
 
 @Observable
@@ -57,6 +58,43 @@ final class TranscriptionService {
 
     /// Transcribes the audio file referenced by the transcription and updates its text, language, and duration.
     func transcribe(_ transcription: Transcription) async throws {
+        try await transcribeAudioAt(
+            path: transcription.audioFileURL.path,
+            onProgress: { [weak transcription] fraction in
+                transcription?.transcriptionProgress = fraction
+            },
+            onResult: { text, language, duration in
+                transcription.text = text
+                transcription.language = language
+                transcription.duration = duration
+            }
+        )
+    }
+
+#if os(iOS)
+    /// Transcribes an audio file for use from an AppIntent (not persisted to SwiftData).
+    func transcribeTransient(_ transcription: TransientTranscription) async throws {
+        try await transcribeAudioAt(
+            path: transcription.audioFileURL.path,
+            onProgress: { [weak transcription] fraction in
+                transcription?.transcriptionProgress = fraction
+            },
+            onResult: { text, language, duration in
+                transcription.text = text
+                transcription.language = language
+                transcription.duration = duration
+            }
+        )
+    }
+#endif
+
+    // MARK: - Core transcription engine
+
+    private func transcribeAudioAt(
+        path audioPath: String,
+        onProgress: @escaping @MainActor (Double) -> Void,
+        onResult: @MainActor @escaping (String, String?, TimeInterval) -> Void
+    ) async throws {
         // Ensure the pipeline is ready, loading it if needed
         if case .idle = state { await load() }
 
@@ -73,25 +111,43 @@ final class TranscriptionService {
             if case .transcribing = state { state = .ready }
         }
 
-        let audioPath = transcription.audioFileURL.path
+        // Get total audio duration for progress calculation
+        let audioDuration: Double = await Task.detached(priority: .userInitiated) {
+            let asset = AVURLAsset(url: URL(fileURLWithPath: audioPath))
+            let duration = try? await asset.load(.duration)
+            return duration.map { CMTimeGetSeconds($0) } ?? 0
+        }.value
+
+        onProgress(0)
+
+        // Set segment discovery callback to report progress per decoded segment
+        pipe.segmentDiscoveryCallback = { segments in
+            guard audioDuration > 0, let lastEnd = segments.last.map({ Double($0.end) }) else { return }
+            let fraction = min(lastEnd / audioDuration, 1.0)
+            Task { @MainActor in
+                onProgress(fraction)
+            }
+        }
+        defer { pipe.segmentDiscoveryCallback = nil }
+
         let results = await Task.detached(priority: .userInitiated) {
             await pipe.transcribe(audioPaths: [audioPath])
         }.value
 
         let transcriptionResults = results.compactMap { $0 }.flatMap { $0 }
 
-        transcription.text = transcriptionResults
+        let text = transcriptionResults
             .map(\.text)
             .joined(separator: " ")
             .trimmingCharacters(in: .whitespaces)
 
-        // Use language from the first result that has one
-        transcription.language = transcriptionResults.first?.language
+        let language = transcriptionResults.first?.language
 
-        // Sum up audio seconds across all segments for total duration
-        transcription.duration = transcriptionResults
+        let duration = transcriptionResults
             .map { $0.timings.inputAudioSeconds }
             .reduce(0, +)
+
+        onResult(text, language, duration)
     }
 
     // MARK: - Reset

@@ -58,8 +58,11 @@ final class TranscriptionListViewModel {
             transcription.originalFilename = url.lastPathComponent
             try repository.save(transcription)
             loadTranscriptions()
-            selectedTranscription = transcription
-            Task { await startTranscription(for: transcription) }
+            // Yield to let SwiftUI process the list update before setting selection
+            Task { @MainActor in
+                self.selectedTranscription = transcription
+                await startTranscription(for: transcription)
+            }
         } catch {
             print("[Import] Failed to import \(url.lastPathComponent): \(error)")
             importError = error

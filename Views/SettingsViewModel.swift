@@ -15,7 +15,7 @@ final class SettingsViewModel {
     static let availableModels: [String] = [
         "openai_whisper-large-v2",
         "openai_whisper-large-v3",
-        "openai_whisper-large-v3-turbo",
+
         "openai_whisper-base",
         "openai_whisper-base.en",
         "openai_whisper-small",

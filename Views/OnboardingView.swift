@@ -15,38 +15,55 @@ private struct OnboardingPage {
     let gradient: [Color]
 }
 
-private let pages: [OnboardingPage] = [
-    OnboardingPage(
-        systemImage: "waveform.circle.fill",
-        title: "Welcome to Transcribe",
-        subtitle: "Turn your audio into text — fast, private, and entirely on-device.",
-        gradient: [.blue, .cyan]
-    ),
-    OnboardingPage(
-        systemImage: "brain.head.profile",
-        title: "Accurate Transcriptions",
-        subtitle: "Powered by OpenAI Whisper, one of the most accurate speech recognition models available.",
-        gradient: [.purple, .indigo]
-    ),
-    OnboardingPage(
-        systemImage: "square.and.arrow.down.fill",
-        title: "Import Any Audio",
-        subtitle: "Supports MP3, M4A, WAV, and MP4 files from anywhere on your device.",
-        gradient: [.orange, .pink]
-    ),
-    OnboardingPage(
-        systemImage: "globe",
-        title: "Language Detection",
-        subtitle: "Automatically detects the spoken language in your recordings — no configuration needed.",
-        gradient: [.green, .teal]
-    ),
-    OnboardingPage(
+#if os(macOS)
+private let openWithSubtitle = "Right-click any audio file in Finder and choose \"Open With → TranscribeApp\" — or use Services → Transcribe Audio to send files directly."
+#else
+private let openWithSubtitle = "Open audio files from the Files app or any app that supports sharing — just tap Share and choose TranscribeApp."
+#endif
+
+private let pages: [OnboardingPage] = {
+    var result: [OnboardingPage] = [
+        OnboardingPage(
+            systemImage: "waveform.circle.fill",
+            title: "Welcome to Transcribe",
+            subtitle: "Turn your audio into text — fast, private, and entirely on-device.",
+            gradient: [.blue, .cyan]
+        ),
+        OnboardingPage(
+            systemImage: "brain.head.profile",
+            title: "Accurate Transcriptions",
+            subtitle: "Powered by OpenAI Whisper, one of the most accurate speech recognition models available.",
+            gradient: [.purple, .indigo]
+        ),
+        OnboardingPage(
+            systemImage: "square.and.arrow.down.fill",
+            title: "Import Any Audio",
+            subtitle: "Supports MP3, M4A, WAV, and MP4 files from anywhere on your device. Spoken language is detected automatically — no configuration needed.",
+            gradient: [.orange, .teal]
+        ),
+        OnboardingPage(
+            systemImage: "square.and.arrow.up.fill",
+            title: "Open With Transcribe",
+            subtitle: openWithSubtitle,
+            gradient: [.teal, .blue]
+        ),
+    ]
+#if os(iOS)
+    result.append(OnboardingPage(
+        systemImage: "shortcuts",
+        title: "Use in Shortcuts",
+        subtitle: "The \"Transcribe Audio\" action is available in the Shortcuts app — automate transcriptions, chain them with other actions, or trigger them with Siri.",
+        gradient: [.pink, .orange]
+    ))
+#endif
+    result.append(OnboardingPage(
         systemImage: "arrow.right.circle.fill",
         title: "Get Started",
         subtitle: "Download the Whisper model once to enable transcriptions. No data ever leaves your device.",
         gradient: [.blue, .purple]
-    ),
-]
+    ))
+    return result
+}()
 
 // MARK: - Page View
 
@@ -103,6 +120,7 @@ private struct OnboardingPageView: View {
                         .foregroundStyle(.white)
                         .clipShape(RoundedRectangle(cornerRadius: 16))
                 }
+                .buttonStyle(.plain)
                 .padding(.bottom, 8)
             } else {
                 // Spacer to keep layout consistent across pages

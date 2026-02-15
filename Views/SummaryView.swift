@@ -20,9 +20,26 @@ struct SummaryView: View {
                 Text("Summary")
                     .font(.headline)
                 Spacer()
-                if summarizationService.state != .unavailable,
-                   let text = transcription.text, !text.isEmpty,
-                   !transcription.isTranscribing {
+                if let summary = transcription.summary, !summary.isEmpty {
+                    // Copy button once summary exists
+                    Button {
+                        #if os(iOS)
+                        UIPasteboard.general.string = summary
+                        #else
+                        NSPasteboard.general.clearContents()
+                        NSPasteboard.general.setString(summary, forType: .string)
+                        #endif
+                    } label: {
+                        Label("Copy", systemImage: "doc.on.doc")
+                            .labelStyle(.iconOnly)
+                    }
+                    .buttonStyle(.plain)
+                    .foregroundStyle(.secondary)
+                    .help("Copy summary to clipboard")
+                } else if summarizationService.state != .unavailable,
+                          let text = transcription.text, !text.isEmpty,
+                          !transcription.isTranscribing {
+                    // Summarize button when no summary yet
                     Button {
                         Task {
                             isSummarizing = true

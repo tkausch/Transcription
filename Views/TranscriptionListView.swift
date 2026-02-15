@@ -57,6 +57,9 @@ struct TranscriptionListView: View {
             .navigationDestination(for: Transcription.self) { transcription in
                 TranscriptionDetailView(transcription: transcription)
             }
+#if os(macOS)
+            .navigationSplitViewColumnWidth(min: 300, ideal: 320)
+#endif
         } detail: {
             if let transcription = vm.selectedTranscription {
                 TranscriptionDetailView(transcription: transcription)
@@ -114,6 +117,12 @@ struct TranscriptionListView: View {
                     TranscriptionRowView(transcription: transcription)
                 }
                 .tag(transcription)
+                .listRowSeparator(.visible)
+#if os(macOS)
+                .alignmentGuide(.listRowSeparatorLeading) { d in d[.leading] + 50 }
+#else
+                .alignmentGuide(.listRowSeparatorLeading) { d in d[.leading] + 40 }
+#endif
                 .contextMenu {
                     Button(role: .destructive) {
                         vm.delete(transcription)
@@ -124,6 +133,9 @@ struct TranscriptionListView: View {
             }
             .onDelete(perform: vm.deleteTranscriptions)
         }
+#if os(macOS)
+        .listStyle(.inset)
+#endif
 #if os(macOS)
         .onDeleteCommand {
             if let selected = vm.selectedTranscription {
@@ -165,6 +177,7 @@ struct TranscriptionListView: View {
                 Label("Open Audio File", systemImage: "waveform.badge.plus")
             }
         }
+#if os(macOS)
         ToolbarItem(placement: .primaryAction) {
             Button {
                 openVoiceMemos()
@@ -172,6 +185,7 @@ struct TranscriptionListView: View {
                 Label("Record", systemImage: "mic")
             }
         }
+#endif
     }
 }
 

@@ -34,15 +34,13 @@ struct TranscriptionTextView: View {
             }
 
             if transcription.isTranscribing {
-                VStack(spacing: 12) {
-                    ProgressView()
-                        .controlSize(.large)
-                    Text("Transcribing…")
+                VStack(alignment: .leading, spacing: 8) {
+                    ProgressView(value: transcription.transcriptionProgress)
+                    Text("Transcribing… \(Int(transcription.transcriptionProgress * 100))%")
                         .font(.subheadline)
                         .foregroundStyle(.secondary)
                 }
-                .frame(maxWidth: .infinity)
-                .padding(.top, 40)
+                .padding(.top, 4)
             } else if let text = transcription.text, !text.isEmpty {
                 Text(text)
                     .font(.body)
