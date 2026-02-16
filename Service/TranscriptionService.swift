@@ -130,8 +130,11 @@ final class TranscriptionService {
         }
         defer { pipe.segmentDiscoveryCallback = nil }
 
+        // Disable firstTokenLogProbThreshold to suppress noisy fallback warnings
+        let decodeOptions = DecodingOptions(firstTokenLogProbThreshold: nil)
+
         let results = await Task.detached(priority: .userInitiated) {
-            await pipe.transcribe(audioPaths: [audioPath])
+            await pipe.transcribe(audioPaths: [audioPath], decodeOptions: decodeOptions)
         }.value
 
         let transcriptionResults = results.compactMap { $0 }.flatMap { $0 }
@@ -168,9 +171,9 @@ enum TranscriptionError: LocalizedError {
     var errorDescription: String? {
         switch self {
         case .notInitialized:
-            return "The transcription model has not been initialized. Please download the model in Settings."
+            return String(localized: "The transcription model has not been initialized. Please download the model in Settings.")
         case .notReady:
-            return "The transcription service is not ready. Please try again."
+            return String(localized: "The transcription service is not ready. Please try again.")
         }
     }
 }

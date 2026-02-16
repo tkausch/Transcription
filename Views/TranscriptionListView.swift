@@ -55,14 +55,18 @@ struct TranscriptionListView: View {
             }
             // Push detail on iPhone when selection is set programmatically
             .navigationDestination(for: Transcription.self) { transcription in
-                TranscriptionDetailView(transcription: transcription)
+                TranscriptionDetailView(transcription: transcription) {
+                    vm.retryTranscription(for: transcription)
+                }
             }
 #if os(macOS)
             .navigationSplitViewColumnWidth(min: 300, ideal: 320)
 #endif
         } detail: {
             if let transcription = vm.selectedTranscription {
-                TranscriptionDetailView(transcription: transcription)
+                TranscriptionDetailView(transcription: transcription) {
+                    vm.retryTranscription(for: transcription)
+                }
             } else {
                 ContentUnavailableView {
                     Label("No Selection", systemImage: "waveform")

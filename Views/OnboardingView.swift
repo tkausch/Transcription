@@ -10,17 +10,17 @@ import SwiftUI
 
 private struct OnboardingPage {
     let systemImage: String
-    let title: String
-    let subtitle: String
+    let title: LocalizedStringKey
+    let subtitle: LocalizedStringKey
     let gradient: [Color]
     /// Optional override icon view rendered instead of the default SF Symbol.
     var iconView: AnyView? = nil
 }
 
 #if os(macOS)
-private let openWithSubtitle = "Right-click any audio file in Finder and choose \"Open With → TranscribeApp\" — or use Services → Transcribe Audio to send files directly."
+private let openWithSubtitle: LocalizedStringKey = "Right-click any audio file in Finder and choose \"Open With → TranscribeApp\" — or use Services → Transcribe Audio to send files directly."
 #else
-private let openWithSubtitle = "Open audio files from the Files app or any app that supports sharing — just tap Share and choose TranscribeApp."
+private let openWithSubtitle: LocalizedStringKey = "Open audio files from the Files app or any app that supports sharing — just tap Share and choose TranscribeApp."
 #endif
 
 private let pages: [OnboardingPage] = {

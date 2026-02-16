@@ -65,13 +65,13 @@ struct TranscribeApp: App {
                     .environment(TranscriptionService.shared)
                     .environment(SummarizationService.shared)
                     .modifier(OnboardingCoverModifier(appSettings: appSettings))
-                    .preferredColorScheme(appSettings.forceDarkMode ? .dark : nil)
 
                 if isLaunching {
                     LaunchScreenView()
                         .transition(.opacity)
                 }
             }
+            .preferredColorScheme(appSettings.forceDarkMode ? .dark : nil)
             .task {
                 // Brief delay to show launch screen, then fade out
                 try? await Task.sleep(for: .seconds(1.5))

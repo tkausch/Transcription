@@ -68,9 +68,11 @@ struct SettingsView: View {
     private func appearanceSection() -> some View {
         @Bindable var settings = appSettings
         return Section {
-            Toggle("Dark Mode", isOn: $settings.forceDarkMode)
+            Toggle("Force Dark Mode", isOn: $settings.forceDarkMode)
         } header: {
             Text("Appearance")
+        } footer: {
+            Text("Override the system appearance and always use dark mode.")
         }
     }
 

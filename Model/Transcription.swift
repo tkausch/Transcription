@@ -23,6 +23,8 @@ final class Transcription {
     var isTranscribing: Bool = false
     /// Progress from 0.0 to 1.0 while transcribing. Ephemeral — not persisted.
     @Attribute(.ephemeral) var transcriptionProgress: Double = 0
+    /// Error message from the last failed transcription attempt. Ephemeral — not persisted.
+    @Attribute(.ephemeral) var transcriptionError: String? = nil
     var summary: String?
 
     /// Resolves the stored filename to the current app sandbox path at runtime.

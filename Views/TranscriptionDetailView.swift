@@ -10,6 +10,7 @@ import SwiftUI
 
 struct TranscriptionDetailView: View {
     @Bindable var transcription: Transcription
+    var onRetry: (() -> Void)? = nil
 
     @State private var audioPlayer = AudioPlayerViewModel()
 
@@ -31,7 +32,7 @@ struct TranscriptionDetailView: View {
                 }
 
                 // MARK: Transcription Section
-                TranscriptionTextView(transcription: transcription)
+                TranscriptionTextView(transcription: transcription, onRetry: onRetry)
 
                 Divider()
 

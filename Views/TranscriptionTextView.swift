@@ -8,6 +8,7 @@ import SwiftUI
 
 struct TranscriptionTextView: View {
     @Bindable var transcription: Transcription
+    var onRetry: (() -> Void)? = nil
 
     var body: some View {
         VStack(alignment: .leading, spacing: 8) {
@@ -45,6 +46,19 @@ struct TranscriptionTextView: View {
                 Text(text)
                     .font(.body)
                     .textSelection(.enabled)
+                    .fixedSize(horizontal: false, vertical: true)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+            } else if let errorMessage = transcription.transcriptionError {
+                ContentUnavailableView {
+                    Label("Transcription Failed", systemImage: "exclamationmark.triangle")
+                } description: {
+                    Text(errorMessage)
+                } actions: {
+                    Button("Retry") {
+                        onRetry?()
+                    }
+                    .buttonStyle(.borderedProminent)
+                }
             } else {
                 ContentUnavailableView {
                     Label("No Transcription", systemImage: "waveform")

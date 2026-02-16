@@ -71,6 +71,7 @@ final class TranscriptionListViewModel {
 
     private func startTranscription(for transcription: Transcription) async {
         transcription.isTranscribing = true
+        transcription.transcriptionError = nil
         try? repository.update(transcription)
 
         do {
@@ -80,8 +81,14 @@ final class TranscriptionListViewModel {
             loadTranscriptions()
         } catch {
             transcription.isTranscribing = false
+            transcription.transcriptionError = error.localizedDescription
             try? repository.update(transcription)
-            importError = error
+        }
+    }
+
+    func retryTranscription(for transcription: Transcription) {
+        Task { @MainActor in
+            await startTranscription(for: transcription)
         }
     }
 

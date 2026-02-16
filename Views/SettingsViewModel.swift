@@ -55,7 +55,7 @@ final class SettingsViewModel {
     func downloadModel() async {
         downloadState = .downloading
         downloadProgress = 0
-        downloadMessage = "Preparing download…"
+        downloadMessage = String(localized: "Preparing download…")
         errorMessage = nil
 
         deleteModelFiles(for: appSettings.selectedModel)
@@ -69,13 +69,13 @@ final class SettingsViewModel {
                         let completed = progress.completedUnitCount
                         let total = progress.totalUnitCount
                         self?.downloadMessage = total > 0
-                            ? "Downloading model files (\(completed) of \(total))…"
-                            : "Downloading…"
+                            ? String(localized: "Downloading model files (\(completed) of \(total))…")
+                            : String(localized: "Downloading…")
                     }
                 }
             )
             downloadProgress = 1
-            downloadMessage = "Model ready."
+            downloadMessage = String(localized: "Model ready.")
             downloadState = .done
             appSettings.isModelDownloaded = true
         } catch {
