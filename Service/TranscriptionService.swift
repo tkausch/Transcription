@@ -130,8 +130,10 @@ final class TranscriptionService {
         }
         defer { pipe.segmentDiscoveryCallback = nil }
 
-        // Disable firstTokenLogProbThreshold to suppress noisy fallback warnings
-        let decodeOptions = DecodingOptions(firstTokenLogProbThreshold: nil)
+        // Disable fallback thresholds to suppress noisy fallback warnings
+        let decodeOptions = DecodingOptions(
+            compressionRatioThreshold: nil, firstTokenLogProbThreshold: nil
+        )
 
         let results = await Task.detached(priority: .userInitiated) {
             await pipe.transcribe(audioPaths: [audioPath], decodeOptions: decodeOptions)

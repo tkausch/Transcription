@@ -78,6 +78,8 @@ final class SettingsViewModel {
             downloadMessage = String(localized: "Model ready.")
             downloadState = .done
             appSettings.isModelDownloaded = true
+            // Pre-warm the pipeline so the first transcription starts immediately
+            await TranscriptionService.shared.load()
         } catch {
             downloadState = .failed
             errorMessage = error.localizedDescription
@@ -88,6 +90,7 @@ final class SettingsViewModel {
     func onModelChanged() {
         appSettings.isModelDownloaded = false
         downloadState = .idle
+        TranscriptionService.shared.unload()
     }
 
     // MARK: - Private
