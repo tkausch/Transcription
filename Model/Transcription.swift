@@ -29,10 +29,10 @@ final class Transcription {
 
     /// Resolves the stored filename to the current app sandbox path at runtime.
     var audioFileURL: URL {
-        let fm = FileManager.default
-        let appSupport = fm.urls(for: .applicationSupportDirectory, in: .userDomainMask).first!
-        return appSupport.appending(component: "AudioFiles", directoryHint: .isDirectory)
-                         .appending(component: audioFilename, directoryHint: .notDirectory)
+        (try? AudioFileStore.url(for: audioFilename))
+            ?? FileManager.default
+                .urls(for: .applicationSupportDirectory, in: .userDomainMask)[0]
+                .appending(component: "AudioFiles/\(audioFilename)")
     }
 
     init(audioFilename: String) {

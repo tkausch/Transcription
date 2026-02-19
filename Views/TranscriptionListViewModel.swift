@@ -52,7 +52,7 @@ final class TranscriptionListViewModel {
         defer { if accessing { url.stopAccessingSecurityScopedResource() } }
 
         do {
-            let filename = try copyToAudioStore(url: url)
+            let filename = try AudioFileStore.copy(from: url)
             let transcription = Transcription(audioFilename: filename)
             transcription.title = url.deletingPathExtension().lastPathComponent
             transcription.originalFilename = url.lastPathComponent
@@ -92,32 +92,19 @@ final class TranscriptionListViewModel {
         }
     }
 
-    private func copyToAudioStore(url: URL) throws -> String {
-        let fm = FileManager.default
-        guard let appSupport = fm.urls(for: .applicationSupportDirectory, in: .userDomainMask).first else {
-            throw CocoaError(.fileNoSuchFile)
-        }
-        let dir = appSupport.appending(component: "AudioFiles", directoryHint: .isDirectory)
-        try fm.createDirectory(at: dir, withIntermediateDirectories: true)
-
-        // UUID prefix avoids filename collisions; preserve original extension
-        let filename = "\(UUID().uuidString).\(url.pathExtension)"
-        let destination = dir.appending(component: filename, directoryHint: .notDirectory)
-        try fm.copyItem(at: url, to: destination)
-        print("[Import] Copied \(url.lastPathComponent) → \(destination.path)")
-        return filename
-    }
-
     // MARK: - Delete
 
     func delete(_ transcription: Transcription) {
+        try? AudioFileStore.delete(filename: transcription.audioFilename)
         try? repository.delete(transcription)
         loadTranscriptions()
     }
 
     func deleteTranscriptions(offsets: IndexSet) {
         for index in offsets {
-            try? repository.delete(transcriptions[index])
+            let t = transcriptions[index]
+            try? AudioFileStore.delete(filename: t.audioFilename)
+            try? repository.delete(t)
         }
         loadTranscriptions()
     }

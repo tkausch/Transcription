@@ -30,6 +30,7 @@ final class SettingsViewModel {
     }
 
     private let appSettings: AppSettings
+    private let transcriptionService: TranscriptionService
 
     private(set) var downloadState: DownloadState = .idle
     private(set) var downloadProgress: Double = 0
@@ -42,8 +43,10 @@ final class SettingsViewModel {
         model.replacingOccurrences(of: "openai_whisper-", with: "")
     }
 
-    init(appSettings: AppSettings = .shared) {
+    @MainActor
+    init(appSettings: AppSettings = .shared, transcriptionService: TranscriptionService = .shared) {
         self.appSettings = appSettings
+        self.transcriptionService = transcriptionService
         // Ensure selected model is valid
         if !Self.availableModels.contains(appSettings.selectedModel) {
             appSettings.selectedModel = AppSettings.defaultModel
@@ -79,7 +82,7 @@ final class SettingsViewModel {
             downloadState = .done
             appSettings.isModelDownloaded = true
             // Pre-warm the pipeline so the first transcription starts immediately
-            await TranscriptionService.shared.load()
+            await transcriptionService.load()
         } catch {
             downloadState = .failed
             errorMessage = error.localizedDescription
@@ -90,7 +93,7 @@ final class SettingsViewModel {
     func onModelChanged() {
         appSettings.isModelDownloaded = false
         downloadState = .idle
-        TranscriptionService.shared.unload()
+        transcriptionService.unload()
     }
 
     // MARK: - Private
