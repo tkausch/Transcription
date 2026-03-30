@@ -35,6 +35,17 @@ struct SettingsView: View {
         .formStyle(.grouped)
 #endif
         .navigationTitle("Settings")
+#if os(iOS)
+        .alert("Download Model", isPresented: Bindable(vm).showDownloadConfirmation) {
+            Button("Cancel", role: .cancel) { }
+            Button("Download") {
+                Task { await vm.downloadModel() }
+            }
+        } message: {
+            let modelSize = SettingsViewModel.modelSizes[appSettings.selectedModel] ?? "unknown size"
+            Text("This will download \(modelSize) of data. Make sure you have a stable internet connection and sufficient storage space.")
+        }
+#endif
     }
 
     // MARK: - Whisper Models Section
@@ -48,7 +59,9 @@ struct SettingsView: View {
         return Section {
             Picker("Model", selection: $settings.selectedModel) {
                 ForEach(SettingsViewModel.availableModels, id: \.self) { model in
-                    Text(SettingsViewModel.displayName(for: model)).tag(model)
+                    let name = SettingsViewModel.displayName(for: model)
+                    let size = SettingsViewModel.modelSizes[model]
+                    Text(size.map { "\(name) · \($0)" } ?? name).tag(model)
                 }
             }
             .pickerStyle(.menu)
@@ -124,18 +137,18 @@ struct SettingsView: View {
             switch vm.downloadState {
             case .idle:
                 Button(appSettings.isModelDownloaded ? "Re-download" : "Download") {
-                    Task { await vm.downloadModel() }
+                    vm.requestDownload()
                 }
             case .downloading:
                 EmptyView()
             case .done:
                 Button("Re-download") {
-                    Task { await vm.downloadModel() }
+                    vm.requestDownload()
                 }
                 .foregroundStyle(.secondary)
             case .failed:
                 Button("Retry") {
-                    Task { await vm.downloadModel() }
+                    vm.requestDownload()
                 }
             }
         } header: {

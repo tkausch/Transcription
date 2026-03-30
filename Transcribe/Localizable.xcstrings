@@ -1,807 +1,3371 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
-    "Accurate Transcriptions" : {
-      "localizations" : {
-        "da" : { "stringUnit" : { "state" : "translated", "value" : "Præcise transskriptioner" } },
-        "de" : { "stringUnit" : { "state" : "translated", "value" : "Genaue Transkriptionen" } },
-        "es" : { "stringUnit" : { "state" : "translated", "value" : "Transcripciones precisas" } },
-        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Transcriptions précises" } },
-        "is" : { "stringUnit" : { "state" : "translated", "value" : "Nákvæmar umritanir" } },
-        "nb" : { "stringUnit" : { "state" : "translated", "value" : "Nøyaktige transkripsjoner" } },
-        "sv" : { "stringUnit" : { "state" : "translated", "value" : "Noggranna transkriptioner" } }
-      }
-    },
     "—" : {
       "localizations" : {
-        "da" : { "stringUnit" : { "state" : "translated", "value" : "—" } },
-        "de" : { "stringUnit" : { "state" : "translated", "value" : "—" } },
-        "es" : { "stringUnit" : { "state" : "translated", "value" : "—" } },
-        "fr" : { "stringUnit" : { "state" : "translated", "value" : "—" } },
-        "is" : { "stringUnit" : { "state" : "translated", "value" : "—" } },
-        "nb" : { "stringUnit" : { "state" : "translated", "value" : "—" } },
-        "sv" : { "stringUnit" : { "state" : "translated", "value" : "—" } }
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "—"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "—"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "—"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "—"
+          }
+        },
+        "is" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "—"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "—"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "—"
+          }
+        }
       }
     },
     "%lld%%" : {
       "localizations" : {
-        "da" : { "stringUnit" : { "state" : "translated", "value" : "%lld %%" } },
-        "de" : { "stringUnit" : { "state" : "translated", "value" : "%lld %%" } },
-        "es" : { "stringUnit" : { "state" : "translated", "value" : "%lld %%" } },
-        "fr" : { "stringUnit" : { "state" : "translated", "value" : "%lld %%" } },
-        "is" : { "stringUnit" : { "state" : "translated", "value" : "%lld %%" } },
-        "nb" : { "stringUnit" : { "state" : "translated", "value" : "%lld %%" } },
-        "sv" : { "stringUnit" : { "state" : "translated", "value" : "%lld %%" } }
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld %%"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld %%"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld %%"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld %%"
+          }
+        },
+        "is" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld %%"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld %%"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld %%"
+          }
+        }
       }
     },
     "© 2026 Thomas Kausch. All rights reserved." : {
       "localizations" : {
-        "da" : { "stringUnit" : { "state" : "translated", "value" : "© 2026 Thomas Kausch. Alle rettigheder forbeholdes." } },
-        "de" : { "stringUnit" : { "state" : "translated", "value" : "© 2026 Thomas Kausch. Alle Rechte vorbehalten." } },
-        "es" : { "stringUnit" : { "state" : "translated", "value" : "© 2026 Thomas Kausch. Todos los derechos reservados." } },
-        "fr" : { "stringUnit" : { "state" : "translated", "value" : "© 2026 Thomas Kausch. Tous droits réservés." } },
-        "is" : { "stringUnit" : { "state" : "translated", "value" : "© 2026 Thomas Kausch. Allur réttur áskilinn." } },
-        "nb" : { "stringUnit" : { "state" : "translated", "value" : "© 2026 Thomas Kausch. Alle rettigheter forbeholdt." } },
-        "sv" : { "stringUnit" : { "state" : "translated", "value" : "© 2026 Thomas Kausch. Alla rättigheter förbehållna." } }
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "© 2026 Thomas Kausch. Alle rettigheder forbeholdes."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "© 2026 Thomas Kausch. Alle Rechte vorbehalten."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "© 2026 Thomas Kausch. Todos los derechos reservados."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "© 2026 Thomas Kausch. Tous droits réservés."
+          }
+        },
+        "is" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "© 2026 Thomas Kausch. Allur réttur áskilinn."
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "© 2026 Thomas Kausch. Alle rettigheter forbeholdt."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "© 2026 Thomas Kausch. Alla rättigheter förbehållna."
+          }
+        }
+      }
+    },
+    "Accurate Transcriptions" : {
+      "localizations" : {
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Præcise transskriptioner"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Genaue Transkriptionen"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Transcripciones precisas"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Transcriptions précises"
+          }
+        },
+        "is" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nákvæmar umritanir"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nøyaktige transkripsjoner"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Noggranna transkriptioner"
+          }
+        }
       }
     },
     "Appearance" : {
       "localizations" : {
-        "da" : { "stringUnit" : { "state" : "translated", "value" : "Udseende" } },
-        "de" : { "stringUnit" : { "state" : "translated", "value" : "Darstellung" } },
-        "es" : { "stringUnit" : { "state" : "translated", "value" : "Apariencia" } },
-        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Apparence" } },
-        "is" : { "stringUnit" : { "state" : "translated", "value" : "Útlit" } },
-        "nb" : { "stringUnit" : { "state" : "translated", "value" : "Utseende" } },
-        "sv" : { "stringUnit" : { "state" : "translated", "value" : "Utseende" } }
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Udseende"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Darstellung"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apariencia"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apparence"
+          }
+        },
+        "is" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Útlit"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Utseende"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Utseende"
+          }
+        }
       }
     },
     "Apple Intelligence is not available on this device." : {
       "localizations" : {
-        "da" : { "stringUnit" : { "state" : "translated", "value" : "Apple Intelligence er ikke tilgængelig på denne enhed." } },
-        "de" : { "stringUnit" : { "state" : "translated", "value" : "Apple Intelligence ist auf diesem Gerät nicht verfügbar." } },
-        "es" : { "stringUnit" : { "state" : "translated", "value" : "Apple Intelligence no está disponible en este dispositivo." } },
-        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Apple Intelligence n'est pas disponible sur cet appareil." } },
-        "is" : { "stringUnit" : { "state" : "translated", "value" : "Apple Intelligence er ekki tiltækt í þessum tæki." } },
-        "nb" : { "stringUnit" : { "state" : "translated", "value" : "Apple Intelligence er ikke tilgjengelig på denne enheten." } },
-        "sv" : { "stringUnit" : { "state" : "translated", "value" : "Apple Intelligence är inte tillgängligt på den här enheten." } }
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apple Intelligence er ikke tilgængelig på denne enhed."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apple Intelligence ist auf diesem Gerät nicht verfügbar."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apple Intelligence no está disponible en este dispositivo."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apple Intelligence n'est pas disponible sur cet appareil."
+          }
+        },
+        "is" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apple Intelligence er ekki tiltækt í þessum tæki."
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apple Intelligence er ikke tilgjengelig på denne enheten."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apple Intelligence är inte tillgängligt på den här enheten."
+          }
+        }
       }
     },
     "Audio" : {
       "localizations" : {
-        "da" : { "stringUnit" : { "state" : "translated", "value" : "Lyd" } },
-        "de" : { "stringUnit" : { "state" : "translated", "value" : "Audio" } },
-        "es" : { "stringUnit" : { "state" : "translated", "value" : "Audio" } },
-        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Audio" } },
-        "is" : { "stringUnit" : { "state" : "translated", "value" : "Hljóð" } },
-        "nb" : { "stringUnit" : { "state" : "translated", "value" : "Lyd" } },
-        "sv" : { "stringUnit" : { "state" : "translated", "value" : "Ljud" } }
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lyd"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Audio"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Audio"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Audio"
+          }
+        },
+        "is" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hljóð"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lyd"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ljud"
+          }
+        }
       }
     },
     "Audio File" : {
       "localizations" : {
-        "da" : { "stringUnit" : { "state" : "translated", "value" : "Lydfil" } },
-        "de" : { "stringUnit" : { "state" : "translated", "value" : "Audiodatei" } },
-        "es" : { "stringUnit" : { "state" : "translated", "value" : "Archivo de audio" } },
-        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Fichier audio" } },
-        "is" : { "stringUnit" : { "state" : "translated", "value" : "Hljóðskrá" } },
-        "nb" : { "stringUnit" : { "state" : "translated", "value" : "Lydfil" } },
-        "sv" : { "stringUnit" : { "state" : "translated", "value" : "Ljudfil" } }
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lydfil"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Audiodatei"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Archivo de audio"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fichier audio"
+          }
+        },
+        "is" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hljóðskrá"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lydfil"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ljudfil"
+          }
+        }
       }
     },
     "Audio file not available." : {
       "localizations" : {
-        "da" : { "stringUnit" : { "state" : "translated", "value" : "Lydfil ikke tilgængelig." } },
-        "de" : { "stringUnit" : { "state" : "translated", "value" : "Audiodatei nicht verfügbar." } },
-        "es" : { "stringUnit" : { "state" : "translated", "value" : "Archivo de audio no disponible." } },
-        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Fichier audio non disponible." } },
-        "is" : { "stringUnit" : { "state" : "translated", "value" : "Hljóðskrá ekki tiltæk." } },
-        "nb" : { "stringUnit" : { "state" : "translated", "value" : "Lydfil ikke tilgjengelig." } },
-        "sv" : { "stringUnit" : { "state" : "translated", "value" : "Ljudfilen är inte tillgänglig." } }
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lydfil ikke tilgængelig."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Audiodatei nicht verfügbar."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Archivo de audio no disponible."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fichier audio non disponible."
+          }
+        },
+        "is" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hljóðskrá ekki tiltæk."
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lydfil ikke tilgjengelig."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ljudfilen är inte tillgänglig."
+          }
+        }
       }
+    },
+    "Cancel" : {
+
     },
     "Copy" : {
       "localizations" : {
-        "da" : { "stringUnit" : { "state" : "translated", "value" : "Kopiér" } },
-        "de" : { "stringUnit" : { "state" : "translated", "value" : "Kopieren" } },
-        "es" : { "stringUnit" : { "state" : "translated", "value" : "Copiar" } },
-        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Copier" } },
-        "is" : { "stringUnit" : { "state" : "translated", "value" : "Afrita" } },
-        "nb" : { "stringUnit" : { "state" : "translated", "value" : "Kopier" } },
-        "sv" : { "stringUnit" : { "state" : "translated", "value" : "Kopiera" } }
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kopiér"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kopieren"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Copiar"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Copier"
+          }
+        },
+        "is" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Afrita"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kopier"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kopiera"
+          }
+        }
       }
     },
     "Copy summary to clipboard" : {
       "localizations" : {
-        "da" : { "stringUnit" : { "state" : "translated", "value" : "Kopiér resumé til udklipsholder" } },
-        "de" : { "stringUnit" : { "state" : "translated", "value" : "Zusammenfassung in die Zwischenablage kopieren" } },
-        "es" : { "stringUnit" : { "state" : "translated", "value" : "Copiar resumen al portapapeles" } },
-        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Copier le résumé dans le presse-papiers" } },
-        "is" : { "stringUnit" : { "state" : "translated", "value" : "Afrita samantekt á klippiborð" } },
-        "nb" : { "stringUnit" : { "state" : "translated", "value" : "Kopier sammendrag til utklippstavle" } },
-        "sv" : { "stringUnit" : { "state" : "translated", "value" : "Kopiera sammanfattning till urklipp" } }
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kopiér resumé til udklipsholder"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zusammenfassung in die Zwischenablage kopieren"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Copiar resumen al portapapeles"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Copier le résumé dans le presse-papiers"
+          }
+        },
+        "is" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Afrita samantekt á klippiborð"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kopier sammendrag til utklippstavle"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kopiera sammanfattning till urklipp"
+          }
+        }
       }
     },
     "Copy transcript to clipboard" : {
       "localizations" : {
-        "da" : { "stringUnit" : { "state" : "translated", "value" : "Kopiér transskription til udklipsholder" } },
-        "de" : { "stringUnit" : { "state" : "translated", "value" : "Transkription in die Zwischenablage kopieren" } },
-        "es" : { "stringUnit" : { "state" : "translated", "value" : "Copiar transcripción al portapapeles" } },
-        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Copier la transcription dans le presse-papiers" } },
-        "is" : { "stringUnit" : { "state" : "translated", "value" : "Afrita umritun á klippiborð" } },
-        "nb" : { "stringUnit" : { "state" : "translated", "value" : "Kopier transkripsjon til utklippstavle" } },
-        "sv" : { "stringUnit" : { "state" : "translated", "value" : "Kopiera transkription till urklipp" } }
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kopiér transskription til udklipsholder"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Transkription in die Zwischenablage kopieren"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Copiar transcripción al portapapeles"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Copier la transcription dans le presse-papiers"
+          }
+        },
+        "is" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Afrita umritun á klippiborð"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kopier transkripsjon til utklippstavle"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kopiera transkription till urklipp"
+          }
+        }
       }
     },
     "Created" : {
       "localizations" : {
-        "da" : { "stringUnit" : { "state" : "translated", "value" : "Oprettet" } },
-        "de" : { "stringUnit" : { "state" : "translated", "value" : "Erstellt" } },
-        "es" : { "stringUnit" : { "state" : "translated", "value" : "Creado" } },
-        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Créé" } },
-        "is" : { "stringUnit" : { "state" : "translated", "value" : "Búið til" } },
-        "nb" : { "stringUnit" : { "state" : "translated", "value" : "Opprettet" } },
-        "sv" : { "stringUnit" : { "state" : "translated", "value" : "Skapad" } }
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Oprettet"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Erstellt"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Creado"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Créé"
+          }
+        },
+        "is" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Búið til"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Opprettet"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Skapad"
+          }
+        }
       }
     },
     "Delete" : {
       "localizations" : {
-        "da" : { "stringUnit" : { "state" : "translated", "value" : "Slet" } },
-        "de" : { "stringUnit" : { "state" : "translated", "value" : "Löschen" } },
-        "es" : { "stringUnit" : { "state" : "translated", "value" : "Eliminar" } },
-        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Supprimer" } },
-        "is" : { "stringUnit" : { "state" : "translated", "value" : "Eyða" } },
-        "nb" : { "stringUnit" : { "state" : "translated", "value" : "Slett" } },
-        "sv" : { "stringUnit" : { "state" : "translated", "value" : "Radera" } }
-      }
-    },
-    "Download the Whisper model once to enable transcriptions. No data ever leaves your device." : {
-      "localizations" : {
-        "da" : { "stringUnit" : { "state" : "translated", "value" : "Download Whisper-modellen én gang for at aktivere transskriptioner. Ingen data forlader nogensinde din enhed." } },
-        "de" : { "stringUnit" : { "state" : "translated", "value" : "Lade das Whisper-Modell einmalig herunter, um Transkriptionen zu ermöglichen. Es verlassen keine Daten dein Gerät." } },
-        "es" : { "stringUnit" : { "state" : "translated", "value" : "Descarga el modelo Whisper una vez para habilitar las transcripciones. Ningún dato sale de tu dispositivo." } },
-        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Téléchargez le modèle Whisper une seule fois pour activer les transcriptions. Aucune donnée ne quitte votre appareil." } },
-        "is" : { "stringUnit" : { "state" : "translated", "value" : "Sæktu Whisper-líkanið einu sinni til að virkja umritanir. Engin gögn fara af tækinu þínu." } },
-        "nb" : { "stringUnit" : { "state" : "translated", "value" : "Last ned Whisper-modellen én gang for å aktivere transkripsjoner. Ingen data forlater enheten din." } },
-        "sv" : { "stringUnit" : { "state" : "translated", "value" : "Ladda ner Whisper-modellen en gång för att aktivera transkriptioner. Ingen data lämnar någonsin din enhet." } }
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Slet"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Löschen"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Eliminar"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Supprimer"
+          }
+        },
+        "is" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Eyða"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Slett"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Radera"
+          }
+        }
       }
     },
     "Download" : {
       "localizations" : {
-        "da" : { "stringUnit" : { "state" : "translated", "value" : "Download" } },
-        "de" : { "stringUnit" : { "state" : "translated", "value" : "Laden" } },
-        "es" : { "stringUnit" : { "state" : "translated", "value" : "Descargar" } },
-        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Télécharger" } },
-        "is" : { "stringUnit" : { "state" : "translated", "value" : "Sækja" } },
-        "nb" : { "stringUnit" : { "state" : "translated", "value" : "Last ned" } },
-        "sv" : { "stringUnit" : { "state" : "translated", "value" : "Ladda ner" } }
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Download"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Laden"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Descargar"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Télécharger"
+          }
+        },
+        "is" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sækja"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Last ned"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ladda ner"
+          }
+        }
       }
     },
     "Download failed" : {
       "localizations" : {
-        "da" : { "stringUnit" : { "state" : "translated", "value" : "Download mislykkedes" } },
-        "de" : { "stringUnit" : { "state" : "translated", "value" : "Download fehlgeschlagen" } },
-        "es" : { "stringUnit" : { "state" : "translated", "value" : "Error de descarga" } },
-        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Échec du téléchargement" } },
-        "is" : { "stringUnit" : { "state" : "translated", "value" : "Niðurhal mistókst" } },
-        "nb" : { "stringUnit" : { "state" : "translated", "value" : "Nedlasting mislyktes" } },
-        "sv" : { "stringUnit" : { "state" : "translated", "value" : "Nedladdning misslyckades" } }
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Download mislykkedes"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Download fehlgeschlagen"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Error de descarga"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Échec du téléchargement"
+          }
+        },
+        "is" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Niðurhal mistókst"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nedlasting mislyktes"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nedladdning misslyckades"
+          }
+        }
+      }
+    },
+    "Download Model" : {
+
+    },
+    "Download the Whisper model once to enable transcriptions. No data ever leaves your device." : {
+      "localizations" : {
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Download Whisper-modellen én gang for at aktivere transskriptioner. Ingen data forlader nogensinde din enhed."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lade das Whisper-Modell einmalig herunter, um Transkriptionen zu ermöglichen. Es verlassen keine Daten dein Gerät."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Descarga el modelo Whisper una vez para habilitar las transcripciones. Ningún dato sale de tu dispositivo."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Téléchargez le modèle Whisper une seule fois pour activer les transcriptions. Aucune donnée ne quitte votre appareil."
+          }
+        },
+        "is" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sæktu Whisper-líkanið einu sinni til að virkja umritanir. Engin gögn fara af tækinu þínu."
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Last ned Whisper-modellen én gang for å aktivere transkripsjoner. Ingen data forlater enheten din."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ladda ner Whisper-modellen en gång för att aktivera transkriptioner. Ingen data lämnar någonsin din enhet."
+          }
+        }
       }
     },
     "Downloading model files (%lld of %lld)…" : {
       "localizations" : {
-        "da" : { "stringUnit" : { "state" : "translated", "value" : "Downloader modelfiler (%lld af %lld)…" } },
-        "de" : { "stringUnit" : { "state" : "translated", "value" : "Modelldateien werden geladen (%lld von %lld)…" } },
-        "es" : { "stringUnit" : { "state" : "translated", "value" : "Descargando archivos del modelo (%lld de %lld)…" } },
-        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Téléchargement des fichiers du modèle (%lld sur %lld)…" } },
-        "is" : { "stringUnit" : { "state" : "translated", "value" : "Sæki líkanaskrár (%lld af %lld)…" } },
-        "nb" : { "stringUnit" : { "state" : "translated", "value" : "Laster ned modellfiler (%lld av %lld)…" } },
-        "sv" : { "stringUnit" : { "state" : "translated", "value" : "Laddar ner modellfiler (%lld av %lld)…" } }
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Downloader modelfiler (%lld af %lld)…"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Modelldateien werden geladen (%lld von %lld)…"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Descargando archivos del modelo (%lld de %lld)…"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Téléchargement des fichiers du modèle (%lld sur %lld)…"
+          }
+        },
+        "is" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sæki líkanaskrár (%lld af %lld)…"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Laster ned modellfiler (%lld av %lld)…"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Laddar ner modellfiler (%lld av %lld)…"
+          }
+        }
       }
     },
     "Downloading…" : {
       "localizations" : {
-        "da" : { "stringUnit" : { "state" : "translated", "value" : "Downloader…" } },
-        "de" : { "stringUnit" : { "state" : "translated", "value" : "Wird geladen…" } },
-        "es" : { "stringUnit" : { "state" : "translated", "value" : "Descargando…" } },
-        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Téléchargement…" } },
-        "is" : { "stringUnit" : { "state" : "translated", "value" : "Sæki…" } },
-        "nb" : { "stringUnit" : { "state" : "translated", "value" : "Laster ned…" } },
-        "sv" : { "stringUnit" : { "state" : "translated", "value" : "Laddar ner…" } }
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Downloader…"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wird geladen…"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Descargando…"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Téléchargement…"
+          }
+        },
+        "is" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sæki…"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Laster ned…"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Laddar ner…"
+          }
+        }
       }
     },
     "Duration" : {
       "localizations" : {
-        "da" : { "stringUnit" : { "state" : "translated", "value" : "Varighed" } },
-        "de" : { "stringUnit" : { "state" : "translated", "value" : "Dauer" } },
-        "es" : { "stringUnit" : { "state" : "translated", "value" : "Duración" } },
-        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Durée" } },
-        "is" : { "stringUnit" : { "state" : "translated", "value" : "Lengd" } },
-        "nb" : { "stringUnit" : { "state" : "translated", "value" : "Varighet" } },
-        "sv" : { "stringUnit" : { "state" : "translated", "value" : "Varaktighet" } }
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Varighed"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dauer"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Duración"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Durée"
+          }
+        },
+        "is" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lengd"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Varighet"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Varaktighet"
+          }
+        }
       }
     },
     "File" : {
       "localizations" : {
-        "da" : { "stringUnit" : { "state" : "translated", "value" : "Fil" } },
-        "de" : { "stringUnit" : { "state" : "translated", "value" : "Datei" } },
-        "es" : { "stringUnit" : { "state" : "translated", "value" : "Archivo" } },
-        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Fichier" } },
-        "is" : { "stringUnit" : { "state" : "translated", "value" : "Skrá" } },
-        "nb" : { "stringUnit" : { "state" : "translated", "value" : "Fil" } },
-        "sv" : { "stringUnit" : { "state" : "translated", "value" : "Fil" } }
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fil"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Datei"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Archivo"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fichier"
+          }
+        },
+        "is" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Skrá"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fil"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fil"
+          }
+        }
       }
     },
     "Force Dark Mode" : {
       "localizations" : {
-        "da" : { "stringUnit" : { "state" : "translated", "value" : "Gennemtving mørk tilstand" } },
-        "de" : { "stringUnit" : { "state" : "translated", "value" : "Dunkelmodus erzwingen" } },
-        "es" : { "stringUnit" : { "state" : "translated", "value" : "Forzar modo oscuro" } },
-        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Forcer le mode sombre" } },
-        "is" : { "stringUnit" : { "state" : "translated", "value" : "Þvinga dökkt þema" } },
-        "nb" : { "stringUnit" : { "state" : "translated", "value" : "Tving mørk modus" } },
-        "sv" : { "stringUnit" : { "state" : "translated", "value" : "Tvinga mörkt läge" } }
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gennemtving mørk tilstand"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dunkelmodus erzwingen"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Forzar modo oscuro"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Forcer le mode sombre"
+          }
+        },
+        "is" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Þvinga dökkt þema"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tving mørk modus"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tvinga mörkt läge"
+          }
+        }
       }
     },
     "Generate summary with Apple Intelligence" : {
       "localizations" : {
-        "da" : { "stringUnit" : { "state" : "translated", "value" : "Generér resumé med Apple Intelligence" } },
-        "de" : { "stringUnit" : { "state" : "translated", "value" : "Zusammenfassung mit Apple Intelligence erstellen" } },
-        "es" : { "stringUnit" : { "state" : "translated", "value" : "Generar resumen con Apple Intelligence" } },
-        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Générer un résumé avec Apple Intelligence" } },
-        "is" : { "stringUnit" : { "state" : "translated", "value" : "Búa til samantekt með Apple Intelligence" } },
-        "nb" : { "stringUnit" : { "state" : "translated", "value" : "Generer sammendrag med Apple Intelligence" } },
-        "sv" : { "stringUnit" : { "state" : "translated", "value" : "Generera sammanfattning med Apple Intelligence" } }
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Generér resumé med Apple Intelligence"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zusammenfassung mit Apple Intelligence erstellen"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Generar resumen con Apple Intelligence"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Générer un résumé avec Apple Intelligence"
+          }
+        },
+        "is" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Búa til samantekt með Apple Intelligence"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Generer sammendrag med Apple Intelligence"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Generera sammanfattning med Apple Intelligence"
+          }
+        }
       }
     },
     "Generating summary…" : {
       "localizations" : {
-        "da" : { "stringUnit" : { "state" : "translated", "value" : "Genererer resumé…" } },
-        "de" : { "stringUnit" : { "state" : "translated", "value" : "Zusammenfassung wird erstellt…" } },
-        "es" : { "stringUnit" : { "state" : "translated", "value" : "Generando resumen…" } },
-        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Génération du résumé…" } },
-        "is" : { "stringUnit" : { "state" : "translated", "value" : "Bý til samantekt…" } },
-        "nb" : { "stringUnit" : { "state" : "translated", "value" : "Genererer sammendrag…" } },
-        "sv" : { "stringUnit" : { "state" : "translated", "value" : "Genererar sammanfattning…" } }
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Genererer resumé…"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zusammenfassung wird erstellt…"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Generando resumen…"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Génération du résumé…"
+          }
+        },
+        "is" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bý til samantekt…"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Genererer sammendrag…"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Genererar sammanfattning…"
+          }
+        }
       }
     },
     "Get Started" : {
       "localizations" : {
-        "da" : { "stringUnit" : { "state" : "translated", "value" : "Kom i gang" } },
-        "de" : { "stringUnit" : { "state" : "translated", "value" : "Loslegen" } },
-        "es" : { "stringUnit" : { "state" : "translated", "value" : "Comenzar" } },
-        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Commencer" } },
-        "is" : { "stringUnit" : { "state" : "translated", "value" : "Hefjast handa" } },
-        "nb" : { "stringUnit" : { "state" : "translated", "value" : "Kom i gang" } },
-        "sv" : { "stringUnit" : { "state" : "translated", "value" : "Kom igång" } }
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kom i gang"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Loslegen"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Comenzar"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Commencer"
+          }
+        },
+        "is" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hefjast handa"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kom i gang"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kom igång"
+          }
+        }
       }
     },
     "Import Any Audio" : {
       "localizations" : {
-        "da" : { "stringUnit" : { "state" : "translated", "value" : "Importér enhver lyd" } },
-        "de" : { "stringUnit" : { "state" : "translated", "value" : "Beliebige Audiodateien importieren" } },
-        "es" : { "stringUnit" : { "state" : "translated", "value" : "Importar cualquier audio" } },
-        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Importer n'importe quel audio" } },
-        "is" : { "stringUnit" : { "state" : "translated", "value" : "Flytja inn hvaða hljóð sem er" } },
-        "nb" : { "stringUnit" : { "state" : "translated", "value" : "Importer hvilken som helst lyd" } },
-        "sv" : { "stringUnit" : { "state" : "translated", "value" : "Importera valfritt ljud" } }
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Importér enhver lyd"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Beliebige Audiodateien importieren"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Importar cualquier audio"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Importer n'importe quel audio"
+          }
+        },
+        "is" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Flytja inn hvaða hljóð sem er"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Importer hvilken som helst lyd"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Importera valfritt ljud"
+          }
+        }
       }
     },
     "Import Failed" : {
       "localizations" : {
-        "da" : { "stringUnit" : { "state" : "translated", "value" : "Import mislykkedes" } },
-        "de" : { "stringUnit" : { "state" : "translated", "value" : "Import fehlgeschlagen" } },
-        "es" : { "stringUnit" : { "state" : "translated", "value" : "Error al importar" } },
-        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Échec de l'importation" } },
-        "is" : { "stringUnit" : { "state" : "translated", "value" : "Innflutningur mistókst" } },
-        "nb" : { "stringUnit" : { "state" : "translated", "value" : "Import mislyktes" } },
-        "sv" : { "stringUnit" : { "state" : "translated", "value" : "Import misslyckades" } }
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Import mislykkedes"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Import fehlgeschlagen"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Error al importar"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Échec de l'importation"
+          }
+        },
+        "is" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Innflutningur mistókst"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Import mislyktes"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Import misslyckades"
+          }
+        }
       }
     },
     "Info" : {
       "localizations" : {
-        "da" : { "stringUnit" : { "state" : "translated", "value" : "Info" } },
-        "de" : { "stringUnit" : { "state" : "translated", "value" : "Info" } },
-        "es" : { "stringUnit" : { "state" : "translated", "value" : "Info" } },
-        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Infos" } },
-        "is" : { "stringUnit" : { "state" : "translated", "value" : "Upplýsingar" } },
-        "nb" : { "stringUnit" : { "state" : "translated", "value" : "Info" } },
-        "sv" : { "stringUnit" : { "state" : "translated", "value" : "Info" } }
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Info"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Info"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Info"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Infos"
+          }
+        },
+        "is" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Upplýsingar"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Info"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Info"
+          }
+        }
       }
     },
     "Keep the app open and in the foreground while the model is downloading. Sending the app to the background or closing it may interrupt the download." : {
       "localizations" : {
-        "da" : { "stringUnit" : { "state" : "translated", "value" : "Hold appen åben og i forgrunden mens modellen downloades. At sende appen til baggrunden eller lukke den kan afbryde downloaden." } },
-        "de" : { "stringUnit" : { "state" : "translated", "value" : "Lass die App geöffnet und im Vordergrund, während das Modell heruntergeladen wird. Das Minimieren oder Schließen der App kann den Download unterbrechen." } },
-        "es" : { "stringUnit" : { "state" : "translated", "value" : "Mantén la app abierta y en primer plano mientras se descarga el modelo. Enviarla al fondo o cerrarla puede interrumpir la descarga." } },
-        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Gardez l'application ouverte et au premier plan pendant le téléchargement du modèle. Envoyer l'application en arrière-plan ou la fermer peut interrompre le téléchargement." } },
-        "is" : { "stringUnit" : { "state" : "translated", "value" : "Haltu forritinu opnu og í forgrunni meðan líkanið er sótt. Að senda forritið í bakgrunn eða loka því getur truflað niðurhalið." } },
-        "nb" : { "stringUnit" : { "state" : "translated", "value" : "Hold appen åpen og i forgrunnen mens modellen lastes ned. Å sende appen til bakgrunnen eller lukke den kan avbryte nedlastingen." } },
-        "sv" : { "stringUnit" : { "state" : "translated", "value" : "Håll appen öppen och i förgrunden medan modellen laddas ner. Att skicka appen till bakgrunden eller stänga den kan avbryta nedladdningen." } }
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hold appen åben og i forgrunden mens modellen downloades. At sende appen til baggrunden eller lukke den kan afbryde downloaden."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lass die App geöffnet und im Vordergrund, während das Modell heruntergeladen wird. Das Minimieren oder Schließen der App kann den Download unterbrechen."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mantén la app abierta y en primer plano mientras se descarga el modelo. Enviarla al fondo o cerrarla puede interrumpir la descarga."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gardez l'application ouverte et au premier plan pendant le téléchargement du modèle. Envoyer l'application en arrière-plan ou la fermer peut interrompre le téléchargement."
+          }
+        },
+        "is" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Haltu forritinu opnu og í forgrunni meðan líkanið er sótt. Að senda forritið í bakgrunn eða loka því getur truflað niðurhalið."
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hold appen åpen og i forgrunnen mens modellen lastes ned. Å sende appen til bakgrunnen eller lukke den kan avbryte nedlastingen."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Håll appen öppen och i förgrunden medan modellen laddas ner. Att skicka appen till bakgrunden eller stänga den kan avbryta nedladdningen."
+          }
+        }
       }
     },
     "Language" : {
       "localizations" : {
-        "da" : { "stringUnit" : { "state" : "translated", "value" : "Sprog" } },
-        "de" : { "stringUnit" : { "state" : "translated", "value" : "Sprache" } },
-        "es" : { "stringUnit" : { "state" : "translated", "value" : "Idioma" } },
-        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Langue" } },
-        "is" : { "stringUnit" : { "state" : "translated", "value" : "Tungumál" } },
-        "nb" : { "stringUnit" : { "state" : "translated", "value" : "Språk" } },
-        "sv" : { "stringUnit" : { "state" : "translated", "value" : "Språk" } }
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sprog"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sprache"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Idioma"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Langue"
+          }
+        },
+        "is" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tungumál"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Språk"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Språk"
+          }
+        }
       }
     },
     "Larger models are more accurate but require more memory and take longer to download. Models ending in \".en\" are optimized for English-only audio and are faster and more accurate when English is the only language spoken." : {
       "localizations" : {
-        "da" : { "stringUnit" : { "state" : "translated", "value" : "Større modeller er mere præcise, men kræver mere hukommelse og tager længere tid at downloade. Modeller der slutter på \".en\" er optimeret til engelsksprogede optagelser og er hurtigere og mere præcise, når engelsk er det eneste talte sprog." } },
-        "de" : { "stringUnit" : { "state" : "translated", "value" : "Größere Modelle sind genauer, benötigen aber mehr Speicher und dauern länger zum Herunterladen. Modelle mit der Endung \".en\" sind für englischsprachige Aufnahmen optimiert und schneller sowie genauer, wenn nur Englisch gesprochen wird." } },
-        "es" : { "stringUnit" : { "state" : "translated", "value" : "Los modelos más grandes son más precisos pero requieren más memoria y tardan más en descargarse. Los modelos que terminan en \".en\" están optimizados para audio solo en inglés y son más rápidos y precisos cuando el inglés es el único idioma hablado." } },
-        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Les modèles plus grands sont plus précis mais nécessitent plus de mémoire et prennent plus de temps à télécharger. Les modèles se terminant par \".en\" sont optimisés pour l'audio en anglais uniquement et sont plus rapides et plus précis lorsque l'anglais est la seule langue parlée." } },
-        "is" : { "stringUnit" : { "state" : "translated", "value" : "Stærri líkön eru nákvæmari en krefjast meira minni og taka lengri tíma að sækja. Líkön sem enda á \".en\" eru fínstillt fyrir enskt hljóð eingöngu og eru hraðari og nákvæmari þegar ensku er eingöngu talað." } },
-        "nb" : { "stringUnit" : { "state" : "translated", "value" : "Større modeller er mer nøyaktige, men krever mer minne og tar lengre tid å laste ned. Modeller som slutter på \".en\" er optimalisert for engelskspråklig lyd og er raskere og mer nøyaktige når engelsk er det eneste talte språket." } },
-        "sv" : { "stringUnit" : { "state" : "translated", "value" : "Större modeller är mer noggranna men kräver mer minne och tar längre tid att ladda ner. Modeller som slutar på \".en\" är optimerade för engelskspråkigt ljud och är snabbare och mer noggranna när engelska är det enda talade språket." } }
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Større modeller er mere præcise, men kræver mere hukommelse og tager længere tid at downloade. Modeller der slutter på \".en\" er optimeret til engelsksprogede optagelser og er hurtigere og mere præcise, når engelsk er det eneste talte sprog."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Größere Modelle sind genauer, benötigen aber mehr Speicher und dauern länger zum Herunterladen. Modelle mit der Endung \".en\" sind für englischsprachige Aufnahmen optimiert und schneller sowie genauer, wenn nur Englisch gesprochen wird."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Los modelos más grandes son más precisos pero requieren más memoria y tardan más en descargarse. Los modelos que terminan en \".en\" están optimizados para audio solo en inglés y son más rápidos y precisos cuando el inglés es el único idioma hablado."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Les modèles plus grands sont plus précis mais nécessitent plus de mémoire et prennent plus de temps à télécharger. Les modèles se terminant par \".en\" sont optimisés pour l'audio en anglais uniquement et sont plus rapides et plus précis lorsque l'anglais est la seule langue parlée."
+          }
+        },
+        "is" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Stærri líkön eru nákvæmari en krefjast meira minni og taka lengri tíma að sækja. Líkön sem enda á \".en\" eru fínstillt fyrir enskt hljóð eingöngu og eru hraðari og nákvæmari þegar ensku er eingöngu talað."
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Større modeller er mer nøyaktige, men krever mer minne og tar lengre tid å laste ned. Modeller som slutter på \".en\" er optimalisert for engelskspråklig lyd og er raskere og mer nøyaktige når engelsk er det eneste talte språket."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Större modeller är mer noggranna men kräver mer minne och tar längre tid att ladda ner. Modeller som slutar på \".en\" är optimerade för engelskspråkigt ljud och är snabbare och mer noggranna när engelska är det enda talade språket."
+          }
+        }
       }
     },
     "Model" : {
       "localizations" : {
-        "da" : { "stringUnit" : { "state" : "translated", "value" : "Model" } },
-        "de" : { "stringUnit" : { "state" : "translated", "value" : "Modell" } },
-        "es" : { "stringUnit" : { "state" : "translated", "value" : "Modelo" } },
-        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Modèle" } },
-        "is" : { "stringUnit" : { "state" : "translated", "value" : "Líkan" } },
-        "nb" : { "stringUnit" : { "state" : "translated", "value" : "Modell" } },
-        "sv" : { "stringUnit" : { "state" : "translated", "value" : "Modell" } }
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Model"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Modell"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Modelo"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Modèle"
+          }
+        },
+        "is" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Líkan"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Modell"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Modell"
+          }
+        }
       }
     },
     "Model ready" : {
       "localizations" : {
-        "da" : { "stringUnit" : { "state" : "translated", "value" : "Model klar" } },
-        "de" : { "stringUnit" : { "state" : "translated", "value" : "Modell bereit" } },
-        "es" : { "stringUnit" : { "state" : "translated", "value" : "Modelo listo" } },
-        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Modèle prêt" } },
-        "is" : { "stringUnit" : { "state" : "translated", "value" : "Líkan tilbúið" } },
-        "nb" : { "stringUnit" : { "state" : "translated", "value" : "Modell klar" } },
-        "sv" : { "stringUnit" : { "state" : "translated", "value" : "Modell redo" } }
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Model klar"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Modell bereit"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Modelo listo"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Modèle prêt"
+          }
+        },
+        "is" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Líkan tilbúið"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Modell klar"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Modell redo"
+          }
+        }
       }
     },
     "Model ready." : {
       "localizations" : {
-        "da" : { "stringUnit" : { "state" : "translated", "value" : "Model klar." } },
-        "de" : { "stringUnit" : { "state" : "translated", "value" : "Modell bereit." } },
-        "es" : { "stringUnit" : { "state" : "translated", "value" : "Modelo listo." } },
-        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Modèle prêt." } },
-        "is" : { "stringUnit" : { "state" : "translated", "value" : "Líkan tilbúið." } },
-        "nb" : { "stringUnit" : { "state" : "translated", "value" : "Modell klar." } },
-        "sv" : { "stringUnit" : { "state" : "translated", "value" : "Modell redo." } }
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Model klar."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Modell bereit."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Modelo listo."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Modèle prêt."
+          }
+        },
+        "is" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Líkan tilbúið."
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Modell klar."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Modell redo."
+          }
+        }
       }
     },
     "No Selection" : {
       "localizations" : {
-        "da" : { "stringUnit" : { "state" : "translated", "value" : "Intet valgt" } },
-        "de" : { "stringUnit" : { "state" : "translated", "value" : "Keine Auswahl" } },
-        "es" : { "stringUnit" : { "state" : "translated", "value" : "Sin selección" } },
-        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Aucune sélection" } },
-        "is" : { "stringUnit" : { "state" : "translated", "value" : "Ekkert valið" } },
-        "nb" : { "stringUnit" : { "state" : "translated", "value" : "Intet valgt" } },
-        "sv" : { "stringUnit" : { "state" : "translated", "value" : "Inget val" } }
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Intet valgt"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Keine Auswahl"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sin selección"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aucune sélection"
+          }
+        },
+        "is" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ekkert valið"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Intet valgt"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Inget val"
+          }
+        }
       }
     },
     "No speech was detected in the audio file." : {
       "localizations" : {
-        "da" : { "stringUnit" : { "state" : "translated", "value" : "Ingen tale blev registreret i lydfilen." } },
-        "de" : { "stringUnit" : { "state" : "translated", "value" : "In der Audiodatei wurde keine Sprache erkannt." } },
-        "es" : { "stringUnit" : { "state" : "translated", "value" : "No se detectó voz en el archivo de audio." } },
-        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Aucune parole détectée dans le fichier audio." } },
-        "is" : { "stringUnit" : { "state" : "translated", "value" : "Engin tal greindist í hljóðskránni." } },
-        "nb" : { "stringUnit" : { "state" : "translated", "value" : "Ingen tale ble oppdaget i lydfilen." } },
-        "sv" : { "stringUnit" : { "state" : "translated", "value" : "Inget tal hittades i ljudfilen." } }
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ingen tale blev registreret i lydfilen."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "In der Audiodatei wurde keine Sprache erkannt."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No se detectó voz en el archivo de audio."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aucune parole détectée dans le fichier audio."
+          }
+        },
+        "is" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Engin tal greindist í hljóðskránni."
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ingen tale ble oppdaget i lydfilen."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Inget tal hittades i ljudfilen."
+          }
+        }
       }
     },
     "No Transcription" : {
       "localizations" : {
-        "da" : { "stringUnit" : { "state" : "translated", "value" : "Ingen transskription" } },
-        "de" : { "stringUnit" : { "state" : "translated", "value" : "Keine Transkription" } },
-        "es" : { "stringUnit" : { "state" : "translated", "value" : "Sin transcripción" } },
-        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Aucune transcription" } },
-        "is" : { "stringUnit" : { "state" : "translated", "value" : "Engin umritun" } },
-        "nb" : { "stringUnit" : { "state" : "translated", "value" : "Ingen transkripsjon" } },
-        "sv" : { "stringUnit" : { "state" : "translated", "value" : "Ingen transkription" } }
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ingen transskription"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Keine Transkription"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sin transcripción"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aucune transcription"
+          }
+        },
+        "is" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Engin umritun"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ingen transkripsjon"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ingen transkription"
+          }
+        }
       }
     },
     "No Transcripts" : {
       "localizations" : {
-        "da" : { "stringUnit" : { "state" : "translated", "value" : "Ingen transskriptioner" } },
-        "de" : { "stringUnit" : { "state" : "translated", "value" : "Keine Transkriptionen" } },
-        "es" : { "stringUnit" : { "state" : "translated", "value" : "Sin transcripciones" } },
-        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Aucune transcription" } },
-        "is" : { "stringUnit" : { "state" : "translated", "value" : "Engar umritanir" } },
-        "nb" : { "stringUnit" : { "state" : "translated", "value" : "Ingen transkripsjoner" } },
-        "sv" : { "stringUnit" : { "state" : "translated", "value" : "Inga transkriptioner" } }
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ingen transskriptioner"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Keine Transkriptionen"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sin transcripciones"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aucune transcription"
+          }
+        },
+        "is" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Engar umritanir"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ingen transkripsjoner"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Inga transkriptioner"
+          }
+        }
       }
     },
     "Not downloaded" : {
       "localizations" : {
-        "da" : { "stringUnit" : { "state" : "translated", "value" : "Ikke downloadet" } },
-        "de" : { "stringUnit" : { "state" : "translated", "value" : "Nicht heruntergeladen" } },
-        "es" : { "stringUnit" : { "state" : "translated", "value" : "No descargado" } },
-        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Non téléchargé" } },
-        "is" : { "stringUnit" : { "state" : "translated", "value" : "Ekki sótt" } },
-        "nb" : { "stringUnit" : { "state" : "translated", "value" : "Ikke lastet ned" } },
-        "sv" : { "stringUnit" : { "state" : "translated", "value" : "Inte nedladdad" } }
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ikke downloadet"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nicht heruntergeladen"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No descargado"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Non téléchargé"
+          }
+        },
+        "is" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ekki sótt"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ikke lastet ned"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Inte nedladdad"
+          }
+        }
       }
     },
     "OK" : {
       "localizations" : {
-        "da" : { "stringUnit" : { "state" : "translated", "value" : "OK" } },
-        "de" : { "stringUnit" : { "state" : "translated", "value" : "OK" } },
-        "es" : { "stringUnit" : { "state" : "translated", "value" : "Aceptar" } },
-        "fr" : { "stringUnit" : { "state" : "translated", "value" : "OK" } },
-        "is" : { "stringUnit" : { "state" : "translated", "value" : "Í lagi" } },
-        "nb" : { "stringUnit" : { "state" : "translated", "value" : "OK" } },
-        "sv" : { "stringUnit" : { "state" : "translated", "value" : "OK" } }
-      }
-    },
-    "Open audio files from the Files app or any app that supports sharing — just tap Share and choose TranscribeApp." : {
-      "localizations" : {
-        "da" : { "stringUnit" : { "state" : "translated", "value" : "Åbn lydfiler fra Filer-appen eller enhver app, der understøtter deling — tryk blot på Del og vælg TranscribeApp." } },
-        "de" : { "stringUnit" : { "state" : "translated", "value" : "Öffne Audiodateien aus der Dateien-App oder einer beliebigen App, die Teilen unterstützt — tippe einfach auf Teilen und wähle TranscribeApp." } },
-        "es" : { "stringUnit" : { "state" : "translated", "value" : "Abre archivos de audio desde la app Archivos o cualquier app que admita compartir — simplemente toca Compartir y elige TranscribeApp." } },
-        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Ouvrez des fichiers audio depuis l'app Fichiers ou toute app prenant en charge le partage — appuyez simplement sur Partager et choisissez TranscribeApp." } },
-        "is" : { "stringUnit" : { "state" : "translated", "value" : "Opnaðu hljóðskrár úr Skrár-forritinu eða hvaða forriti sem styður deilingu — ýttu bara á Deila og veldu TranscribeApp." } },
-        "nb" : { "stringUnit" : { "state" : "translated", "value" : "Åpne lydfiler fra Filer-appen eller enhver app som støtter deling — trykk bare på Del og velg TranscribeApp." } },
-        "sv" : { "stringUnit" : { "state" : "translated", "value" : "Öppna ljudfiler från Filer-appen eller valfri app som stöder delning — tryck bara på Dela och välj TranscribeApp." } }
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "OK"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "OK"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aceptar"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "OK"
+          }
+        },
+        "is" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Í lagi"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "OK"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "OK"
+          }
+        }
       }
     },
     "Open a file or start a new recording to get started." : {
       "localizations" : {
-        "da" : { "stringUnit" : { "state" : "translated", "value" : "Åbn en fil, eller start en ny optagelse for at komme i gang." } },
-        "de" : { "stringUnit" : { "state" : "translated", "value" : "Öffne eine Datei oder starte eine neue Aufnahme." } },
-        "es" : { "stringUnit" : { "state" : "translated", "value" : "Abre un archivo o inicia una nueva grabación para comenzar." } },
-        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Ouvrez un fichier ou démarrez un nouvel enregistrement pour commencer." } },
-        "is" : { "stringUnit" : { "state" : "translated", "value" : "Opnaðu skrá eða byrjaðu nýja upptöku til að hefjast handa." } },
-        "nb" : { "stringUnit" : { "state" : "translated", "value" : "Åpne en fil eller start et nytt opptak for å komme i gang." } },
-        "sv" : { "stringUnit" : { "state" : "translated", "value" : "Öppna en fil eller starta en ny inspelning för att komma igång." } }
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Åbn en fil, eller start en ny optagelse for at komme i gang."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Öffne eine Datei oder starte eine neue Aufnahme."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Abre un archivo o inicia una nueva grabación para comenzar."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ouvrez un fichier ou démarrez un nouvel enregistrement pour commencer."
+          }
+        },
+        "is" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Opnaðu skrá eða byrjaðu nýja upptöku til að hefjast handa."
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Åpne en fil eller start et nytt opptak for å komme i gang."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Öppna en fil eller starta en ny inspelning för att komma igång."
+          }
+        }
       }
     },
     "Open Audio File" : {
       "localizations" : {
-        "da" : { "stringUnit" : { "state" : "translated", "value" : "Åbn lydfil" } },
-        "de" : { "stringUnit" : { "state" : "translated", "value" : "Audiodatei öffnen" } },
-        "es" : { "stringUnit" : { "state" : "translated", "value" : "Abrir archivo de audio" } },
-        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Ouvrir un fichier audio" } },
-        "is" : { "stringUnit" : { "state" : "translated", "value" : "Opna hljóðskrá" } },
-        "nb" : { "stringUnit" : { "state" : "translated", "value" : "Åpne lydfil" } },
-        "sv" : { "stringUnit" : { "state" : "translated", "value" : "Öppna ljudfil" } }
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Åbn lydfil"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Audiodatei öffnen"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Abrir archivo de audio"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ouvrir un fichier audio"
+          }
+        },
+        "is" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Opna hljóðskrá"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Åpne lydfil"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Öppna ljudfil"
+          }
+        }
+      }
+    },
+    "Open audio files from the Files app or any app that supports sharing — just tap Share and choose TranscribeApp." : {
+      "localizations" : {
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Åbn lydfiler fra Filer-appen eller enhver app, der understøtter deling — tryk blot på Del og vælg TranscribeApp."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Öffne Audiodateien aus der Dateien-App oder einer beliebigen App, die Teilen unterstützt — tippe einfach auf Teilen und wähle TranscribeApp."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Abre archivos de audio desde la app Archivos o cualquier app que admita compartir — simplemente toca Compartir y elige TranscribeApp."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ouvrez des fichiers audio depuis l'app Fichiers ou toute app prenant en charge le partage — appuyez simplement sur Partager et choisissez TranscribeApp."
+          }
+        },
+        "is" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Opnaðu hljóðskrár úr Skrár-forritinu eða hvaða forriti sem styður deilingu — ýttu bara á Deila og veldu TranscribeApp."
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Åpne lydfiler fra Filer-appen eller enhver app som støtter deling — trykk bare på Del og velg TranscribeApp."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Öppna ljudfiler från Filer-appen eller valfri app som stöder delning — tryck bara på Dela och välj TranscribeApp."
+          }
+        }
       }
     },
     "Open With Transcribe" : {
       "localizations" : {
-        "da" : { "stringUnit" : { "state" : "translated", "value" : "Åbn med Transcribe" } },
-        "de" : { "stringUnit" : { "state" : "translated", "value" : "Mit Transcribe öffnen" } },
-        "es" : { "stringUnit" : { "state" : "translated", "value" : "Abrir con Transcribe" } },
-        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Ouvrir avec Transcribe" } },
-        "is" : { "stringUnit" : { "state" : "translated", "value" : "Opna með Transcribe" } },
-        "nb" : { "stringUnit" : { "state" : "translated", "value" : "Åpne med Transcribe" } },
-        "sv" : { "stringUnit" : { "state" : "translated", "value" : "Öppna med Transcribe" } }
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Åbn med Transcribe"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mit Transcribe öffnen"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Abrir con Transcribe"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ouvrir avec Transcribe"
+          }
+        },
+        "is" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Opna með Transcribe"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Åpne med Transcribe"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Öppna med Transcribe"
+          }
+        }
       }
     },
     "Override the system appearance and always use dark mode." : {
       "localizations" : {
-        "da" : { "stringUnit" : { "state" : "translated", "value" : "Tilsidesæt systemudseendet og brug altid mørk tilstand." } },
-        "de" : { "stringUnit" : { "state" : "translated", "value" : "Systemdarstellung ignorieren und immer den Dunkelmodus verwenden." } },
-        "es" : { "stringUnit" : { "state" : "translated", "value" : "Ignorar la apariencia del sistema y usar siempre el modo oscuro." } },
-        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Remplacer l'apparence du système et toujours utiliser le mode sombre." } },
-        "is" : { "stringUnit" : { "state" : "translated", "value" : "Hnekkja útliti kerfisins og nota alltaf dökkt þema." } },
-        "nb" : { "stringUnit" : { "state" : "translated", "value" : "Overstyr systemutseendet og bruk alltid mørk modus." } },
-        "sv" : { "stringUnit" : { "state" : "translated", "value" : "Åsidosätt systemets utseende och använd alltid mörkt läge." } }
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tilsidesæt systemudseendet og brug altid mørk tilstand."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Systemdarstellung ignorieren und immer den Dunkelmodus verwenden."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ignorar la apariencia del sistema y usar siempre el modo oscuro."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Remplacer l'apparence du système et toujours utiliser le mode sombre."
+          }
+        },
+        "is" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hnekkja útliti kerfisins og nota alltaf dökkt þema."
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Overstyr systemutseendet og bruk alltid mørk modus."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Åsidosätt systemets utseende och använd alltid mörkt läge."
+          }
+        }
       }
     },
     "Powered by OpenAI Whisper, one of the most accurate speech recognition models available." : {
       "localizations" : {
-        "da" : { "stringUnit" : { "state" : "translated", "value" : "Drevet af OpenAI Whisper, en af de mest præcise talegenkendelsesmodeller tilgængelige." } },
-        "de" : { "stringUnit" : { "state" : "translated", "value" : "Basiert auf OpenAI Whisper, einem der genauesten Spracherkennungsmodelle." } },
-        "es" : { "stringUnit" : { "state" : "translated", "value" : "Desarrollado con OpenAI Whisper, uno de los modelos de reconocimiento de voz más precisos disponibles." } },
-        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Propulsé par OpenAI Whisper, l'un des modèles de reconnaissance vocale les plus précis disponibles." } },
-        "is" : { "stringUnit" : { "state" : "translated", "value" : "Knúið af OpenAI Whisper, einu nákvæmasta talgreiningarlíkani sem völ er á." } },
-        "nb" : { "stringUnit" : { "state" : "translated", "value" : "Drevet av OpenAI Whisper, en av de mest nøyaktige talegjenkjenningsmodellene tilgjengelig." } },
-        "sv" : { "stringUnit" : { "state" : "translated", "value" : "Drivs av OpenAI Whisper, en av de mest noggranna taligenkänningsmodellerna som finns." } }
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Drevet af OpenAI Whisper, en af de mest præcise talegenkendelsesmodeller tilgængelige."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Basiert auf OpenAI Whisper, einem der genauesten Spracherkennungsmodelle."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Desarrollado con OpenAI Whisper, uno de los modelos de reconocimiento de voz más precisos disponibles."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Propulsé par OpenAI Whisper, l'un des modèles de reconnaissance vocale les plus précis disponibles."
+          }
+        },
+        "is" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Knúið af OpenAI Whisper, einu nákvæmasta talgreiningarlíkani sem völ er á."
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Drevet av OpenAI Whisper, en av de mest nøyaktige talegjenkjenningsmodellene tilgjengelig."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Drivs av OpenAI Whisper, en av de mest noggranna taligenkänningsmodellerna som finns."
+          }
+        }
       }
     },
     "Preparing download…" : {
       "localizations" : {
-        "da" : { "stringUnit" : { "state" : "translated", "value" : "Forbereder download…" } },
-        "de" : { "stringUnit" : { "state" : "translated", "value" : "Download wird vorbereitet…" } },
-        "es" : { "stringUnit" : { "state" : "translated", "value" : "Preparando descarga…" } },
-        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Préparation du téléchargement…" } },
-        "is" : { "stringUnit" : { "state" : "translated", "value" : "Undirbý niðurhal…" } },
-        "nb" : { "stringUnit" : { "state" : "translated", "value" : "Forbereder nedlasting…" } },
-        "sv" : { "stringUnit" : { "state" : "translated", "value" : "Förbereder nedladdning…" } }
-      }
-    },
-    "Right-click any audio file in Finder and choose \"Open With → TranscribeApp\" — or use Services → Transcribe Audio to send files directly." : {
-      "localizations" : {
-        "da" : { "stringUnit" : { "state" : "translated", "value" : "Højreklik på en lydfil i Finder og vælg \"Åbn med → TranscribeApp\" — eller brug Tjenester → Transskribér lyd for at sende filer direkte." } },
-        "de" : { "stringUnit" : { "state" : "translated", "value" : "Klicke in Finder mit der rechten Maustaste auf eine Audiodatei und wähle \u201eÖffnen mit \u2192 TranscribeApp\u201c \u2014 oder nutze Dienste \u2192 Audio transkribieren." } },
-        "es" : { "stringUnit" : { "state" : "translated", "value" : "Haz clic derecho en cualquier archivo de audio en el Finder y elige «Abrir con → TranscribeApp» — o usa Servicios → Transcribir audio." } },
-        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Faites un clic droit sur un fichier audio dans le Finder et choisissez « Ouvrir avec → TranscribeApp » — ou utilisez Services → Transcrire l'audio." } },
-        "is" : { "stringUnit" : { "state" : "translated", "value" : "Hægrismelltu á hljóðskrá í Finder og veldu \"Opna með → TranscribeApp\" — eða notaðu Þjónustur → Umrita hljóð til að senda skrár beint." } },
-        "nb" : { "stringUnit" : { "state" : "translated", "value" : "Høyreklikk på en lydfil i Finder og velg \"Åpne med → TranscribeApp\" — eller bruk Tjenester → Transkriber lyd for å sende filer direkte." } },
-        "sv" : { "stringUnit" : { "state" : "translated", "value" : "Högerklicka på en ljudfil i Finder och välj \"Öppna med → TranscribeApp\" — eller använd Tjänster → Transkribera ljud för att skicka filer direkt." } }
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Forbereder download…"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Download wird vorbereitet…"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Preparando descarga…"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Préparation du téléchargement…"
+          }
+        },
+        "is" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Undirbý niðurhal…"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Forbereder nedlasting…"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Förbereder nedladdning…"
+          }
+        }
       }
     },
     "Re-download" : {
       "localizations" : {
-        "da" : { "stringUnit" : { "state" : "translated", "value" : "Download igen" } },
-        "de" : { "stringUnit" : { "state" : "translated", "value" : "Erneut herunterladen" } },
-        "es" : { "stringUnit" : { "state" : "translated", "value" : "Volver a descargar" } },
-        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Re-télécharger" } },
-        "is" : { "stringUnit" : { "state" : "translated", "value" : "Sækja aftur" } },
-        "nb" : { "stringUnit" : { "state" : "translated", "value" : "Last ned på nytt" } },
-        "sv" : { "stringUnit" : { "state" : "translated", "value" : "Ladda ner igen" } }
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Download igen"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Erneut herunterladen"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Volver a descargar"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Re-télécharger"
+          }
+        },
+        "is" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sækja aftur"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Last ned på nytt"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ladda ner igen"
+          }
+        }
       }
     },
     "Record" : {
       "localizations" : {
-        "da" : { "stringUnit" : { "state" : "translated", "value" : "Optag" } },
-        "de" : { "stringUnit" : { "state" : "translated", "value" : "Aufnehmen" } },
-        "es" : { "stringUnit" : { "state" : "translated", "value" : "Grabar" } },
-        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Enregistrer" } },
-        "is" : { "stringUnit" : { "state" : "translated", "value" : "Taka upp" } },
-        "nb" : { "stringUnit" : { "state" : "translated", "value" : "Ta opp" } },
-        "sv" : { "stringUnit" : { "state" : "translated", "value" : "Spela in" } }
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Optag"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aufnehmen"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Grabar"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Enregistrer"
+          }
+        },
+        "is" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Taka upp"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ta opp"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Spela in"
+          }
+        }
       }
     },
     "Retry" : {
       "localizations" : {
-        "da" : { "stringUnit" : { "state" : "translated", "value" : "Prøv igen" } },
-        "de" : { "stringUnit" : { "state" : "translated", "value" : "Erneut versuchen" } },
-        "es" : { "stringUnit" : { "state" : "translated", "value" : "Reintentar" } },
-        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Réessayer" } },
-        "is" : { "stringUnit" : { "state" : "translated", "value" : "Reyna aftur" } },
-        "nb" : { "stringUnit" : { "state" : "translated", "value" : "Prøv igjen" } },
-        "sv" : { "stringUnit" : { "state" : "translated", "value" : "Försök igen" } }
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Prøv igen"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Erneut versuchen"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Reintentar"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Réessayer"
+          }
+        },
+        "is" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Reyna aftur"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Prøv igjen"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Försök igen"
+          }
+        }
       }
     },
-    "Supports MP3, M4A, WAV, and MP4 files from anywhere on your device. Spoken language is detected automatically — no configuration needed." : {
+    "Right-click any audio file in Finder and choose \"Open With → TranscribeApp\" — or use Services → Transcribe Audio to send files directly." : {
       "localizations" : {
-        "da" : { "stringUnit" : { "state" : "translated", "value" : "Understøtter MP3-, M4A-, WAV- og MP4-filer fra overalt på din enhed. Det talte sprog registreres automatisk — ingen konfiguration nødvendig." } },
-        "de" : { "stringUnit" : { "state" : "translated", "value" : "Unterstützt MP3-, M4A-, WAV- und MP4-Dateien von überall auf deinem Gerät. Die gesprochene Sprache wird automatisch erkannt — keine Konfiguration erforderlich." } },
-        "es" : { "stringUnit" : { "state" : "translated", "value" : "Compatible con archivos MP3, M4A, WAV y MP4 de cualquier lugar de tu dispositivo. El idioma hablado se detecta automáticamente — sin configuración necesaria." } },
-        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Prend en charge les fichiers MP3, M4A, WAV et MP4 depuis n'importe où sur votre appareil. La langue parlée est détectée automatiquement — aucune configuration nécessaire." } },
-        "is" : { "stringUnit" : { "state" : "translated", "value" : "Styður MP3-, M4A-, WAV- og MP4-skrár hvaðanæva af tækinu þínu. Talið tungumál greinist sjálfkrafa — engin stilling þarf." } },
-        "nb" : { "stringUnit" : { "state" : "translated", "value" : "Støtter MP3-, M4A-, WAV- og MP4-filer fra hvor som helst på enheten din. Talt språk oppdages automatisk — ingen konfigurasjon nødvendig." } },
-        "sv" : { "stringUnit" : { "state" : "translated", "value" : "Stöder MP3-, M4A-, WAV- och MP4-filer från var som helst på din enhet. Talat språk identifieras automatiskt — ingen konfiguration behövs." } }
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Højreklik på en lydfil i Finder og vælg \"Åbn med → TranscribeApp\" — eller brug Tjenester → Transskribér lyd for at sende filer direkte."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Klicke in Finder mit der rechten Maustaste auf eine Audiodatei und wähle „Öffnen mit → TranscribeApp“ — oder nutze Dienste → Audio transkribieren."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Haz clic derecho en cualquier archivo de audio en el Finder y elige «Abrir con → TranscribeApp» — o usa Servicios → Transcribir audio."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Faites un clic droit sur un fichier audio dans le Finder et choisissez « Ouvrir avec → TranscribeApp » — ou utilisez Services → Transcrire l'audio."
+          }
+        },
+        "is" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hægrismelltu á hljóðskrá í Finder og veldu \"Opna með → TranscribeApp\" — eða notaðu Þjónustur → Umrita hljóð til að senda skrár beint."
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Høyreklikk på en lydfil i Finder og velg \"Åpne med → TranscribeApp\" — eller bruk Tjenester → Transkriber lyd for å sende filer direkte."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Högerklicka på en ljudfil i Finder och välj \"Öppna med → TranscribeApp\" — eller använd Tjänster → Transkribera ljud för att skicka filer direkt."
+          }
+        }
       }
     },
     "Select a transcription from the list." : {
       "localizations" : {
-        "da" : { "stringUnit" : { "state" : "translated", "value" : "Vælg en transskription fra listen." } },
-        "de" : { "stringUnit" : { "state" : "translated", "value" : "Wähle eine Transkription aus der Liste." } },
-        "es" : { "stringUnit" : { "state" : "translated", "value" : "Selecciona una transcripción de la lista." } },
-        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Sélectionnez une transcription dans la liste." } },
-        "is" : { "stringUnit" : { "state" : "translated", "value" : "Veldu umritun af listanum." } },
-        "nb" : { "stringUnit" : { "state" : "translated", "value" : "Velg en transkripsjon fra listen." } },
-        "sv" : { "stringUnit" : { "state" : "translated", "value" : "Välj en transkription från listan." } }
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vælg en transskription fra listen."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wähle eine Transkription aus der Liste."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Selecciona una transcripción de la lista."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sélectionnez une transcription dans la liste."
+          }
+        },
+        "is" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Veldu umritun af listanum."
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Velg en transkripsjon fra listen."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Välj en transkription från listan."
+          }
+        }
       }
     },
     "Settings" : {
       "localizations" : {
-        "da" : { "stringUnit" : { "state" : "translated", "value" : "Indstillinger" } },
-        "de" : { "stringUnit" : { "state" : "translated", "value" : "Einstellungen" } },
-        "es" : { "stringUnit" : { "state" : "translated", "value" : "Ajustes" } },
-        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Réglages" } },
-        "is" : { "stringUnit" : { "state" : "translated", "value" : "Stillingar" } },
-        "nb" : { "stringUnit" : { "state" : "translated", "value" : "Innstillinger" } },
-        "sv" : { "stringUnit" : { "state" : "translated", "value" : "Inställningar" } }
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Indstillinger"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Einstellungen"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ajustes"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Réglages"
+          }
+        },
+        "is" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Stillingar"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Innstillinger"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Inställningar"
+          }
+        }
       }
     },
     "Summarize" : {
       "localizations" : {
-        "da" : { "stringUnit" : { "state" : "translated", "value" : "Opsummér" } },
-        "de" : { "stringUnit" : { "state" : "translated", "value" : "Zusammenfassen" } },
-        "es" : { "stringUnit" : { "state" : "translated", "value" : "Resumir" } },
-        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Résumer" } },
-        "is" : { "stringUnit" : { "state" : "translated", "value" : "Búa til samantekt" } },
-        "nb" : { "stringUnit" : { "state" : "translated", "value" : "Oppsummer" } },
-        "sv" : { "stringUnit" : { "state" : "translated", "value" : "Sammanfatta" } }
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Opsummér"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zusammenfassen"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Resumir"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Résumer"
+          }
+        },
+        "is" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Búa til samantekt"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Oppsummer"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sammanfatta"
+          }
+        }
       }
     },
     "Summary" : {
       "localizations" : {
-        "da" : { "stringUnit" : { "state" : "translated", "value" : "Resumé" } },
-        "de" : { "stringUnit" : { "state" : "translated", "value" : "Zusammenfassung" } },
-        "es" : { "stringUnit" : { "state" : "translated", "value" : "Resumen" } },
-        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Résumé" } },
-        "is" : { "stringUnit" : { "state" : "translated", "value" : "Samantekt" } },
-        "nb" : { "stringUnit" : { "state" : "translated", "value" : "Sammendrag" } },
-        "sv" : { "stringUnit" : { "state" : "translated", "value" : "Sammanfattning" } }
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Resumé"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zusammenfassung"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Resumen"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Résumé"
+          }
+        },
+        "is" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Samantekt"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sammendrag"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sammanfattning"
+          }
+        }
+      }
+    },
+    "Supports MP3, M4A, WAV, and MP4 files from anywhere on your device. Spoken language is detected automatically — no configuration needed." : {
+      "localizations" : {
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Understøtter MP3-, M4A-, WAV- og MP4-filer fra overalt på din enhed. Det talte sprog registreres automatisk — ingen konfiguration nødvendig."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Unterstützt MP3-, M4A-, WAV- und MP4-Dateien von überall auf deinem Gerät. Die gesprochene Sprache wird automatisch erkannt — keine Konfiguration erforderlich."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Compatible con archivos MP3, M4A, WAV y MP4 de cualquier lugar de tu dispositivo. El idioma hablado se detecta automáticamente — sin configuración necesaria."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Prend en charge les fichiers MP3, M4A, WAV et MP4 depuis n'importe où sur votre appareil. La langue parlée est détectée automatiquement — aucune configuration nécessaire."
+          }
+        },
+        "is" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Styður MP3-, M4A-, WAV- og MP4-skrár hvaðanæva af tækinu þínu. Talið tungumál greinist sjálfkrafa — engin stilling þarf."
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Støtter MP3-, M4A-, WAV- og MP4-filer fra hvor som helst på enheten din. Talt språk oppdages automatisk — ingen konfigurasjon nødvendig."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Stöder MP3-, M4A-, WAV- och MP4-filer från var som helst på din enhet. Talat språk identifieras automatiskt — ingen konfiguration behövs."
+          }
+        }
       }
     },
     "Tap ✦ to generate a summary." : {
       "localizations" : {
-        "da" : { "stringUnit" : { "state" : "translated", "value" : "Tryk på ✦ for at generere et resumé." } },
-        "de" : { "stringUnit" : { "state" : "translated", "value" : "Tippe auf ✦, um eine Zusammenfassung zu erstellen." } },
-        "es" : { "stringUnit" : { "state" : "translated", "value" : "Toca ✦ para generar un resumen." } },
-        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Appuyez sur ✦ pour générer un résumé." } },
-        "is" : { "stringUnit" : { "state" : "translated", "value" : "Ýttu á ✦ til að búa til samantekt." } },
-        "nb" : { "stringUnit" : { "state" : "translated", "value" : "Trykk på ✦ for å generere et sammendrag." } },
-        "sv" : { "stringUnit" : { "state" : "translated", "value" : "Tryck på ✦ för att generera en sammanfattning." } }
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tryk på ✦ for at generere et resumé."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tippe auf ✦, um eine Zusammenfassung zu erstellen."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Toca ✦ para generar un resumen."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Appuyez sur ✦ pour générer un résumé."
+          }
+        },
+        "is" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ýttu á ✦ til að búa til samantekt."
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Trykk på ✦ for å generere et sammendrag."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tryck på ✦ för att generera en sammanfattning."
+          }
+        }
       }
     },
     "The \"Transcribe Audio\" action is available in the Shortcuts app — automate transcriptions, chain them with other actions, or trigger them with Siri." : {
       "localizations" : {
-        "da" : { "stringUnit" : { "state" : "translated", "value" : "Handlingen \"Transskribér lyd\" er tilgængelig i Genveje-appen — automatisér transskriptioner, kæd dem sammen med andre handlinger, eller udløs dem med Siri." } },
-        "de" : { "stringUnit" : { "state" : "translated", "value" : "Die Aktion \u201eAudio transkribieren\u201c ist in der Kurzbefehle-App verf\u00fcgbar \u2014 automatisiere Transkriptionen, verkn\u00fcpfe sie mit anderen Aktionen oder starte sie per Siri." } },
-        "es" : { "stringUnit" : { "state" : "translated", "value" : "La acción «Transcribir audio» está disponible en la app Atajos — automatiza transcripciones, combínalas con otras acciones o actívalas con Siri." } },
-        "fr" : { "stringUnit" : { "state" : "translated", "value" : "L'action « Transcrire l'audio » est disponible dans l'app Raccourcis — automatisez les transcriptions, enchaînez-les avec d'autres actions ou déclenchez-les avec Siri." } },
-        "is" : { "stringUnit" : { "state" : "translated", "value" : "Aðgerðin \"Umrita hljóð\" er tiltæk í Flýtileið-forritinu — sjálfvirkgjarðu umritanir, tengdu þær við aðrar aðgerðir, eða ræstu þær með Siri." } },
-        "nb" : { "stringUnit" : { "state" : "translated", "value" : "Handlingen \"Transkriber lyd\" er tilgjengelig i Snarveier-appen — automatiser transkripsjoner, koble dem til andre handlinger, eller utløs dem med Siri." } },
-        "sv" : { "stringUnit" : { "state" : "translated", "value" : "Åtgärden \"Transkribera ljud\" finns i Genvägar-appen — automatisera transkriptioner, koppla dem till andra åtgärder eller utlös dem med Siri." } }
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Handlingen \"Transskribér lyd\" er tilgængelig i Genveje-appen — automatisér transskriptioner, kæd dem sammen med andre handlinger, eller udløs dem med Siri."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Die Aktion „Audio transkribieren“ ist in der Kurzbefehle-App verfügbar — automatisiere Transkriptionen, verknüpfe sie mit anderen Aktionen oder starte sie per Siri."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "La acción «Transcribir audio» está disponible en la app Atajos — automatiza transcripciones, combínalas con otras acciones o actívalas con Siri."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "L'action « Transcrire l'audio » est disponible dans l'app Raccourcis — automatisez les transcriptions, enchaînez-les avec d'autres actions ou déclenchez-les avec Siri."
+          }
+        },
+        "is" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aðgerðin \"Umrita hljóð\" er tiltæk í Flýtileið-forritinu — sjálfvirkgjarðu umritanir, tengdu þær við aðrar aðgerðir, eða ræstu þær með Siri."
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Handlingen \"Transkriber lyd\" er tilgjengelig i Snarveier-appen — automatiser transkripsjoner, koble dem til andre handlinger, eller utløs dem med Siri."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Åtgärden \"Transkribera ljud\" finns i Genvägar-appen — automatisera transkriptioner, koppla dem till andra åtgärder eller utlös dem med Siri."
+          }
+        }
       }
     },
     "The audio file to transcribe (MP3, M4A, WAV, MP4)." : {
       "localizations" : {
-        "da" : { "stringUnit" : { "state" : "translated", "value" : "Lydfilen der skal transskriberes (MP3, M4A, WAV, MP4)." } },
-        "de" : { "stringUnit" : { "state" : "translated", "value" : "Die zu transkribierende Audiodatei (MP3, M4A, WAV, MP4)." } },
-        "es" : { "stringUnit" : { "state" : "translated", "value" : "El archivo de audio a transcribir (MP3, M4A, WAV, MP4)." } },
-        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Le fichier audio à transcrire (MP3, M4A, WAV, MP4)." } },
-        "is" : { "stringUnit" : { "state" : "translated", "value" : "Hljóðskráin til að umrita (MP3, M4A, WAV, MP4)." } },
-        "nb" : { "stringUnit" : { "state" : "translated", "value" : "Lydfilen som skal transkriberes (MP3, M4A, WAV, MP4)." } },
-        "sv" : { "stringUnit" : { "state" : "translated", "value" : "Ljudfilen att transkribera (MP3, M4A, WAV, MP4)." } }
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lydfilen der skal transskriberes (MP3, M4A, WAV, MP4)."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Die zu transkribierende Audiodatei (MP3, M4A, WAV, MP4)."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "El archivo de audio a transcribir (MP3, M4A, WAV, MP4)."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Le fichier audio à transcrire (MP3, M4A, WAV, MP4)."
+          }
+        },
+        "is" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hljóðskráin til að umrita (MP3, M4A, WAV, MP4)."
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lydfilen som skal transkriberes (MP3, M4A, WAV, MP4)."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ljudfilen att transkribera (MP3, M4A, WAV, MP4)."
+          }
+        }
       }
     },
     "The transcription for this recording is not available yet." : {
       "localizations" : {
-        "da" : { "stringUnit" : { "state" : "translated", "value" : "Transskriptionen for denne optagelse er endnu ikke tilgængelig." } },
-        "de" : { "stringUnit" : { "state" : "translated", "value" : "Die Transkription für diese Aufnahme ist noch nicht verfügbar." } },
-        "es" : { "stringUnit" : { "state" : "translated", "value" : "La transcripción de esta grabación aún no está disponible." } },
-        "fr" : { "stringUnit" : { "state" : "translated", "value" : "La transcription de cet enregistrement n'est pas encore disponible." } },
-        "is" : { "stringUnit" : { "state" : "translated", "value" : "Umritun fyrir þessa upptöku er ekki tiltæk enn." } },
-        "nb" : { "stringUnit" : { "state" : "translated", "value" : "Transkripsjonen for dette opptaket er ikke tilgjengelig ennå." } },
-        "sv" : { "stringUnit" : { "state" : "translated", "value" : "Transkriptionen för den här inspelningen är inte tillgänglig ännu." } }
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Transskriptionen for denne optagelse er endnu ikke tilgængelig."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Die Transkription für diese Aufnahme ist noch nicht verfügbar."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "La transcripción de esta grabación aún no está disponible."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "La transcription de cet enregistrement n'est pas encore disponible."
+          }
+        },
+        "is" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Umritun fyrir þessa upptöku er ekki tiltæk enn."
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Transkripsjonen for dette opptaket er ikke tilgjengelig ennå."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Transkriptionen för den här inspelningen är inte tillgänglig ännu."
+          }
+        }
       }
     },
     "The transcription model has not been initialized. Please download the model in Settings." : {
       "localizations" : {
-        "da" : { "stringUnit" : { "state" : "translated", "value" : "Transskriptionsmodellen er ikke blevet initialiseret. Download venligst modellen i Indstillinger." } },
-        "de" : { "stringUnit" : { "state" : "translated", "value" : "Das Transkriptionsmodell wurde nicht initialisiert. Bitte lade das Modell in den Einstellungen herunter." } },
-        "es" : { "stringUnit" : { "state" : "translated", "value" : "El modelo de transcripción no ha sido inicializado. Por favor, descarga el modelo en Ajustes." } },
-        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Le modèle de transcription n'a pas été initialisé. Veuillez télécharger le modèle dans les Réglages." } },
-        "is" : { "stringUnit" : { "state" : "translated", "value" : "Umritunarlíkanið hefur ekki verið frumstillt. Vinsamlegast sæktu líkanið í Stillingum." } },
-        "nb" : { "stringUnit" : { "state" : "translated", "value" : "Transkripsjonmodellen har ikke blitt initialisert. Last ned modellen i Innstillinger." } },
-        "sv" : { "stringUnit" : { "state" : "translated", "value" : "Transkriptionsmodellen har inte initierats. Ladda ner modellen i Inställningar." } }
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Transskriptionsmodellen er ikke blevet initialiseret. Download venligst modellen i Indstillinger."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Das Transkriptionsmodell wurde nicht initialisiert. Bitte lade das Modell in den Einstellungen herunter."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "El modelo de transcripción no ha sido inicializado. Por favor, descarga el modelo en Ajustes."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Le modèle de transcription n'a pas été initialisé. Veuillez télécharger le modèle dans les Réglages."
+          }
+        },
+        "is" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Umritunarlíkanið hefur ekki verið frumstillt. Vinsamlegast sæktu líkanið í Stillingum."
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Transkripsjonmodellen har ikke blitt initialisert. Last ned modellen i Innstillinger."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Transkriptionsmodellen har inte initierats. Ladda ner modellen i Inställningar."
+          }
+        }
       }
     },
     "The transcription service is not ready. Please try again." : {
       "localizations" : {
-        "da" : { "stringUnit" : { "state" : "translated", "value" : "Transskriptionstjenesten er ikke klar. Prøv venligst igen." } },
-        "de" : { "stringUnit" : { "state" : "translated", "value" : "Der Transkriptionsdienst ist nicht bereit. Bitte versuche es erneut." } },
-        "es" : { "stringUnit" : { "state" : "translated", "value" : "El servicio de transcripción no está listo. Por favor, inténtalo de nuevo." } },
-        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Le service de transcription n'est pas prêt. Veuillez réessayer." } },
-        "is" : { "stringUnit" : { "state" : "translated", "value" : "Umritunarþjónustan er ekki tilbúin. Vinsamlegast reyndu aftur." } },
-        "nb" : { "stringUnit" : { "state" : "translated", "value" : "Transkripsjonstjenesten er ikke klar. Prøv igjen." } },
-        "sv" : { "stringUnit" : { "state" : "translated", "value" : "Transkriptionstjänsten är inte redo. Försök igen." } }
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Transskriptionstjenesten er ikke klar. Prøv venligst igen."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Der Transkriptionsdienst ist nicht bereit. Bitte versuche es erneut."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "El servicio de transcripción no está listo. Por favor, inténtalo de nuevo."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Le service de transcription n'est pas prêt. Veuillez réessayer."
+          }
+        },
+        "is" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Umritunarþjónustan er ekki tilbúin. Vinsamlegast reyndu aftur."
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Transkripsjonstjenesten er ikke klar. Prøv igjen."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Transkriptionstjänsten är inte redo. Försök igen."
+          }
+        }
       }
+    },
+    "This will download %@ of data. Make sure you have a stable internet connection and sufficient storage space." : {
+
     },
     "Transcribe Audio" : {
       "localizations" : {
-        "da" : { "stringUnit" : { "state" : "translated", "value" : "Transskribér lyd" } },
-        "de" : { "stringUnit" : { "state" : "translated", "value" : "Audio transkribieren" } },
-        "es" : { "stringUnit" : { "state" : "translated", "value" : "Transcribir audio" } },
-        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Transcrire l'audio" } },
-        "is" : { "stringUnit" : { "state" : "translated", "value" : "Umrita hljóð" } },
-        "nb" : { "stringUnit" : { "state" : "translated", "value" : "Transkriber lyd" } },
-        "sv" : { "stringUnit" : { "state" : "translated", "value" : "Transkribera ljud" } }
-      }
-    },
-    "Turn your audio into text — fast, private, and entirely on-device." : {
-      "localizations" : {
-        "da" : { "stringUnit" : { "state" : "translated", "value" : "Omdann din lyd til tekst — hurtigt, privat og helt på enheden." } },
-        "de" : { "stringUnit" : { "state" : "translated", "value" : "Wandle dein Audio in Text um — schnell, privat und vollständig auf deinem Gerät." } },
-        "es" : { "stringUnit" : { "state" : "translated", "value" : "Convierte tu audio en texto — rápido, privado y completamente en tu dispositivo." } },
-        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Transformez votre audio en texte — rapide, privé et entièrement sur votre appareil." } },
-        "is" : { "stringUnit" : { "state" : "translated", "value" : "Breyttu hljóðinu þínu í texta — hratt, persónulegt og allt á tækinu." } },
-        "nb" : { "stringUnit" : { "state" : "translated", "value" : "Gjør lyden din om til tekst — raskt, privat og helt på enheten." } },
-        "sv" : { "stringUnit" : { "state" : "translated", "value" : "Omvandla ditt ljud till text — snabbt, privat och helt på enheten." } }
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Transskribér lyd"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Audio transkribieren"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Transcribir audio"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Transcrire l'audio"
+          }
+        },
+        "is" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Umrita hljóð"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Transkriber lyd"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Transkribera ljud"
+          }
+        }
       }
     },
     "TranscribeApp" : {
       "localizations" : {
-        "da" : { "stringUnit" : { "state" : "translated", "value" : "TranscribeApp" } },
-        "de" : { "stringUnit" : { "state" : "translated", "value" : "TranscribeApp" } },
-        "es" : { "stringUnit" : { "state" : "translated", "value" : "TranscribeApp" } },
-        "fr" : { "stringUnit" : { "state" : "translated", "value" : "TranscribeApp" } },
-        "is" : { "stringUnit" : { "state" : "translated", "value" : "TranscribeApp" } },
-        "nb" : { "stringUnit" : { "state" : "translated", "value" : "TranscribeApp" } },
-        "sv" : { "stringUnit" : { "state" : "translated", "value" : "TranscribeApp" } }
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "TranscribeApp"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "TranscribeApp"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "TranscribeApp"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "TranscribeApp"
+          }
+        },
+        "is" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "TranscribeApp"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "TranscribeApp"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "TranscribeApp"
+          }
+        }
       }
     },
     "Transcribes an audio file using Whisper and returns the text." : {
       "localizations" : {
-        "da" : { "stringUnit" : { "state" : "translated", "value" : "Transskriberer en lydfil med Whisper og returnerer teksten." } },
-        "de" : { "stringUnit" : { "state" : "translated", "value" : "Transkribiert eine Audiodatei mit Whisper und gibt den Text zurück." } },
-        "es" : { "stringUnit" : { "state" : "translated", "value" : "Transcribe un archivo de audio con Whisper y devuelve el texto." } },
-        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Transcrit un fichier audio avec Whisper et retourne le texte." } },
-        "is" : { "stringUnit" : { "state" : "translated", "value" : "Umritar hljóðskrá með Whisper og skilar textanum." } },
-        "nb" : { "stringUnit" : { "state" : "translated", "value" : "Transkriberer en lydfil med Whisper og returnerer teksten." } },
-        "sv" : { "stringUnit" : { "state" : "translated", "value" : "Transkriberar en ljudfil med Whisper och returnerar texten." } }
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Transskriberer en lydfil med Whisper og returnerer teksten."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Transkribiert eine Audiodatei mit Whisper und gibt den Text zurück."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Transcribe un archivo de audio con Whisper y devuelve el texto."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Transcrit un fichier audio avec Whisper et retourne le texte."
+          }
+        },
+        "is" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Umritar hljóðskrá með Whisper og skilar textanum."
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Transkriberer en lydfil med Whisper og returnerer teksten."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Transkriberar en ljudfil med Whisper och returnerar texten."
+          }
+        }
       }
     },
     "Transcribing… %lld%%" : {
       "localizations" : {
-        "da" : { "stringUnit" : { "state" : "translated", "value" : "Transskriberer… %lld %%" } },
-        "de" : { "stringUnit" : { "state" : "translated", "value" : "Wird transkribiert… %lld %%" } },
-        "es" : { "stringUnit" : { "state" : "translated", "value" : "Transcribiendo… %lld %%" } },
-        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Transcription… %lld %%" } },
-        "is" : { "stringUnit" : { "state" : "translated", "value" : "Umrita… %lld %%" } },
-        "nb" : { "stringUnit" : { "state" : "translated", "value" : "Transkriberer… %lld %%" } },
-        "sv" : { "stringUnit" : { "state" : "translated", "value" : "Transkriberar… %lld %%" } }
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Transskriberer… %lld %%"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wird transkribiert… %lld %%"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Transcribiendo… %lld %%"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Transcription… %lld %%"
+          }
+        },
+        "is" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Umrita… %lld %%"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Transkriberer… %lld %%"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Transkriberar… %lld %%"
+          }
+        }
       }
     },
     "Transcription" : {
       "localizations" : {
-        "da" : { "stringUnit" : { "state" : "translated", "value" : "Transskription" } },
-        "de" : { "stringUnit" : { "state" : "translated", "value" : "Transkription" } },
-        "es" : { "stringUnit" : { "state" : "translated", "value" : "Transcripción" } },
-        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Transcription" } },
-        "is" : { "stringUnit" : { "state" : "translated", "value" : "Umritun" } },
-        "nb" : { "stringUnit" : { "state" : "translated", "value" : "Transkripsjon" } },
-        "sv" : { "stringUnit" : { "state" : "translated", "value" : "Transkription" } }
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Transskription"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Transkription"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Transcripción"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Transcription"
+          }
+        },
+        "is" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Umritun"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Transkripsjon"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Transkription"
+          }
+        }
       }
     },
     "Transcription Failed" : {
       "localizations" : {
-        "da" : { "stringUnit" : { "state" : "translated", "value" : "Transskription mislykkedes" } },
-        "de" : { "stringUnit" : { "state" : "translated", "value" : "Transkription fehlgeschlagen" } },
-        "es" : { "stringUnit" : { "state" : "translated", "value" : "Error de transcripción" } },
-        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Échec de la transcription" } },
-        "is" : { "stringUnit" : { "state" : "translated", "value" : "Umritun mistókst" } },
-        "nb" : { "stringUnit" : { "state" : "translated", "value" : "Transkripsjon mislyktes" } },
-        "sv" : { "stringUnit" : { "state" : "translated", "value" : "Transkription misslyckades" } }
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Transskription mislykkedes"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Transkription fehlgeschlagen"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Error de transcripción"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Échec de la transcription"
+          }
+        },
+        "is" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Umritun mistókst"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Transkripsjon mislyktes"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Transkription misslyckades"
+          }
+        }
       }
     },
     "Transcriptions" : {
       "localizations" : {
-        "da" : { "stringUnit" : { "state" : "translated", "value" : "Transskriptioner" } },
-        "de" : { "stringUnit" : { "state" : "translated", "value" : "Transkriptionen" } },
-        "es" : { "stringUnit" : { "state" : "translated", "value" : "Transcripciones" } },
-        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Transcriptions" } },
-        "is" : { "stringUnit" : { "state" : "translated", "value" : "Umritanir" } },
-        "nb" : { "stringUnit" : { "state" : "translated", "value" : "Transkripsjoner" } },
-        "sv" : { "stringUnit" : { "state" : "translated", "value" : "Transkriptioner" } }
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Transskriptioner"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Transkriptionen"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Transcripciones"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Transcriptions"
+          }
+        },
+        "is" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Umritanir"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Transkripsjoner"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Transkriptioner"
+          }
+        }
+      }
+    },
+    "Turn your audio into text — fast, private, and entirely on-device." : {
+      "localizations" : {
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Omdann din lyd til tekst — hurtigt, privat og helt på enheden."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wandle dein Audio in Text um — schnell, privat und vollständig auf deinem Gerät."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Convierte tu audio en texto — rápido, privado y completamente en tu dispositivo."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Transformez votre audio en texte — rapide, privé et entièrement sur votre appareil."
+          }
+        },
+        "is" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Breyttu hljóðinu þínu í texta — hratt, persónulegt og allt á tækinu."
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gjør lyden din om til tekst — raskt, privat og helt på enheten."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Omvandla ditt ljud till text — snabbt, privat och helt på enheten."
+          }
+        }
       }
     },
     "Use in Shortcuts" : {
       "localizations" : {
-        "da" : { "stringUnit" : { "state" : "translated", "value" : "Brug i Genveje" } },
-        "de" : { "stringUnit" : { "state" : "translated", "value" : "In Kurzbefehlen verwenden" } },
-        "es" : { "stringUnit" : { "state" : "translated", "value" : "Usar en Atajos" } },
-        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Utiliser dans Raccourcis" } },
-        "is" : { "stringUnit" : { "state" : "translated", "value" : "Nota í Flýtileiðum" } },
-        "nb" : { "stringUnit" : { "state" : "translated", "value" : "Bruk i Snarveier" } },
-        "sv" : { "stringUnit" : { "state" : "translated", "value" : "Använd i Genvägar" } }
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Brug i Genveje"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "In Kurzbefehlen verwenden"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Usar en Atajos"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Utiliser dans Raccourcis"
+          }
+        },
+        "is" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nota í Flýtileiðum"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bruk i Snarveier"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Använd i Genvägar"
+          }
+        }
       }
     },
     "Welcome to Transcribe" : {
       "localizations" : {
-        "da" : { "stringUnit" : { "state" : "translated", "value" : "Velkommen til Transcribe" } },
-        "de" : { "stringUnit" : { "state" : "translated", "value" : "Willkommen bei Transcribe" } },
-        "es" : { "stringUnit" : { "state" : "translated", "value" : "Bienvenido a Transcribe" } },
-        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Bienvenue dans Transcribe" } },
-        "is" : { "stringUnit" : { "state" : "translated", "value" : "Velkomin í Transcribe" } },
-        "nb" : { "stringUnit" : { "state" : "translated", "value" : "Velkommen til Transcribe" } },
-        "sv" : { "stringUnit" : { "state" : "translated", "value" : "Välkommen till Transcribe" } }
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Velkommen til Transcribe"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Willkommen bei Transcribe"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bienvenido a Transcribe"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bienvenue dans Transcribe"
+          }
+        },
+        "is" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Velkomin í Transcribe"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Velkommen til Transcribe"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Välkommen till Transcribe"
+          }
+        }
       }
     },
     "Whisper Models" : {
       "localizations" : {
-        "da" : { "stringUnit" : { "state" : "translated", "value" : "Whisper-modeller" } },
-        "de" : { "stringUnit" : { "state" : "translated", "value" : "Whisper-Modelle" } },
-        "es" : { "stringUnit" : { "state" : "translated", "value" : "Modelos Whisper" } },
-        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Modèles Whisper" } },
-        "is" : { "stringUnit" : { "state" : "translated", "value" : "Whisper-líkön" } },
-        "nb" : { "stringUnit" : { "state" : "translated", "value" : "Whisper-modeller" } },
-        "sv" : { "stringUnit" : { "state" : "translated", "value" : "Whisper-modeller" } }
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Whisper-modeller"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Whisper-Modelle"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Modelos Whisper"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Modèles Whisper"
+          }
+        },
+        "is" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Whisper-líkön"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Whisper-modeller"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Whisper-modeller"
+          }
+        }
       }
     }
   },

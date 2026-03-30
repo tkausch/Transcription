@@ -22,7 +22,19 @@ final class SettingsViewModel {
         "openai_whisper-small.en",
         "openai_whisper-medium",
         "openai_whisper-medium.en",
-       
+
+    ]
+
+    // Approximate download sizes for each model.
+    static let modelSizes: [String: String] = [
+        "openai_whisper-large-v2":  "~3 GB",
+        "openai_whisper-large-v3":  "~3 GB",
+        "openai_whisper-base":      "~145 MB",
+        "openai_whisper-base.en":   "~145 MB",
+        "openai_whisper-small":     "~500 MB",
+        "openai_whisper-small.en":  "~500 MB",
+        "openai_whisper-medium":    "~1.5 GB",
+        "openai_whisper-medium.en": "~1.5 GB",
     ]
 
     enum DownloadState {
@@ -36,6 +48,7 @@ final class SettingsViewModel {
     private(set) var downloadProgress: Double = 0
     private(set) var downloadMessage = ""
     private(set) var errorMessage: String? = nil
+    var showDownloadConfirmation = false
 
     var isDownloading: Bool { downloadState == .downloading }
 
@@ -54,6 +67,14 @@ final class SettingsViewModel {
     }
 
     // MARK: - Download
+
+    func requestDownload() {
+        #if os(iOS)
+        showDownloadConfirmation = true
+        #else
+        Task { await downloadModel() }
+        #endif
+    }
 
     func downloadModel() async {
         downloadState = .downloading
