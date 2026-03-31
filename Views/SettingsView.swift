@@ -35,7 +35,6 @@ struct SettingsView: View {
         .formStyle(.grouped)
 #endif
         .navigationTitle("Settings")
-#if os(iOS)
         .alert("Download Model", isPresented: Bindable(vm).showDownloadConfirmation) {
             Button("Cancel", role: .cancel) { }
             Button("Download") {
@@ -45,7 +44,6 @@ struct SettingsView: View {
             let modelSize = SettingsViewModel.modelSizes[appSettings.selectedModel] ?? "unknown size"
             Text("This will download \(modelSize) of data. Make sure you have a stable internet connection and sufficient storage space.")
         }
-#endif
     }
 
     // MARK: - Whisper Models Section

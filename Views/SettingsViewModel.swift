@@ -69,11 +69,7 @@ final class SettingsViewModel {
     // MARK: - Download
 
     func requestDownload() {
-        #if os(iOS)
         showDownloadConfirmation = true
-        #else
-        Task { await downloadModel() }
-        #endif
     }
 
     func downloadModel() async {
