@@ -24,11 +24,21 @@ final class TranscriptionListViewModel {
     var importError: Error? = nil
     
     var importedTranscriptions: [Transcription] {
-        transcriptions.filter { $0.source == .imported }
+        let filtered = transcriptions.filter { $0.source == .imported }
+        print("[TranscriptionList] Imported: \(filtered.count) transcriptions")
+        for t in filtered {
+            print("  - \(t.title ?? "Untitled") - source: \(t.source.rawValue)")
+        }
+        return filtered
     }
     
     var recordedTranscriptions: [Transcription] {
-        transcriptions.filter { $0.source == .recording }
+        let filtered = transcriptions.filter { $0.source == .recording }
+        print("[TranscriptionList] Recorded: \(filtered.count) transcriptions")
+        for t in filtered {
+            print("  - \(t.title ?? "Untitled") - source: \(t.source.rawValue)")
+        }
+        return filtered
     }
 
     init(modelContext: ModelContext, appSettings: AppSettings = .shared, transcriptionService: TranscriptionService = .shared) {
