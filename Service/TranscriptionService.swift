@@ -131,8 +131,11 @@ final class TranscriptionService {
         defer { pipe.segmentDiscoveryCallback = nil }
 
         // Disable fallback thresholds to suppress noisy fallback warnings
+        // Set task to "transcribe" to keep the original language instead of translating to English
         let decodeOptions = DecodingOptions(
-            compressionRatioThreshold: nil, firstTokenLogProbThreshold: nil
+            task: .transcribe,
+            compressionRatioThreshold: nil, 
+            firstTokenLogProbThreshold: nil
         )
 
         let results = await Task.detached(priority: .userInitiated) {
