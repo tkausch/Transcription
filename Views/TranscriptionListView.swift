@@ -53,6 +53,11 @@ struct TranscriptionListView: View {
             .navigationDestination(isPresented: Bindable(vm).showSettings) {
                 SettingsView()
             }
+            .sheet(isPresented: Bindable(vm).showVoiceRecording) {
+                VoiceRecordingView(modelContext: modelContext) { transcription in
+                    vm.onRecordingComplete(transcription)
+                }
+            }
             // Push detail on iPhone when selection is set programmatically
             .navigationDestination(for: Transcription.self) { transcription in
                 TranscriptionDetailView(transcription: transcription) {
@@ -172,15 +177,16 @@ struct TranscriptionListView: View {
 
     // MARK: - Actions
 
-    private func openVoiceMemos() {
+    private func openVoiceRecording(vm: TranscriptionListViewModel) {
 #if os(macOS)
+        // On macOS, open Voice Memos app
         NSWorkspace.shared.openApplication(
             at: URL(fileURLWithPath: "/System/Applications/VoiceMemos.app"),
             configuration: NSWorkspace.OpenConfiguration()
         )
 #else
-        guard let url = URL(string: "voicememos://") else { return }
-        UIApplication.shared.open(url)
+        // On iOS, show built-in voice recording screen
+        vm.showVoiceRecording = true
 #endif
     }
 
@@ -204,7 +210,7 @@ struct TranscriptionListView: View {
         }
         ToolbarItem(placement: .primaryAction) {
             Button {
-                openVoiceMemos()
+                openVoiceRecording(vm: vm)
             } label: {
                 Label("Record", systemImage: "mic")
             }

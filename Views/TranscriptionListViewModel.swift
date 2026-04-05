@@ -20,6 +20,7 @@ final class TranscriptionListViewModel {
     var selectedTranscription: Transcription?
     var showSettings: Bool = false
     var showFilePicker: Bool = false
+    var showVoiceRecording: Bool = false
     var importError: Error? = nil
     
     var importedTranscriptions: [Transcription] {
@@ -95,6 +96,14 @@ final class TranscriptionListViewModel {
     }
 
     func retryTranscription(for transcription: Transcription) {
+        Task { @MainActor in
+            await startTranscription(for: transcription)
+        }
+    }
+    
+    func onRecordingComplete(_ transcription: Transcription) {
+        loadTranscriptions()
+        selectedTranscription = transcription
         Task { @MainActor in
             await startTranscription(for: transcription)
         }
