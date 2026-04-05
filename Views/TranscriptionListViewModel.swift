@@ -24,19 +24,19 @@ final class TranscriptionListViewModel {
     var importError: Error? = nil
     
     var importedTranscriptions: [Transcription] {
-        let filtered = transcriptions.filter { $0.source == .imported }
+        let filtered = transcriptions.filter { $0.sourceType == .imported }
         print("[TranscriptionList] Imported: \(filtered.count) transcriptions")
         for t in filtered {
-            print("  - \(t.title ?? "Untitled") - source: \(t.source.rawValue)")
+            print("  - \(t.title ?? "Untitled") - source: \(t.source)")
         }
         return filtered
     }
     
     var recordedTranscriptions: [Transcription] {
-        let filtered = transcriptions.filter { $0.source == .recording }
+        let filtered = transcriptions.filter { $0.sourceType == .recording }
         print("[TranscriptionList] Recorded: \(filtered.count) transcriptions")
         for t in filtered {
-            print("  - \(t.title ?? "Untitled") - source: \(t.source.rawValue)")
+            print("  - \(t.title ?? "Untitled") - source: \(t.source)")
         }
         return filtered
     }

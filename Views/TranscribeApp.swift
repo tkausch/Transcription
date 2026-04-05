@@ -69,20 +69,20 @@ struct TranscribeApp: App {
         
         var migrated = 0
         for transcription in transcriptions {
-            // All existing transcriptions without a source should default to .imported
+            // All existing transcriptions should default to "imported"
             // Note: SwiftData will auto-initialize new properties with their default values,
             // so this primarily serves as a validation/logging step
-            if transcription.source != .imported {
-                transcription.source = .imported
+            if transcription.source != "imported" && transcription.source != "recording" {
+                transcription.source = "imported"
                 migrated += 1
             }
         }
         
         if migrated > 0 {
             try? context.save()
-            print("[Migration] Migrated \(migrated) existing transcription(s) to .imported source")
+            print("[Migration] Migrated \(migrated) existing transcription(s) to imported source")
         } else {
-            print("[Migration] All existing transcriptions already have .imported source")
+            print("[Migration] All existing transcriptions already have a valid source")
         }
     }
 

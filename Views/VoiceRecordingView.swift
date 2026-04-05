@@ -265,11 +265,11 @@ struct VoiceRecordingView: View {
         
         transcription.originalFilename = filename
         
-        print("[VoiceRecording] Created transcription with source: \(transcription.source.rawValue)")
+        print("[VoiceRecording] Created transcription with source: \(transcription.source)")
         
         do {
             try repository.save(transcription)
-            print("[VoiceRecording] Saved transcription - source after save: \(transcription.source.rawValue)")
+            print("[VoiceRecording] Saved transcription - source after save: \(transcription.source)")
             onRecordingComplete(transcription)
             dismiss()
         } catch {
