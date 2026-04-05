@@ -31,7 +31,7 @@ final class Transcription {
     /// Error message from the last failed transcription attempt. Ephemeral — not persisted.
     @Attribute(.ephemeral) var transcriptionError: String? = nil
     var summary: String?
-    var source: TranscriptionSource
+    var source: TranscriptionSource = TranscriptionSource.imported
 
     /// Resolves the stored filename to the current app sandbox path at runtime.
     var audioFileURL: URL {
