@@ -113,29 +113,50 @@ struct TranscriptionListView: View {
             Text("Open a file or start a new recording to get started.")
         }
     }
+    
+    private func transcriptionRow(transcription: Transcription, vm: TranscriptionListViewModel) -> some View {
+        NavigationLink(value: transcription) {
+            TranscriptionRowView(transcription: transcription)
+        }
+        .tag(transcription)
+#if os(macOS)
+        .listRowSeparator(.visible)
+        .alignmentGuide(.listRowSeparatorLeading) { d in d[.leading] + 50 }
+#else
+        .listRowSeparator(.hidden)
+#endif
+        .contextMenu {
+            Button(role: .destructive) {
+                vm.delete(transcription)
+            } label: {
+                Label("Delete", systemImage: "trash")
+            }
+        }
+    }
 
     private func list(vm: TranscriptionListViewModel) -> some View {
         List(selection: Bindable(vm).selectedTranscription) {
-            ForEach(vm.transcriptions, id: \.id) { transcription in
-                NavigationLink(value: transcription) {
-                    TranscriptionRowView(transcription: transcription)
-                }
-                .tag(transcription)
-#if os(macOS)
-                .listRowSeparator(.visible)
-                .alignmentGuide(.listRowSeparatorLeading) { d in d[.leading] + 50 }
-#else
-                .listRowSeparator(.hidden)
-#endif
-                .contextMenu {
-                    Button(role: .destructive) {
-                        vm.delete(transcription)
-                    } label: {
-                        Label("Delete", systemImage: "trash")
+            if !vm.importedTranscriptions.isEmpty {
+                Section {
+                    ForEach(vm.importedTranscriptions, id: \.id) { transcription in
+                        transcriptionRow(transcription: transcription, vm: vm)
                     }
+                    .onDelete(perform: vm.deleteImportedTranscriptions)
+                } header: {
+                    Text("Imported Audio")
                 }
             }
-            .onDelete(perform: vm.deleteTranscriptions)
+            
+            if !vm.recordedTranscriptions.isEmpty {
+                Section {
+                    ForEach(vm.recordedTranscriptions, id: \.id) { transcription in
+                        transcriptionRow(transcription: transcription, vm: vm)
+                    }
+                    .onDelete(perform: vm.deleteRecordedTranscriptions)
+                } header: {
+                    Text("Voice Recordings")
+                }
+            }
         }
 #if os(macOS)
         .listStyle(.inset)

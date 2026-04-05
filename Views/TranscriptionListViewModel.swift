@@ -21,6 +21,14 @@ final class TranscriptionListViewModel {
     var showSettings: Bool = false
     var showFilePicker: Bool = false
     var importError: Error? = nil
+    
+    var importedTranscriptions: [Transcription] {
+        transcriptions.filter { $0.source == .imported }
+    }
+    
+    var recordedTranscriptions: [Transcription] {
+        transcriptions.filter { $0.source == .recording }
+    }
 
     init(modelContext: ModelContext, appSettings: AppSettings = .shared, transcriptionService: TranscriptionService = .shared) {
         self.repository = TranscriptionRepository(modelContext: modelContext)
@@ -53,7 +61,7 @@ final class TranscriptionListViewModel {
 
         do {
             let filename = try AudioFileStore.copy(from: url)
-            let transcription = Transcription(audioFilename: filename)
+            let transcription = Transcription(audioFilename: filename, source: .imported)
             transcription.title = url.deletingPathExtension().lastPathComponent
             transcription.originalFilename = url.lastPathComponent
             try repository.save(transcription)
@@ -103,6 +111,24 @@ final class TranscriptionListViewModel {
     func deleteTranscriptions(offsets: IndexSet) {
         for index in offsets {
             let t = transcriptions[index]
+            try? AudioFileStore.delete(filename: t.audioFilename)
+            try? repository.delete(t)
+        }
+        loadTranscriptions()
+    }
+    
+    func deleteImportedTranscriptions(offsets: IndexSet) {
+        for index in offsets {
+            let t = importedTranscriptions[index]
+            try? AudioFileStore.delete(filename: t.audioFilename)
+            try? repository.delete(t)
+        }
+        loadTranscriptions()
+    }
+    
+    func deleteRecordedTranscriptions(offsets: IndexSet) {
+        for index in offsets {
+            let t = recordedTranscriptions[index]
             try? AudioFileStore.delete(filename: t.audioFilename)
             try? repository.delete(t)
         }

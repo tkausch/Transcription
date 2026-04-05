@@ -7,6 +7,11 @@
 import Foundation
 import SwiftData
 
+enum TranscriptionSource: String, Codable {
+    case imported = "imported"
+    case recording = "recording"
+}
+
 @Model
 final class Transcription {
     
@@ -26,6 +31,7 @@ final class Transcription {
     /// Error message from the last failed transcription attempt. Ephemeral — not persisted.
     @Attribute(.ephemeral) var transcriptionError: String? = nil
     var summary: String?
+    var source: TranscriptionSource
 
     /// Resolves the stored filename to the current app sandbox path at runtime.
     var audioFileURL: URL {
@@ -35,9 +41,10 @@ final class Transcription {
                 .appending(component: "AudioFiles/\(audioFilename)")
     }
 
-    init(audioFilename: String) {
+    init(audioFilename: String, source: TranscriptionSource = .imported) {
         self.id = UUID()
         self.createdAt = Date()
         self.audioFilename = audioFilename
+        self.source = source
     }
 }
