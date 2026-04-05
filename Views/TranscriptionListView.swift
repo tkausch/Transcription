@@ -202,7 +202,6 @@ struct TranscriptionListView: View {
                 Label("Open Audio File", systemImage: "waveform.badge.plus")
             }
         }
-#if os(macOS)
         ToolbarItem(placement: .primaryAction) {
             Button {
                 openVoiceMemos()
@@ -210,7 +209,6 @@ struct TranscriptionListView: View {
                 Label("Record", systemImage: "mic")
             }
         }
-#endif
     }
 }
 
