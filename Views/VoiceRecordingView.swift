@@ -256,7 +256,13 @@ struct VoiceRecordingView: View {
         // Create transcription object with source = .recording
         let filename = url.lastPathComponent
         let transcription = Transcription(audioFilename: filename, source: .recording)
-        transcription.title = "Voice Recording"
+        
+        // Use formatted date and time as title for voice recordings
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .medium
+        dateFormatter.timeStyle = .short
+        transcription.title = dateFormatter.string(from: Date())
+        
         transcription.originalFilename = filename
         
         do {
