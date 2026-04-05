@@ -132,12 +132,17 @@ final class TranscriptionService {
 
         // Disable fallback thresholds to suppress noisy fallback warnings
         // Use the transcription mode from settings to determine task type
+        print("[TranscriptionService] Reading transcriptionMode from settings: \(appSettings.transcriptionMode.rawValue)")
+        print("[TranscriptionService] Comparison: transcriptionMode == .transcribe is \(appSettings.transcriptionMode == .transcribe)")
         let task: DecodingTask = appSettings.transcriptionMode == .transcribe ? .transcribe : .translate
+        print("[TranscriptionService] Selected DecodingTask: \(task)")
+        
         let decodeOptions = DecodingOptions(
             task: task,
             compressionRatioThreshold: nil, 
             firstTokenLogProbThreshold: nil
         )
+        print("[TranscriptionService] DecodingOptions task: \(decodeOptions.task ?? .transcribe)")
 
         let results = await Task.detached(priority: .userInitiated) {
             await pipe.transcribe(audioPaths: [audioPath], decodeOptions: decodeOptions)
