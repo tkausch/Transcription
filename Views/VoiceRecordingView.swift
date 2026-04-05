@@ -53,6 +53,15 @@ struct VoiceRecordingView: View {
                     }
                     .disabled(recorder.state == .idle)
                 }
+                ToolbarItem(placement: .confirmationAction) {
+                    Button("Done") {
+                        if recorder.state != .idle && recorder.state != .stopped {
+                            stopRecording()
+                        } else {
+                            dismiss()
+                        }
+                    }
+                }
             }
             .alert("Microphone Permission Required", isPresented: $showPermissionAlert) {
                 Button("Cancel", role: .cancel) {
