@@ -55,7 +55,10 @@ final class AppSettings {
     }
     
     var transcriptionMode: TranscriptionMode {
-        didSet { UserDefaults.standard.set(transcriptionMode.rawValue, forKey: Keys.transcriptionMode) }
+        didSet { 
+            UserDefaults.standard.set(transcriptionMode.rawValue, forKey: Keys.transcriptionMode)
+            print("[AppSettings] TranscriptionMode changed to: \(transcriptionMode.rawValue)")
+        }
     }
 
     init() {
@@ -66,5 +69,6 @@ final class AppSettings {
         
         let modeRawValue = UserDefaults.standard.string(forKey: Keys.transcriptionMode) ?? TranscriptionMode.transcribe.rawValue
         self.transcriptionMode = TranscriptionMode(rawValue: modeRawValue) ?? .transcribe
+        print("[AppSettings] Initialized transcriptionMode: \(self.transcriptionMode.rawValue)")
     }
 }
