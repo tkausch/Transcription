@@ -28,8 +28,8 @@ struct SettingsView: View {
     private func content(vm: SettingsViewModel) -> some View {
         Form {
             whisperModelsSection(vm: vm)
-            transcriptionModeSection()
             downloadSection(vm: vm)
+            transcriptionModeSection()
             appearanceSection()
         }
 #if os(macOS)
