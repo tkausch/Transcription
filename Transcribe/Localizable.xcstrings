@@ -418,6 +418,9 @@
     "Cancel" : {
 
     },
+    "Choose whether to transcribe audio in its original language or translate it to English." : {
+
+    },
     "Copy" : {
       "localizations" : {
         "da" : {
@@ -1432,6 +1435,9 @@
           }
         }
       }
+    },
+    "Mode" : {
+
     },
     "Model" : {
       "localizations" : {
@@ -2908,6 +2914,9 @@
         }
       }
     },
+    "Transcribe only" : {
+
+    },
     "TranscribeApp" : {
       "localizations" : {
         "da" : {
@@ -3138,6 +3147,9 @@
         }
       }
     },
+    "Transcription Mode" : {
+
+    },
     "Transcriptions" : {
       "localizations" : {
         "da" : {
@@ -3183,6 +3195,9 @@
           }
         }
       }
+    },
+    "Translate to English" : {
+
     },
     "Turn your audio into text — fast, private, and entirely on-device." : {
       "localizations" : {
