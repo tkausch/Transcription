@@ -147,8 +147,10 @@ final class TranscriptionService {
 
         let text = transcriptionResults
             .map(\.text)
-            .joined(separator: " ")
-            .trimmingCharacters(in: .whitespaces)
+            .map { $0.trimmingCharacters(in: .whitespaces) }
+            .filter { !$0.isEmpty }
+            .joined(separator: "\n")
+            .trimmingCharacters(in: .whitespacesAndNewlines)
 
         let language = transcriptionResults.first?.language
 
