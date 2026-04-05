@@ -28,6 +28,7 @@ struct SettingsView: View {
     private func content(vm: SettingsViewModel) -> some View {
         Form {
             whisperModelsSection(vm: vm)
+            transcriptionModeSection()
             downloadSection(vm: vm)
             appearanceSection()
         }
@@ -72,6 +73,24 @@ struct SettingsView: View {
             Text("Larger models are more accurate but require more memory and take longer to download. Models ending in \".en\" are optimized for English-only audio and are faster and more accurate when English is the only language spoken.")
         }
         .disabled(vm.isDownloading)
+    }
+
+    // MARK: - Transcription Mode Section
+
+    private func transcriptionModeSection() -> some View {
+        @Bindable var settings = appSettings
+        return Section {
+            Picker("Mode", selection: $settings.transcriptionMode) {
+                ForEach(TranscriptionMode.allCases) { mode in
+                    Text(mode.displayName).tag(mode)
+                }
+            }
+            .pickerStyle(.menu)
+        } header: {
+            Text("Transcription Mode")
+        } footer: {
+            Text("Choose whether to transcribe audio in its original language or translate it to English.")
+        }
     }
 
     // MARK: - Appearance Section
