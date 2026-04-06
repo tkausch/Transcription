@@ -44,7 +44,9 @@ struct VoiceRecordingView: View {
             }
             .padding()
             .navigationTitle("Voice Recording")
+            #if os(iOS)
             .navigationBarTitleDisplayMode(.inline)
+            #endif
             .toolbar {
                 ToolbarItem(placement: .cancellationAction) {
                     Button("Cancel") {
@@ -67,11 +69,13 @@ struct VoiceRecordingView: View {
                 Button("Cancel", role: .cancel) {
                     dismiss()
                 }
+                #if os(iOS)
                 Button("Open Settings") {
                     if let url = URL(string: UIApplication.openSettingsURLString) {
                         UIApplication.shared.open(url)
                     }
                 }
+                #endif
             } message: {
                 Text("Please enable microphone access in Settings to record audio.")
             }

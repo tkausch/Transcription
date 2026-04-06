@@ -142,7 +142,7 @@ final class TranscriptionService {
             compressionRatioThreshold: nil, 
             firstTokenLogProbThreshold: nil
         )
-        print("[TranscriptionService] DecodingOptions task: \(decodeOptions.task ?? .transcribe)")
+        print("[TranscriptionService] DecodingOptions task: \(decodeOptions.task)")
 
         let results = await Task.detached(priority: .userInitiated) {
             await pipe.transcribe(audioPaths: [audioPath], decodeOptions: decodeOptions)
@@ -158,6 +158,8 @@ final class TranscriptionService {
             .trimmingCharacters(in: .whitespacesAndNewlines)
 
         let language = transcriptionResults.first?.language
+        print("[TranscriptionService] Detected language: \(language ?? "nil")")
+        print("[TranscriptionService] First segment text: \(transcriptionResults.first?.text ?? "nil")")
 
         let duration = transcriptionResults
             .map { $0.timings.inputAudioSeconds }

@@ -56,23 +56,23 @@ final class AudioRecorderService: NSObject {
             }
         }
         #else
-        switch AVAudioSession.sharedInstance().recordPermission {
-        case .granted:
-            hasPermission = true
-        case .denied, .undetermined:
-            hasPermission = false
-        @unknown default:
-            hasPermission = false
-        }
+        // On macOS, microphone permission is handled by the system
+        // The app will be granted permission automatically when Info.plist has NSMicrophoneUsageDescription
+        hasPermission = true
         #endif
     }
     
     func requestPermission() async -> Bool {
+        #if os(iOS)
         return await withCheckedContinuation { continuation in
             AVAudioSession.sharedInstance().requestRecordPermission { granted in
                 continuation.resume(returning: granted)
             }
         }
+        #else
+        // On macOS, permission is handled automatically by the system
+        return true
+        #endif
     }
     
     // MARK: - Recording Controls
@@ -83,10 +83,12 @@ final class AudioRecorderService: NSObject {
             throw RecordingError.permissionDenied
         }
         
-        // Setup audio session
+        #if os(iOS)
+        // Setup audio session (iOS only)
         let audioSession = AVAudioSession.sharedInstance()
         try audioSession.setCategory(.playAndRecord, mode: .default)
         try audioSession.setActive(true)
+        #endif
         
         // Create recording URL
         let filename = "\(UUID().uuidString).m4a"
@@ -135,8 +137,10 @@ final class AudioRecorderService: NSObject {
         let url = recordingURL
         recordingURL = nil
         
-        // Deactivate audio session
+        #if os(iOS)
+        // Deactivate audio session (iOS only)
         try? AVAudioSession.sharedInstance().setActive(false)
+        #endif
         
         return url
     }
@@ -155,8 +159,10 @@ final class AudioRecorderService: NSObject {
         currentTime = 0
         audioLevel = 0
         
-        // Deactivate audio session
+        #if os(iOS)
+        // Deactivate audio session (iOS only)
         try? AVAudioSession.sharedInstance().setActive(false)
+        #endif
     }
     
     // MARK: - Timer & Metering
