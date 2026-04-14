@@ -104,7 +104,15 @@ struct TranscriptionListView: View {
         }
         .onChange(of: incomingURL) { _, url in
             guard let url else { return }
-            vm.importAudioFile(url: url)
+            
+            // Handle custom URL scheme from Share Extension
+            if url.scheme == "transcribe" {
+                handleCustomURL(url, vm: vm)
+            } else {
+                // Handle direct file URLs
+                vm.importAudioFile(url: url)
+            }
+            
             incomingURL = nil
         }
     }
@@ -176,6 +184,23 @@ struct TranscriptionListView: View {
     }
 
     // MARK: - Actions
+    
+    private func handleCustomURL(_ url: URL, vm: TranscriptionListViewModel) {
+        // Parse the custom URL scheme: transcribe://open?path=<encoded-url>
+        guard url.host == "open",
+              let components = URLComponents(url: url, resolvingAgainstBaseURL: false),
+              let queryItems = components.queryItems,
+              let pathItem = queryItems.first(where: { $0.name == "path" }),
+              let encodedPath = pathItem.value,
+              let decodedPath = encodedPath.removingPercentEncoding,
+              let fileURL = URL(string: decodedPath) else {
+            print("[TranscriptionListView] Failed to parse custom URL: \(url)")
+            return
+        }
+        
+        print("[TranscriptionListView] Received file from Share Extension: \(fileURL.path)")
+        vm.importAudioFile(url: fileURL)
+    }
 
     private func openVoiceRecording(vm: TranscriptionListViewModel) {
 #if os(macOS)

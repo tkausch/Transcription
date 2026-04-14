@@ -33,6 +33,7 @@
 		B6C22D822F82B36800F69E58 /* VoiceRecordingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C22D812F82B36800F69E58 /* VoiceRecordingView.swift */; };
 		B6C43F142F840DED008355FB /* VoiceRecordingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C43F132F840DED008355FB /* VoiceRecordingViewModel.swift */; };
 		B6C59FA92F89415600A9FA79 /* TranscribeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C59FA82F89415600A9FA79 /* TranscribeTests.swift */; };
+		B6C59FE62F8E75C700A9FA79 /* TranscribeShareExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = B6C59FDC2F8E75C700A9FA79 /* TranscribeShareExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,13 @@
 			remoteGlobalIDString = B6A98E512F3B3EDD00C3AEC5;
 			remoteInfo = Transcribe;
 		};
+		B6C59FE42F8E75C700A9FA79 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B6A98E4A2F3B3EDD00C3AEC5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B6C59FDB2F8E75C700A9FA79;
+			remoteInfo = TranscribeShareExtension;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -59,6 +67,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
+				B6C59FE62F8E75C700A9FA79 /* TranscribeShareExtension.appex in Embed Foundation Extensions */,
 			);
 			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -94,6 +103,7 @@
 		B6C22D812F82B36800F69E58 /* VoiceRecordingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceRecordingView.swift; sourceTree = "<group>"; };
 		B6C43F132F840DED008355FB /* VoiceRecordingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceRecordingViewModel.swift; sourceTree = "<group>"; };
 		B6C59FA82F89415600A9FA79 /* TranscribeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranscribeTests.swift; sourceTree = "<group>"; };
+		B6C59FDC2F8E75C700A9FA79 /* TranscribeShareExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = TranscribeShareExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -103,6 +113,13 @@
 				Info.plist,
 			);
 			target = B6A98E512F3B3EDD00C3AEC5 /* Transcribe */;
+		};
+		B6C59FEA2F8E75C700A9FA79 /* Exceptions for "TranscribeShareExtension" folder in "TranscribeShareExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = B6C59FDB2F8E75C700A9FA79 /* TranscribeShareExtension */;
 		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
@@ -123,6 +140,14 @@
 		B6A98E6E2F3B3EDF00C3AEC5 /* TranscribeUITests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = TranscribeUITests;
+			sourceTree = "<group>";
+		};
+		B6C59FDD2F8E75C700A9FA79 /* TranscribeShareExtension */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				B6C59FEA2F8E75C700A9FA79 /* Exceptions for "TranscribeShareExtension" folder in "TranscribeShareExtension" target */,
+			);
+			path = TranscribeShareExtension;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -150,6 +175,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B6C59FD92F8E75C700A9FA79 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -163,6 +195,7 @@
 				B6A98E642F3B3EDF00C3AEC5 /* TranscribeTests */,
 				B6C59FA82F89415600A9FA79 /* TranscribeTests.swift */,
 				B6A98E6E2F3B3EDF00C3AEC5 /* TranscribeUITests */,
+				B6C59FDD2F8E75C700A9FA79 /* TranscribeShareExtension */,
 				B6A98E532F3B3EDD00C3AEC5 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -173,6 +206,7 @@
 				B6A98E522F3B3EDD00C3AEC5 /* Transcribe.app */,
 				B6A98E612F3B3EDF00C3AEC5 /* TranscribeTests.xctest */,
 				B6A98E6B2F3B3EDF00C3AEC5 /* TranscribeUITests.xctest */,
+				B6C59FDC2F8E75C700A9FA79 /* TranscribeShareExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -237,6 +271,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				B6C59FE52F8E75C700A9FA79 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				B6A98E542F3B3EDD00C3AEC5 /* Transcribe */,
@@ -295,6 +330,28 @@
 			productReference = B6A98E6B2F3B3EDF00C3AEC5 /* TranscribeUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		B6C59FDB2F8E75C700A9FA79 /* TranscribeShareExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B6C59FE92F8E75C700A9FA79 /* Build configuration list for PBXNativeTarget "TranscribeShareExtension" */;
+			buildPhases = (
+				B6C59FD82F8E75C700A9FA79 /* Sources */,
+				B6C59FD92F8E75C700A9FA79 /* Frameworks */,
+				B6C59FDA2F8E75C700A9FA79 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				B6C59FDD2F8E75C700A9FA79 /* TranscribeShareExtension */,
+			);
+			name = TranscribeShareExtension;
+			packageProductDependencies = (
+			);
+			productName = TranscribeShareExtension;
+			productReference = B6C59FDC2F8E75C700A9FA79 /* TranscribeShareExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -315,6 +372,9 @@
 					B6A98E6A2F3B3EDF00C3AEC5 = {
 						CreatedOnToolsVersion = 26.3;
 						TestTargetID = B6A98E512F3B3EDD00C3AEC5;
+					};
+					B6C59FDB2F8E75C700A9FA79 = {
+						CreatedOnToolsVersion = 26.3;
 					};
 				};
 			};
@@ -338,6 +398,7 @@
 				B6A98E512F3B3EDD00C3AEC5 /* Transcribe */,
 				B6A98E602F3B3EDF00C3AEC5 /* TranscribeTests */,
 				B6A98E6A2F3B3EDF00C3AEC5 /* TranscribeUITests */,
+				B6C59FDB2F8E75C700A9FA79 /* TranscribeShareExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -358,6 +419,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		B6A98E692F3B3EDF00C3AEC5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B6C59FDA2F8E75C700A9FA79 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -413,6 +481,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B6C59FD82F8E75C700A9FA79 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -425,6 +500,11 @@
 			isa = PBXTargetDependency;
 			target = B6A98E512F3B3EDD00C3AEC5 /* Transcribe */;
 			targetProxy = B6A98E6C2F3B3EDF00C3AEC5 /* PBXContainerItemProxy */;
+		};
+		B6C59FE52F8E75C700A9FA79 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B6C59FDB2F8E75C700A9FA79 /* TranscribeShareExtension */;
+			targetProxy = B6C59FE42F8E75C700A9FA79 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -763,6 +843,67 @@
 			};
 			name = Release;
 		};
+		B6C59FE72F8E75C700A9FA79 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Y7R5N52YDS;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TranscribeShareExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = TranscribeShareExtension;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = li.kausch.Transcribe.TranscribeShareExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B6C59FE82F8E75C700A9FA79 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Y7R5N52YDS;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TranscribeShareExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = TranscribeShareExtension;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = li.kausch.Transcribe.TranscribeShareExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -798,6 +939,15 @@
 			buildConfigurations = (
 				B6A98E7C2F3B3EDF00C3AEC5 /* Debug */,
 				B6A98E7D2F3B3EDF00C3AEC5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B6C59FE92F8E75C700A9FA79 /* Build configuration list for PBXNativeTarget "TranscribeShareExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B6C59FE72F8E75C700A9FA79 /* Debug */,
+				B6C59FE82F8E75C700A9FA79 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
