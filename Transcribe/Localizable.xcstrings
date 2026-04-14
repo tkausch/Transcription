@@ -47,6 +47,9 @@
         }
       }
     },
+    "·" : {
+
+    },
     "%lld%%" : {
       "localizations" : {
         "da" : {
@@ -278,6 +281,7 @@
       }
     },
     "Audio" : {
+      "extractionState" : "stale",
       "localizations" : {
         "da" : {
           "stringUnit" : {
@@ -651,6 +655,9 @@
         }
       }
     },
+    "Done" : {
+
+    },
     "Download" : {
       "localizations" : {
         "da" : {
@@ -930,7 +937,11 @@
         }
       }
     },
+    "Failed to start recording. Please try again." : {
+
+    },
     "File" : {
+      "extractionState" : "stale",
       "localizations" : {
         "da" : {
           "stringUnit" : {
@@ -1252,7 +1263,11 @@
         }
       }
     },
+    "Imported Audio" : {
+
+    },
     "Info" : {
+      "extractionState" : "stale",
       "localizations" : {
         "da" : {
           "stringUnit" : {
@@ -1436,6 +1451,15 @@
         }
       }
     },
+    "Loading model..." : {
+
+    },
+    "Microphone access is required to record audio. Please enable it in Settings." : {
+
+    },
+    "Microphone Permission Required" : {
+
+    },
     "Mode" : {
 
     },
@@ -1577,6 +1601,52 @@
         }
       }
     },
+    "No Recordings" : {
+      "localizations" : {
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ingen optagelser"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Keine Aufnahmen"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sin grabaciones"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aucun enregistrement"
+          }
+        },
+        "is" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Engar upptökur"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ingen opptak"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Inga inspelningar"
+          }
+        }
+      }
+    },
     "No Selection" : {
       "localizations" : {
         "da" : {
@@ -1711,52 +1781,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ingen transkription"
-          }
-        }
-      }
-    },
-    "No Transcripts" : {
-      "localizations" : {
-        "da" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ingen transskriptioner"
-          }
-        },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Keine Transkriptionen"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Sin transcripciones"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Aucune transcription"
-          }
-        },
-        "is" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Engar umritanir"
-          }
-        },
-        "nb" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ingen transkripsjoner"
-          }
-        },
-        "sv" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Inga transkriptioner"
           }
         }
       }
@@ -1991,6 +2015,9 @@
         }
       }
     },
+    "Open Settings" : {
+
+    },
     "Open With Transcribe" : {
       "localizations" : {
         "da" : {
@@ -2082,6 +2109,9 @@
           }
         }
       }
+    },
+    "Please enable microphone access in Settings to record audio." : {
+
     },
     "Powered by OpenAI Whisper, one of the most accurate speech recognition models available." : {
       "localizations" : {
@@ -2263,6 +2293,55 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Spela in"
+          }
+        }
+      }
+    },
+    "Recording Error" : {
+
+    },
+    "Recordings" : {
+      "localizations" : {
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Optagelser"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aufnahmen"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Grabaciones"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Enregistrements"
+          }
+        },
+        "is" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Upptökur"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Opptak"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Inspelningar"
           }
         }
       }
@@ -3151,6 +3230,7 @@
 
     },
     "Transcriptions" : {
+      "extractionState" : "stale",
       "localizations" : {
         "da" : {
           "stringUnit" : {
@@ -3287,6 +3367,55 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Använd i Genvägar"
+          }
+        }
+      }
+    },
+    "Voice Recording" : {
+
+    },
+    "Voice Recordings" : {
+      "localizations" : {
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Stemmeoptagelser"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sprachaufnahmen"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Grabaciones de voz"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Enregistrements vocaux"
+          }
+        },
+        "is" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Raddupptökur"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Stemmeopptakere"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Röstinspelningar"
           }
         }
       }

@@ -12,12 +12,6 @@ struct TranscriptionInfoView: View {
     var body: some View {
         Grid(alignment: .leadingFirstTextBaseline, horizontalSpacing: 16, verticalSpacing: 8) {
             GridRow {
-                Text("File")
-                    .foregroundStyle(.secondary)
-                Text(transcription.originalFilename ?? "—")
-                    .textSelection(.enabled)
-            }
-            GridRow {
                 Text("Language")
                     .foregroundStyle(.secondary)
                 Text(transcription.language ?? "—")

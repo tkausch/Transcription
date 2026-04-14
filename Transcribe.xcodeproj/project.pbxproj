@@ -29,6 +29,10 @@
 		B6A98EDF2F3D101B00C3AEC5 /* LaunchScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A98EDE2F3D101B00C3AEC5 /* LaunchScreenView.swift */; };
 		B6A98EE42F3F7F4700C3AEC5 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A98EE32F3F7F4700C3AEC5 /* SettingsViewModel.swift */; };
 		B6A990B72F421A3500C3AEC5 /* TranscribeAudioIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A990B62F421A3500C3AEC5 /* TranscribeAudioIntent.swift */; };
+		B6C22D802F82B34500F69E58 /* AudioRecorderService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C22D7F2F82B34500F69E58 /* AudioRecorderService.swift */; };
+		B6C22D822F82B36800F69E58 /* VoiceRecordingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C22D812F82B36800F69E58 /* VoiceRecordingView.swift */; };
+		B6C43F142F840DED008355FB /* VoiceRecordingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C43F132F840DED008355FB /* VoiceRecordingViewModel.swift */; };
+		B6C59FA92F89415600A9FA79 /* TranscribeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C59FA82F89415600A9FA79 /* TranscribeTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +51,19 @@
 			remoteInfo = Transcribe;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		B6C59FBD2F8E705700A9FA79 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		B61015B42F476CC0007D9DFB /* AudioFileStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioFileStore.swift; sourceTree = "<group>"; };
@@ -73,6 +90,10 @@
 		B6A98EDE2F3D101B00C3AEC5 /* LaunchScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenView.swift; sourceTree = "<group>"; };
 		B6A98EE32F3F7F4700C3AEC5 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
 		B6A990B62F421A3500C3AEC5 /* TranscribeAudioIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranscribeAudioIntent.swift; sourceTree = "<group>"; };
+		B6C22D7F2F82B34500F69E58 /* AudioRecorderService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioRecorderService.swift; sourceTree = "<group>"; };
+		B6C22D812F82B36800F69E58 /* VoiceRecordingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceRecordingView.swift; sourceTree = "<group>"; };
+		B6C43F132F840DED008355FB /* VoiceRecordingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceRecordingViewModel.swift; sourceTree = "<group>"; };
+		B6C59FA82F89415600A9FA79 /* TranscribeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranscribeTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -140,6 +161,7 @@
 				B6A98E952F3B540300C3AEC5 /* Model */,
 				B6A98E542F3B3EDD00C3AEC5 /* Transcribe */,
 				B6A98E642F3B3EDF00C3AEC5 /* TranscribeTests */,
+				B6C59FA82F89415600A9FA79 /* TranscribeTests.swift */,
 				B6A98E6E2F3B3EDF00C3AEC5 /* TranscribeUITests */,
 				B6A98E532F3B3EDD00C3AEC5 /* Products */,
 			);
@@ -180,6 +202,8 @@
 				B6A98ED12F3CD1F000C3AEC5 /* SummaryView.swift */,
 				B6A98EDE2F3D101B00C3AEC5 /* LaunchScreenView.swift */,
 				B6A98EE32F3F7F4700C3AEC5 /* SettingsViewModel.swift */,
+				B6C22D812F82B36800F69E58 /* VoiceRecordingView.swift */,
+				B6C43F132F840DED008355FB /* VoiceRecordingViewModel.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -193,6 +217,7 @@
 				B6A98ECF2F3CD05B00C3AEC5 /* SummarizationService.swift */,
 				B6A990B62F421A3500C3AEC5 /* TranscribeAudioIntent.swift */,
 				B61015B42F476CC0007D9DFB /* AudioFileStore.swift */,
+				B6C22D7F2F82B34500F69E58 /* AudioRecorderService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -207,6 +232,7 @@
 				B6A98E4E2F3B3EDD00C3AEC5 /* Sources */,
 				B6A98E4F2F3B3EDD00C3AEC5 /* Frameworks */,
 				B6A98E502F3B3EDD00C3AEC5 /* Resources */,
+				B6C59FBD2F8E705700A9FA79 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
@@ -347,10 +373,12 @@
 			files = (
 				B6A98EAF2F3B690A00C3AEC5 /* TranscribeApp.swift in Sources */,
 				B6A98EBD2F3B69D700C3AEC5 /* SettingsView.swift in Sources */,
+				B6C22D822F82B36800F69E58 /* VoiceRecordingView.swift in Sources */,
 				B6A98ECC2F3CCB1A00C3AEC5 /* TranscriptionTextView.swift in Sources */,
 				B6A98EC82F3CCA1E00C3AEC5 /* AudioPlayerView.swift in Sources */,
 				B6A98EB02F3B690A00C3AEC5 /* TranscriptionDetailView.swift in Sources */,
 				B6A98EE42F3F7F4700C3AEC5 /* SettingsViewModel.swift in Sources */,
+				B6C43F142F840DED008355FB /* VoiceRecordingViewModel.swift in Sources */,
 				B6A98EBB2F3B69C600C3AEC5 /* AppSettings.swift in Sources */,
 				B6A990B72F421A3500C3AEC5 /* TranscribeAudioIntent.swift in Sources */,
 				B6A98EC42F3BCD9700C3AEC5 /* TranscriptionListViewModel.swift in Sources */,
@@ -365,6 +393,7 @@
 				B6A98EC62F3BD96900C3AEC5 /* OnboardingView.swift in Sources */,
 				B61015B52F476CC0007D9DFB /* AudioFileStore.swift in Sources */,
 				B6A98ECA2F3CCAC900C3AEC5 /* TranscriptionInfoView.swift in Sources */,
+				B6C22D802F82B34500F69E58 /* AudioRecorderService.swift in Sources */,
 				B6A98EDF2F3D101B00C3AEC5 /* LaunchScreenView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -373,6 +402,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B6C59FA92F89415600A9FA79 /* TranscribeTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -20,7 +20,26 @@ final class TranscriptionListViewModel {
     var selectedTranscription: Transcription?
     var showSettings: Bool = false
     var showFilePicker: Bool = false
+    var showVoiceRecording: Bool = false
     var importError: Error? = nil
+    
+    var importedTranscriptions: [Transcription] {
+        let filtered = transcriptions.filter { $0.sourceType == .imported }
+        print("[TranscriptionList] Imported: \(filtered.count) transcriptions")
+        for t in filtered {
+            print("  - \(t.title ?? "Untitled") - source: \(t.source)")
+        }
+        return filtered
+    }
+    
+    var recordedTranscriptions: [Transcription] {
+        let filtered = transcriptions.filter { $0.sourceType == .recording }
+        print("[TranscriptionList] Recorded: \(filtered.count) transcriptions")
+        for t in filtered {
+            print("  - \(t.title ?? "Untitled") - source: \(t.source)")
+        }
+        return filtered
+    }
 
     init(modelContext: ModelContext, appSettings: AppSettings = .shared, transcriptionService: TranscriptionService = .shared) {
         self.repository = TranscriptionRepository(modelContext: modelContext)
@@ -53,7 +72,7 @@ final class TranscriptionListViewModel {
 
         do {
             let filename = try AudioFileStore.copy(from: url)
-            let transcription = Transcription(audioFilename: filename)
+            let transcription = Transcription(audioFilename: filename, source: .imported)
             transcription.title = url.deletingPathExtension().lastPathComponent
             transcription.originalFilename = url.lastPathComponent
             try repository.save(transcription)
@@ -91,6 +110,14 @@ final class TranscriptionListViewModel {
             await startTranscription(for: transcription)
         }
     }
+    
+    func onRecordingComplete(_ transcription: Transcription) {
+        loadTranscriptions()
+        selectedTranscription = transcription
+        Task { @MainActor in
+            await startTranscription(for: transcription)
+        }
+    }
 
     // MARK: - Delete
 
@@ -103,6 +130,24 @@ final class TranscriptionListViewModel {
     func deleteTranscriptions(offsets: IndexSet) {
         for index in offsets {
             let t = transcriptions[index]
+            try? AudioFileStore.delete(filename: t.audioFilename)
+            try? repository.delete(t)
+        }
+        loadTranscriptions()
+    }
+    
+    func deleteImportedTranscriptions(offsets: IndexSet) {
+        for index in offsets {
+            let t = importedTranscriptions[index]
+            try? AudioFileStore.delete(filename: t.audioFilename)
+            try? repository.delete(t)
+        }
+        loadTranscriptions()
+    }
+    
+    func deleteRecordedTranscriptions(offsets: IndexSet) {
+        for index in offsets {
+            let t = recordedTranscriptions[index]
             try? AudioFileStore.delete(filename: t.audioFilename)
             try? repository.delete(t)
         }

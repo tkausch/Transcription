@@ -48,10 +48,15 @@ struct TranscriptionListView: View {
                     list(vm: vm)
                 }
             }
-            .navigationTitle("Transcriptions")
+            .navigationTitle("Recordings")
             .toolbar { toolbarItems(vm: vm) }
             .navigationDestination(isPresented: Bindable(vm).showSettings) {
                 SettingsView()
+            }
+            .sheet(isPresented: Bindable(vm).showVoiceRecording) {
+                VoiceRecordingView(modelContext: modelContext) { transcription in
+                    vm.onRecordingComplete(transcription)
+                }
             }
             // Push detail on iPhone when selection is set programmatically
             .navigationDestination(for: Transcription.self) { transcription in
@@ -108,34 +113,55 @@ struct TranscriptionListView: View {
 
     private var emptyState: some View {
         ContentUnavailableView {
-            Label("No Transcripts", systemImage: "waveform.badge.plus")
+            Label("No Recordings", systemImage: "waveform.badge.plus")
         } description: {
             Text("Open a file or start a new recording to get started.")
+        }
+    }
+    
+    private func transcriptionRow(transcription: Transcription, vm: TranscriptionListViewModel) -> some View {
+        NavigationLink(value: transcription) {
+            TranscriptionRowView(transcription: transcription)
+        }
+        .tag(transcription)
+#if os(macOS)
+        .listRowSeparator(.visible)
+        .alignmentGuide(.listRowSeparatorLeading) { d in d[.leading] + 50 }
+#else
+        .listRowSeparator(.hidden)
+#endif
+        .contextMenu {
+            Button(role: .destructive) {
+                vm.delete(transcription)
+            } label: {
+                Label("Delete", systemImage: "trash")
+            }
         }
     }
 
     private func list(vm: TranscriptionListViewModel) -> some View {
         List(selection: Bindable(vm).selectedTranscription) {
-            ForEach(vm.transcriptions, id: \.id) { transcription in
-                NavigationLink(value: transcription) {
-                    TranscriptionRowView(transcription: transcription)
-                }
-                .tag(transcription)
-#if os(macOS)
-                .listRowSeparator(.visible)
-                .alignmentGuide(.listRowSeparatorLeading) { d in d[.leading] + 50 }
-#else
-                .listRowSeparator(.hidden)
-#endif
-                .contextMenu {
-                    Button(role: .destructive) {
-                        vm.delete(transcription)
-                    } label: {
-                        Label("Delete", systemImage: "trash")
+            if !vm.importedTranscriptions.isEmpty {
+                Section {
+                    ForEach(vm.importedTranscriptions, id: \.id) { transcription in
+                        transcriptionRow(transcription: transcription, vm: vm)
                     }
+                    .onDelete(perform: vm.deleteImportedTranscriptions)
+                } header: {
+                    Text("Imported Audio")
                 }
             }
-            .onDelete(perform: vm.deleteTranscriptions)
+            
+            if !vm.recordedTranscriptions.isEmpty {
+                Section {
+                    ForEach(vm.recordedTranscriptions, id: \.id) { transcription in
+                        transcriptionRow(transcription: transcription, vm: vm)
+                    }
+                    .onDelete(perform: vm.deleteRecordedTranscriptions)
+                } header: {
+                    Text("Voice Recordings")
+                }
+            }
         }
 #if os(macOS)
         .listStyle(.inset)
@@ -151,15 +177,16 @@ struct TranscriptionListView: View {
 
     // MARK: - Actions
 
-    private func openVoiceMemos() {
+    private func openVoiceRecording(vm: TranscriptionListViewModel) {
 #if os(macOS)
+        // On macOS, open Voice Memos app
         NSWorkspace.shared.openApplication(
             at: URL(fileURLWithPath: "/System/Applications/VoiceMemos.app"),
             configuration: NSWorkspace.OpenConfiguration()
         )
 #else
-        guard let url = URL(string: "voicememos://") else { return }
-        UIApplication.shared.open(url)
+        // On iOS, show built-in voice recording screen
+        vm.showVoiceRecording = true
 #endif
     }
 
@@ -178,18 +205,16 @@ struct TranscriptionListView: View {
             Button {
                 vm.showFilePicker = true
             } label: {
-                Label("Open Audio File", systemImage: "waveform.badge.plus")
+                Label("Open Audio File", systemImage: "folder.badge.plus")
             }
         }
-#if os(macOS)
         ToolbarItem(placement: .primaryAction) {
             Button {
-                openVoiceMemos()
+                openVoiceRecording(vm: vm)
             } label: {
                 Label("Record", systemImage: "mic")
             }
         }
-#endif
     }
 }
 

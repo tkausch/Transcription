@@ -38,8 +38,17 @@ struct TranscribeApp: App {
     var sharedModelContainer: ModelContainer = {
         let schema = Schema([Transcription.self])
         let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
+        
         do {
-            return try ModelContainer(for: schema, configurations: [modelConfiguration])
+            let container = try ModelContainer(for: schema, configurations: [modelConfiguration])
+            
+            // Migrate existing transcriptions to set source = .imported
+            // Run this on next tick to ensure container is fully initialized
+            Task { @MainActor in
+                migrateExistingTranscriptions(in: container.mainContext)
+            }
+            
+            return container
         } catch {
             // Schema has changed — delete the old store and start fresh
             let storeURL = modelConfiguration.url
@@ -52,6 +61,30 @@ struct TranscribeApp: App {
             }
         }
     }()
+    
+    @MainActor
+    private static func migrateExistingTranscriptions(in context: ModelContext) {
+        let descriptor = FetchDescriptor<Transcription>()
+        guard let transcriptions = try? context.fetch(descriptor) else { return }
+        
+        var migrated = 0
+        for transcription in transcriptions {
+            // All existing transcriptions should default to "imported"
+            // Note: SwiftData will auto-initialize new properties with their default values,
+            // so this primarily serves as a validation/logging step
+            if transcription.source != "imported" && transcription.source != "recording" {
+                transcription.source = "imported"
+                migrated += 1
+            }
+        }
+        
+        if migrated > 0 {
+            try? context.save()
+            print("[Migration] Migrated \(migrated) existing transcription(s) to imported source")
+        } else {
+            print("[Migration] All existing transcriptions already have a valid source")
+        }
+    }
 
     private let appSettings = AppSettings.shared
     @State private var isLaunching = true
@@ -73,16 +106,22 @@ struct TranscribeApp: App {
             }
             .preferredColorScheme(appSettings.forceDarkMode ? .dark : nil)
             .task {
-                // Start loading the model in the background immediately on launch,
+                // Start loading the model in the background immediately on launch in parallel,
                 // so the pipeline is ready by the time the user imports a file.
-                if appSettings.isModelDownloaded {
-                    await TranscriptionService.shared.load()
-                }
+                async let modelLoad: Void = {
+                    if appSettings.isModelDownloaded {
+                        await TranscriptionService.shared.load()
+                    }
+                }()
+                
                 // Brief delay to show launch screen, then fade out
                 try? await Task.sleep(for: .seconds(1.5))
                 withAnimation(.easeOut(duration: 0.4)) {
                     isLaunching = false
                 }
+                
+                // Ensure model loading completes (non-blocking for UI)
+                await modelLoad
             }
             .onOpenURL { url in
                 incomingURL = url

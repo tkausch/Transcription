@@ -4,6 +4,8 @@
 <dict>
 	<key>LSApplicationCategoryType</key>
 	<string>public.app-category.productivity</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>Transcribe needs access to your microphone to record audio for transcription.</string>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
 		<string>voicememos</string>
