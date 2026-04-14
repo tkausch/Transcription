@@ -106,16 +106,22 @@ struct TranscribeApp: App {
             }
             .preferredColorScheme(appSettings.forceDarkMode ? .dark : nil)
             .task {
-                // Start loading the model in the background immediately on launch,
+                // Start loading the model in the background immediately on launch in parallel,
                 // so the pipeline is ready by the time the user imports a file.
-                if appSettings.isModelDownloaded {
-                    await TranscriptionService.shared.load()
-                }
+                async let modelLoad: Void = {
+                    if appSettings.isModelDownloaded {
+                        await TranscriptionService.shared.load()
+                    }
+                }()
+                
                 // Brief delay to show launch screen, then fade out
                 try? await Task.sleep(for: .seconds(1.5))
                 withAnimation(.easeOut(duration: 0.4)) {
                     isLaunching = false
                 }
+                
+                // Ensure model loading completes (non-blocking for UI)
+                await modelLoad
             }
             .onOpenURL { url in
                 incomingURL = url

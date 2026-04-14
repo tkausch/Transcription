@@ -8,6 +8,7 @@ import Foundation
 import Observation
 import AVFoundation
 import WhisperKit
+import CoreML
 
 @Observable
 @MainActor
@@ -37,20 +38,48 @@ final class TranscriptionService {
     /// Loads the WhisperKit pipeline for the model selected in AppSettings.
     /// Must be called before transcribing. Safe to call multiple times.
     func load() async {
-        guard case .idle = state else { return }
+        print("[TranscriptionService] load() called - current state: \(state)")
+        guard case .idle = state else {
+            print("[TranscriptionService] Skipping load - state is not idle")
+            return
+        }
 
         state = .loading
         let model = appSettings.selectedModel
+        print("[TranscriptionService] Starting to load model: \(model)")
+        let loadStart = Date()
+        
         do {
             // Run heavy model initialisation off the main actor to avoid blocking the UI.
             let newPipe = try await Task.detached(priority: .userInitiated) {
-                let config = WhisperKitConfig(model: model)
-                return try await WhisperKit(config)
+                let config = WhisperKitConfig(
+                    model: model,
+                    computeOptions: ModelComputeOptions(
+                        audioEncoderCompute: .cpuAndNeuralEngine,
+                        textDecoderCompute: .cpuAndNeuralEngine
+                    ),
+                )
+                let whisperKit = try await WhisperKit(config)
+                
+                // Prewarm immediately after loading
+                print("[TranscriptionService] Prewarming models...")
+                let prewarmStart = Date()
+                try await whisperKit.prewarmModels()
+                let prewarmTime = Date().timeIntervalSince(prewarmStart)
+                print("[TranscriptionService] Models prewarmed in \(String(format: "%.2f", prewarmTime))s")
+                
+                return whisperKit
             }.value
+            
             pipe = newPipe
+            
+            let totalTime = Date().timeIntervalSince(loadStart)
+            print("[TranscriptionService] Total initialization time: \(String(format: "%.2f", totalTime))s")
+            
             state = .ready
         } catch {
             state = .failed(error)
+            print("[TranscriptionService] Model loading failed: \(error)")
         }
     }
 
@@ -95,8 +124,33 @@ final class TranscriptionService {
         onProgress: @escaping @MainActor (Double) -> Void,
         onResult: @MainActor @escaping (String, String?, TimeInterval) -> Void
     ) async throws {
-        // Ensure the pipeline is ready, loading it if needed
-        if case .idle = state { await load() }
+        print("[TranscriptionService] transcribeAudioAt() called - current state: \(state), pipe exists: \(pipe != nil)")
+        
+        // Wait for the model to be ready (max 180 seconds)
+        let timeout = Date().addingTimeInterval(180)
+        while Date() < timeout {
+            switch state {
+            case .ready:
+                print("[TranscriptionService] Model is ready, starting transcription")
+                break
+            case .loading:
+                print("[TranscriptionService] Model is still loading, waiting...")
+                try await Task.sleep(for: .milliseconds(500))
+                continue
+            case .idle:
+                print("[TranscriptionService] Model not loaded, loading now...")
+                await load()
+                continue
+            case .failed(let error):
+                print("[TranscriptionService] Model failed to load: \(error)")
+                throw error
+            case .transcribing:
+                print("[TranscriptionService] Another transcription in progress, waiting...")
+                try await Task.sleep(for: .milliseconds(500))
+                continue
+            }
+            break
+        }
 
         guard let pipe else {
             throw TranscriptionError.notInitialized
@@ -105,6 +159,8 @@ final class TranscriptionService {
         guard case .ready = state else {
             throw TranscriptionError.notReady(state)
         }
+        
+        print("[TranscriptionService] Starting transcription with preloaded model")
 
         state = .transcribing
         defer {
@@ -132,17 +188,14 @@ final class TranscriptionService {
 
         // Disable fallback thresholds to suppress noisy fallback warnings
         // Use the transcription mode from settings to determine task type
-        print("[TranscriptionService] Reading transcriptionMode from settings: \(appSettings.transcriptionMode.rawValue)")
-        print("[TranscriptionService] Comparison: transcriptionMode == .transcribe is \(appSettings.transcriptionMode == .transcribe)")
         let task: DecodingTask = appSettings.transcriptionMode == .transcribe ? .transcribe : .translate
-        print("[TranscriptionService] Selected DecodingTask: \(task)")
         
         let decodeOptions = DecodingOptions(
             task: task,
-            compressionRatioThreshold: nil, 
+            detectLanguage: true,
+            compressionRatioThreshold: nil,
             firstTokenLogProbThreshold: nil
         )
-        print("[TranscriptionService] DecodingOptions task: \(decodeOptions.task)")
 
         let results = await Task.detached(priority: .userInitiated) {
             await pipe.transcribe(audioPaths: [audioPath], decodeOptions: decodeOptions)
@@ -158,8 +211,6 @@ final class TranscriptionService {
             .trimmingCharacters(in: .whitespacesAndNewlines)
 
         let language = transcriptionResults.first?.language
-        print("[TranscriptionService] Detected language: \(language ?? "nil")")
-        print("[TranscriptionService] First segment text: \(transcriptionResults.first?.text ?? "nil")")
 
         let duration = transcriptionResults
             .map { $0.timings.inputAudioSeconds }

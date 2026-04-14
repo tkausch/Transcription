@@ -48,7 +48,7 @@ struct TranscriptionListView: View {
                     list(vm: vm)
                 }
             }
-            .navigationTitle("Transcriptions")
+            .navigationTitle("Recordings")
             .toolbar { toolbarItems(vm: vm) }
             .navigationDestination(isPresented: Bindable(vm).showSettings) {
                 SettingsView()
@@ -113,7 +113,7 @@ struct TranscriptionListView: View {
 
     private var emptyState: some View {
         ContentUnavailableView {
-            Label("No Transcripts", systemImage: "waveform.badge.plus")
+            Label("No Recordings", systemImage: "waveform.badge.plus")
         } description: {
             Text("Open a file or start a new recording to get started.")
         }
@@ -205,7 +205,7 @@ struct TranscriptionListView: View {
             Button {
                 vm.showFilePicker = true
             } label: {
-                Label("Open Audio File", systemImage: "waveform.badge.plus")
+                Label("Open Audio File", systemImage: "folder.badge.plus")
             }
         }
         ToolbarItem(placement: .primaryAction) {

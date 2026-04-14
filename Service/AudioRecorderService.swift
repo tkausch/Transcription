@@ -90,10 +90,13 @@ final class AudioRecorderService: NSObject {
         try audioSession.setActive(true)
         #endif
         
-        // Create recording URL
+        // Create recording URL and ensure directory exists
         let filename = "\(UUID().uuidString).m4a"
+        let directory = try AudioFileStore.directory
+        try FileManager.default.createDirectory(at: directory, withIntermediateDirectories: true)
         let url = try AudioFileStore.url(for: filename)
         recordingURL = url
+        print("[AudioRecorder] Recording to: \(url.path)")
         
         // Configure recording settings
         let settings: [String: Any] = [

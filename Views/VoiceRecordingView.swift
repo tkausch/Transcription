@@ -11,17 +11,13 @@ struct VoiceRecordingView: View {
     @Environment(\.dismiss) private var dismiss
     @Environment(\.modelContext) private var modelContext
     
-    @State private var recorder = AudioRecorderService()
-    @State private var showPermissionAlert = false
-    @State private var showErrorAlert = false
-    @State private var errorMessage: String?
-    
-    private let repository: TranscriptionRepository
-    private let onRecordingComplete: (Transcription) -> Void
+    @State private var viewModel: VoiceRecordingViewModel
     
     init(modelContext: ModelContext, onRecordingComplete: @escaping (Transcription) -> Void) {
-        self.repository = TranscriptionRepository(modelContext: modelContext)
-        self.onRecordingComplete = onRecordingComplete
+        self._viewModel = State(wrappedValue: VoiceRecordingViewModel(
+            modelContext: modelContext,
+            onRecordingComplete: onRecordingComplete
+        ))
     }
     
     var body: some View {
@@ -50,22 +46,21 @@ struct VoiceRecordingView: View {
             .toolbar {
                 ToolbarItem(placement: .cancellationAction) {
                     Button("Cancel") {
-                        recorder.cancelRecording()
-                        dismiss()
+                        viewModel.cancelRecording { dismiss() }
                     }
-                    .disabled(recorder.state == .idle)
+                    .disabled(viewModel.recorder.state == .idle)
                 }
                 ToolbarItem(placement: .confirmationAction) {
                     Button("Done") {
-                        if recorder.state != .idle && recorder.state != .stopped {
-                            stopRecording()
+                        if viewModel.recorder.state != .idle && viewModel.recorder.state != .stopped {
+                            viewModel.stopRecording { dismiss() }
                         } else {
                             dismiss()
                         }
                     }
                 }
             }
-            .alert("Microphone Permission Required", isPresented: $showPermissionAlert) {
+            .alert("Microphone Permission Required", isPresented: $viewModel.showPermissionAlert) {
                 Button("Cancel", role: .cancel) {
                     dismiss()
                 }
@@ -79,10 +74,10 @@ struct VoiceRecordingView: View {
             } message: {
                 Text("Please enable microphone access in Settings to record audio.")
             }
-            .alert("Recording Error", isPresented: $showErrorAlert) {
+            .alert("Recording Error", isPresented: $viewModel.showErrorAlert) {
                 Button("OK", role: .cancel) { }
             } message: {
-                Text(errorMessage ?? "An unknown error occurred.")
+                Text(viewModel.errorMessage ?? "An unknown error occurred.")
             }
         }
     }
@@ -95,32 +90,32 @@ struct VoiceRecordingView: View {
             HStack(spacing: 4) {
                 ForEach(0..<50, id: \.self) { index in
                     RoundedRectangle(cornerRadius: 2)
-                        .fill(recorder.state == .recording ? Color.red : Color.gray.opacity(0.3))
-                        .frame(width: 3, height: barHeight(for: index))
-                        .animation(.easeInOut(duration: 0.1), value: recorder.audioLevel)
+                        .fill(viewModel.recorder.state == .recording ? Color.red : Color.gray.opacity(0.3))
+                        .frame(width: 3, height: viewModel.barHeight(for: index))
+                        .animation(.easeInOut(duration: 0.1), value: viewModel.recorder.audioLevel)
                 }
             }
             .frame(height: 100)
             
             // Status text
-            Text(statusText)
+            Text(viewModel.statusText)
                 .font(.subheadline)
                 .foregroundStyle(.secondary)
         }
     }
     
     private var timeDisplay: some View {
-        Text(formattedTime)
+        Text(viewModel.formattedTime)
             .font(.system(size: 48, weight: .light, design: .monospaced))
             .monospacedDigit()
     }
     
     private var recordingControls: some View {
         HStack(spacing: 40) {
-            if recorder.state == .idle {
+            if viewModel.recorder.state == .idle {
                 // Record button
                 Button {
-                    startRecording()
+                    viewModel.startRecording()
                 } label: {
                     ZStack {
                         Circle()
@@ -131,10 +126,10 @@ struct VoiceRecordingView: View {
                             .foregroundStyle(.white)
                     }
                 }
-            } else if recorder.state == .recording {
+            } else if viewModel.recorder.state == .recording {
                 // Pause button
                 Button {
-                    recorder.pauseRecording()
+                    viewModel.pauseRecording()
                 } label: {
                     ZStack {
                         Circle()
@@ -148,7 +143,7 @@ struct VoiceRecordingView: View {
                 
                 // Stop button
                 Button {
-                    stopRecording()
+                    viewModel.stopRecording { dismiss() }
                 } label: {
                     ZStack {
                         Circle()
@@ -159,10 +154,10 @@ struct VoiceRecordingView: View {
                             .foregroundStyle(.white)
                     }
                 }
-            } else if recorder.state == .paused {
+            } else if viewModel.recorder.state == .paused {
                 // Resume button
                 Button {
-                    recorder.resumeRecording()
+                    viewModel.resumeRecording()
                 } label: {
                     ZStack {
                         Circle()
@@ -176,7 +171,7 @@ struct VoiceRecordingView: View {
                 
                 // Stop button
                 Button {
-                    stopRecording()
+                    viewModel.stopRecording { dismiss() }
                 } label: {
                     ZStack {
                         Circle()
@@ -188,97 +183,6 @@ struct VoiceRecordingView: View {
                     }
                 }
             }
-        }
-    }
-    
-    // MARK: - Helpers
-    
-    private var statusText: String {
-        switch recorder.state {
-        case .idle:
-            return "Tap to start recording"
-        case .recording:
-            return "Recording..."
-        case .paused:
-            return "Paused"
-        case .stopped:
-            return "Stopped"
-        }
-    }
-    
-    private var formattedTime: String {
-        let minutes = Int(recorder.currentTime) / 60
-        let seconds = Int(recorder.currentTime) % 60
-        return String(format: "%02d:%02d", minutes, seconds)
-    }
-    
-    private func barHeight(for index: Int) -> CGFloat {
-        guard recorder.state == .recording else {
-            return 20 + CGFloat.random(in: -5...5)
-        }
-        
-        // Create animated waveform effect
-        let baseHeight: CGFloat = 20
-        let variation = CGFloat(recorder.audioLevel) * 60
-        let offset = CGFloat(index) * 0.1
-        let wave = sin(recorder.currentTime * 5 + offset) * variation
-        
-        return max(baseHeight, baseHeight + wave)
-    }
-    
-    // MARK: - Actions
-    
-    private func startRecording() {
-        Task {
-            // Check permission
-            if !recorder.hasPermission {
-                let granted = await recorder.requestPermission()
-                if !granted {
-                    showPermissionAlert = true
-                    return
-                }
-                recorder.checkPermission()
-            }
-            
-            // Start recording
-            do {
-                _ = try recorder.startRecording()
-            } catch {
-                errorMessage = error.localizedDescription
-                showErrorAlert = true
-            }
-        }
-    }
-    
-    private func stopRecording() {
-        guard let url = recorder.stopRecording() else {
-            errorMessage = "Failed to save recording"
-            showErrorAlert = true
-            return
-        }
-        
-        // Create transcription object with source = .recording
-        let filename = url.lastPathComponent
-        let transcription = Transcription(audioFilename: filename, source: .recording)
-        
-        // Use formatted date and time as title for voice recordings
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateStyle = .medium
-        dateFormatter.timeStyle = .short
-        transcription.title = dateFormatter.string(from: Date())
-        
-        transcription.originalFilename = filename
-        
-        print("[VoiceRecording] Created transcription with source: \(transcription.source)")
-        
-        do {
-            try repository.save(transcription)
-            print("[VoiceRecording] Saved transcription - source after save: \(transcription.source)")
-            onRecordingComplete(transcription)
-            dismiss()
-        } catch {
-            errorMessage = "Failed to save recording: \(error.localizedDescription)"
-            showErrorAlert = true
         }
     }
 }

@@ -11,7 +11,7 @@ struct TranscriptionRowView: View {
 
     var body: some View {
         HStack(spacing: 12) {
-            Image(systemName: "waveform")
+            Image(systemName: transcription.sourceType == .recording ? "mic.fill" : "waveform")
                 .resizable()
                 .scaledToFit()
 #if os(macOS)
@@ -31,18 +31,11 @@ struct TranscriptionRowView: View {
                     .font(.headline)
 #endif
                     .lineLimit(1)
-                HStack(spacing: 10) {
-                    Label {
-                        Text(transcription.createdAt, style: .date)
-                    } icon: {
-                        Image(systemName: "calendar")
-                    }
+                HStack(spacing: 4) {
+                    Text(transcription.createdAt, style: .date)
                     if let duration = transcription.duration {
-                        Label {
-                            Text(Duration.seconds(duration).formatted(.time(pattern: .minuteSecond)))
-                        } icon: {
-                            Image(systemName: "clock")
-                        }
+                        Text("·")
+                        Text(Duration.seconds(duration).formatted(.time(pattern: .minuteSecond)) + " min")
                     }
                 }
                 .font(.subheadline)

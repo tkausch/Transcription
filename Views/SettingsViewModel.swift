@@ -95,11 +95,19 @@ final class SettingsViewModel {
                 }
             )
             downloadProgress = 1
+            downloadMessage = String(localized: "Loading model...")
+            appSettings.isModelDownloaded = true
+            
+            // Unload any existing model first
+            transcriptionService.unload()
+            
+            // Load and prewarm the new model so it's ready for transcription
+            print("[SettingsViewModel] Model downloaded, loading and prewarming...")
+            await transcriptionService.load()
+            
             downloadMessage = String(localized: "Model ready.")
             downloadState = .done
-            appSettings.isModelDownloaded = true
-            // Pre-warm the pipeline so the first transcription starts immediately
-            await transcriptionService.load()
+            print("[SettingsViewModel] Model loaded and ready")
         } catch {
             downloadState = .failed
             errorMessage = error.localizedDescription
@@ -111,6 +119,7 @@ final class SettingsViewModel {
         appSettings.isModelDownloaded = false
         downloadState = .idle
         transcriptionService.unload()
+        print("[SettingsViewModel] Model changed, unloaded transcription service")
     }
 
     // MARK: - Private
